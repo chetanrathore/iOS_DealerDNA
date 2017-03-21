@@ -14,6 +14,10 @@
 		0C69D96C1E811C720079F9A3 /* DealerDNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D96B1E811C720079F9A3 /* DealerDNATests.swift */; };
 		0C69D9771E811C730079F9A3 /* DealerDNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9761E811C730079F9A3 /* DealerDNAUITests.swift */; };
 		0C69D98F1E811E200079F9A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D98E1E811E200079F9A3 /* Constants.swift */; };
+		0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9911E81286F0079F9A3 /* LoginVC.swift */; };
+		0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9921E81286F0079F9A3 /* LoginVC.xib */; };
+		0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9951E8128F90079F9A3 /* HomeVC.swift */; };
+		0C69D9981E8128F90079F9A3 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9961E8128F90079F9A3 /* HomeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		0C69D9761E811C730079F9A3 /* DealerDNAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerDNAUITests.swift; sourceTree = "<group>"; };
 		0C69D9781E811C730079F9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C69D98E1E811E200079F9A3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0C69D9911E81286F0079F9A3 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		0C69D9921E81286F0079F9A3 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		0C69D9951E8128F90079F9A3 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		0C69D9961E8128F90079F9A3 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +201,10 @@
 		0C69D9901E8120CD0079F9A3 /* InitialControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C69D9911E81286F0079F9A3 /* LoginVC.swift */,
+				0C69D9921E81286F0079F9A3 /* LoginVC.xib */,
+				0C69D9951E8128F90079F9A3 /* HomeVC.swift */,
+				0C69D9961E8128F90079F9A3 /* HomeVC.xib */,
 			);
 			name = InitialControllers;
 			sourceTree = "<group>";
@@ -304,6 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */,
+				0C69D9981E8128F90079F9A3 /* HomeVC.xib in Resources */,
 				0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */,
 				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
 			);
@@ -331,7 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */,
+				0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */,
 				0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */,
+				0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */,
 				0C69D98F1E811E200079F9A3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +587,7 @@
 				0C69D97D1E811C730079F9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C69D97E1E811C730079F9A3 /* Build configuration list for PBXNativeTarget "DealerDNATests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +596,7 @@
 				0C69D9801E811C730079F9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C69D9811E811C730079F9A3 /* Build configuration list for PBXNativeTarget "DealerDNAUITests" */ = {
 			isa = XCConfigurationList;
@@ -587,6 +605,7 @@
 				0C69D9831E811C730079F9A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -23,3 +23,7 @@ struct Constants{
     }
     
 }
+
+struct Screen {
+    
+}
