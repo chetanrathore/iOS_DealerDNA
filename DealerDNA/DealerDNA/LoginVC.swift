@@ -10,16 +10,65 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet var txtUserName: UITextField!
+    @IBOutlet var txtPassword: UITextField!
+    @IBOutlet var btnRemember: CheckBoxButton!
+    var isRemember: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setLayout()
     }
   
+    // MARK: Interface design
+    
+    func setLayout() {
+        self.navigationController?.navigationBar.isHidden = true
+        txtUserName.backgroundColor = UIColor.white
+        txtUserName.layer.borderColor = nil
+        txtUserName.clipsToBounds = true
+        (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
+        
+    }
+    
+    // MARK: Outlet Action
+    
+    @IBAction func handleBtnSignIn(_ sender: UIButton) {
+    }
+    
+    @IBAction func handleBtnRememberMe(_ sender: UIButton) {
+        if sender.tag == 1{
+        if self.isRemember{
+            self.isRemember = false
+            btnRemember.did_UnSelected()
+        }else{
+            self.isRemember = true
+            btnRemember.did_Selected()
+            }
+        }else{
+            if btnRemember.is_Selected(){
+                self.isRemember = false
+            }else{
+                self.isRemember = true
+            }
+        }
+    }
+    
+    @IBAction func handleBtnLostPwd(_ sender: UIButton) {
+    }
+    
+    @IBAction func handleBtnSignUp(_ sender: UIButton) {
+        let registerVC = RegistrationVC(nibName: "RegistrationVC", bundle: nil)
+        self.navigationController?.pushViewController(registerVC, animated: true)
+    }
+    
+    
 
 }
