@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants{
     
@@ -26,4 +27,17 @@ struct Constants{
 
 struct Screen {
     
+}
+
+extension UINavigationController{
+    
+    func isContain(view: UIViewController){
+        let viewControllers = self.viewControllers as Array
+        self.viewControllers = viewControllers.filter{ views in
+            if views.isKind(of: view.classForCoder){
+                return false
+            }
+            return true
+        }
+    }
 }
