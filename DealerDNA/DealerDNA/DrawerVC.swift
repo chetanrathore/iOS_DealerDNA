@@ -44,6 +44,26 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell?.lbCell.text = arr[indexPath.row]
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tblDrawer.cellForRow(at: indexPath) as! drawerCell
+        if let itemName = cell.lbCell.text{
+            if itemName == "DLScan"{
+                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
+                revealSideViewController.popViewController(withNewCenter: vc, animated: true)
+            }else if itemName == "Inventory"{
+                let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
+                revealSideViewController.popViewController(withNewCenter: vc, animated: true)
+            }else if itemName == "Customers"{
+                let vc = CustomerListVC(nibName: "CustomerListVC", bundle: nil)
+                revealSideViewController.popViewController(withNewCenter: vc, animated: true)
+            }else if itemName == "Settings"{
+                let vc = SettingsVC(nibName: "SettingsVC", bundle: nil)
+                revealSideViewController.popViewController(withNewCenter: vc, animated: true)
+            }
+        }
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

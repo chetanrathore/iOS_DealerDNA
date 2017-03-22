@@ -1,0 +1,6 @@
+framework module Pods_DealerDNA {
+  umbrella header "Pods-DealerDNA-umbrella.h"
+
+  export *
+  module * { export * }
+}
