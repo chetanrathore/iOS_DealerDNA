@@ -39,6 +39,7 @@ class RegistrationVC: UIViewController {
     
     func setLayout() {
         self.navigationController?.navigationBar.isHidden = true
+
         txtUserName.backgroundColor = UIColor.white
         txtPassword.backgroundColor = UIColor.white
         txtConfirmPwd.backgroundColor = UIColor.white
@@ -50,6 +51,9 @@ class RegistrationVC: UIViewController {
         lblAlreadyAccount.font = appFont(size: AppFont.normalFontSize)
         lblTitle.font = appFont(size: AppFont.titleFontSize)
         viewTop.backgroundColor = AppColor.theamColor
+
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+
     }
     
     // MARK: Outlet Actions

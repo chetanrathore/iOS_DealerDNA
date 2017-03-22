@@ -45,6 +45,24 @@
 		0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */; };
 		0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AA1E815B7F0079F9A3 /* email.png */; };
 		0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */; };
+		3079D8871E8268B700D3DD4D /* homeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8851E8268B700D3DD4D /* homeScreenCell.swift */; };
+		3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8861E8268B700D3DD4D /* homeScreenCell.xib */; };
+		3079D88F1E82796800D3DD4D /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D88D1E82796800D3DD4D /* InventoryVC.swift */; };
+		3079D8901E82796800D3DD4D /* InventoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D88E1E82796800D3DD4D /* InventoryVC.xib */; };
+		3079D8931E82798500D3DD4D /* CustomerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8911E82798500D3DD4D /* CustomerListVC.swift */; };
+		3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8921E82798500D3DD4D /* CustomerListVC.xib */; };
+		3079D8971E82799800D3DD4D /* CustomerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8951E82799800D3DD4D /* CustomerDetailsVC.swift */; };
+		3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8961E82799800D3DD4D /* CustomerDetailsVC.xib */; };
+		3079D89B1E8279AB00D3DD4D /* DLScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8991E8279AB00D3DD4D /* DLScanVC.swift */; };
+		3079D89C1E8279AB00D3DD4D /* DLScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D89A1E8279AB00D3DD4D /* DLScanVC.xib */; };
+		3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D89D1E8279D200D3DD4D /* SettingsVC.swift */; };
+		3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D89E1E8279D200D3DD4D /* SettingsVC.xib */; };
+		3079D8A41E827D5B00D3DD4D /* DrawerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8A21E827D5B00D3DD4D /* DrawerVC.swift */; };
+		3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8A31E827D5B00D3DD4D /* DrawerVC.xib */; };
+		3079D8A81E827EC300D3DD4D /* drawerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8A61E827EC300D3DD4D /* drawerCell.swift */; };
+		3079D8A91E827EC300D3DD4D /* drawerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8A71E827EC300D3DD4D /* drawerCell.xib */; };
+		3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8AB1E82842300D3DD4D /* ProfileVC.swift */; };
+		3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AC1E82842300D3DD4D /* ProfileVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +128,24 @@
 		0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedCheckbox.png; sourceTree = "<group>"; };
 		0C69D9AA1E815B7F0079F9A3 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		3079D8851E8268B700D3DD4D /* homeScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenCell.swift; sourceTree = "<group>"; };
+		3079D8861E8268B700D3DD4D /* homeScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeScreenCell.xib; sourceTree = "<group>"; };
+		3079D88D1E82796800D3DD4D /* InventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
+		3079D88E1E82796800D3DD4D /* InventoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVC.xib; sourceTree = "<group>"; };
+		3079D8911E82798500D3DD4D /* CustomerListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerListVC.swift; sourceTree = "<group>"; };
+		3079D8921E82798500D3DD4D /* CustomerListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerListVC.xib; sourceTree = "<group>"; };
+		3079D8951E82799800D3DD4D /* CustomerDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDetailsVC.swift; sourceTree = "<group>"; };
+		3079D8961E82799800D3DD4D /* CustomerDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerDetailsVC.xib; sourceTree = "<group>"; };
+		3079D8991E8279AB00D3DD4D /* DLScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanVC.swift; sourceTree = "<group>"; };
+		3079D89A1E8279AB00D3DD4D /* DLScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanVC.xib; sourceTree = "<group>"; };
+		3079D89D1E8279D200D3DD4D /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		3079D89E1E8279D200D3DD4D /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		3079D8A21E827D5B00D3DD4D /* DrawerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVC.swift; sourceTree = "<group>"; };
+		3079D8A31E827D5B00D3DD4D /* DrawerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawerVC.xib; sourceTree = "<group>"; };
+		3079D8A61E827EC300D3DD4D /* drawerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drawerCell.swift; sourceTree = "<group>"; };
+		3079D8A71E827EC300D3DD4D /* drawerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = drawerCell.xib; sourceTree = "<group>"; };
+		3079D8AB1E82842300D3DD4D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		3079D8AC1E82842300D3DD4D /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +351,12 @@
 		0C69D98C1E811DE50079F9A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3079D8AA1E82840A00D3DD4D /* User */,
+				3079D8A11E827D4200D3DD4D /* DrawerController */,
+				3079D88C1E82790300D3DD4D /* DLScan */,
+				3079D88B1E8278F500D3DD4D /* Inventory */,
+				3079D88A1E8278E800D3DD4D /* Customers */,
+				3079D8891E8278DE00D3DD4D /* Settings */,
 				0C69D9901E8120CD0079F9A3 /* InitialControllers */,
 			);
 			name = ViewControllers;
@@ -323,6 +365,10 @@
 		0C69D98D1E811DFE0079F9A3 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				3079D8851E8268B700D3DD4D /* homeScreenCell.swift */,
+				3079D8861E8268B700D3DD4D /* homeScreenCell.xib */,
+				3079D8A61E827EC300D3DD4D /* drawerCell.swift */,
+				3079D8A71E827EC300D3DD4D /* drawerCell.xib */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -346,6 +392,62 @@
 				0C69D9A41E81444B0079F9A3 /* CheckBoxButton.swift */,
 			);
 			name = CustomControl;
+			sourceTree = "<group>";
+		};
+		3079D8891E8278DE00D3DD4D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3079D89D1E8279D200D3DD4D /* SettingsVC.swift */,
+				3079D89E1E8279D200D3DD4D /* SettingsVC.xib */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		3079D88A1E8278E800D3DD4D /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				3079D8911E82798500D3DD4D /* CustomerListVC.swift */,
+				3079D8921E82798500D3DD4D /* CustomerListVC.xib */,
+				3079D8951E82799800D3DD4D /* CustomerDetailsVC.swift */,
+				3079D8961E82799800D3DD4D /* CustomerDetailsVC.xib */,
+			);
+			name = Customers;
+			sourceTree = "<group>";
+		};
+		3079D88B1E8278F500D3DD4D /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				3079D88D1E82796800D3DD4D /* InventoryVC.swift */,
+				3079D88E1E82796800D3DD4D /* InventoryVC.xib */,
+			);
+			name = Inventory;
+			sourceTree = "<group>";
+		};
+		3079D88C1E82790300D3DD4D /* DLScan */ = {
+			isa = PBXGroup;
+			children = (
+				3079D8991E8279AB00D3DD4D /* DLScanVC.swift */,
+				3079D89A1E8279AB00D3DD4D /* DLScanVC.xib */,
+			);
+			name = DLScan;
+			sourceTree = "<group>";
+		};
+		3079D8A11E827D4200D3DD4D /* DrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				3079D8A21E827D5B00D3DD4D /* DrawerVC.swift */,
+				3079D8A31E827D5B00D3DD4D /* DrawerVC.xib */,
+			);
+			name = DrawerController;
+			sourceTree = "<group>";
+		};
+		3079D8AA1E82840A00D3DD4D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3079D8AB1E82842300D3DD4D /* ProfileVC.swift */,
+				3079D8AC1E82842300D3DD4D /* ProfileVC.xib */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,14 +557,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */,
 				0C69D99A1E8132970079F9A3 /* user.png in Resources */,
 				0C69D99E1E813CBA0079F9A3 /* RegistrationVC.xib in Resources */,
+
 				0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */,
 				0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */,
+				3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */,
+				3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */,
+				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
+				0C69D9A21E8140180079F9A3 /* Lock.png in Resources */,
+				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
+				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
+
 				0C69D9A71E8145040079F9A3 /* CheckedCheckbox.png in Resources */,
+				3079D8A91E827EC300D3DD4D /* drawerCell.xib in Resources */,
 				0C69D9981E8128F90079F9A3 /* HomeVC.xib in Resources */,
 				0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */,
-				0C17D67D1E8284690055CAE7 /* lock1.png in Resources */,
+				3079D8901E82796800D3DD4D /* InventoryVC.xib in Resources */,
+				3079D89C1E8279AB00D3DD4D /* DLScanVC.xib in Resources */,
 				0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */,
 				0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */,
 				0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */,
@@ -491,6 +604,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */,
+				3079D8971E82799800D3DD4D /* CustomerDetailsVC.swift in Sources */,
+				3079D8931E82798500D3DD4D /* CustomerListVC.swift in Sources */,
+				3079D8871E8268B700D3DD4D /* homeScreenCell.swift in Sources */,
+				3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */,
+				3079D8A81E827EC300D3DD4D /* drawerCell.swift in Sources */,
+				3079D89B1E8279AB00D3DD4D /* DLScanVC.swift in Sources */,
 				0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */,
 				0C69D99D1E813CBA0079F9A3 /* RegistrationVC.swift in Sources */,
 				0C17D6431E826F360055CAE7 /* IQPreviousNextView.swift in Sources */,
@@ -506,10 +626,12 @@
 				0C17D6401E826F360055CAE7 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0C17D6391E826F360055CAE7 /* IQUITextFieldView+Additions.swift in Sources */,
 				0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */,
+				3079D8A41E827D5B00D3DD4D /* DrawerVC.swift in Sources */,
 				0C69D9A51E81444B0079F9A3 /* CheckBoxButton.swift in Sources */,
 				0C17D63F1E826F360055CAE7 /* IQKeyboardManager.swift in Sources */,
 				0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */,
 				0C17D6421E826F360055CAE7 /* IQBarButtonItem.swift in Sources */,
+				3079D88F1E82796800D3DD4D /* InventoryVC.swift in Sources */,
 				0C69D98F1E811E200079F9A3 /* Constants.swift in Sources */,
 				0C17D6371E826F360055CAE7 /* IQNSArray+Sort.swift in Sources */,
 				0C17D63D1E826F360055CAE7 /* IQKeyboardManagerConstants.swift in Sources */,

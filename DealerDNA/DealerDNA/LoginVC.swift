@@ -48,6 +48,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     func setLayout() {
         self.navigationController?.navigationBar.isHidden = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         txtUserName.backgroundColor = UIColor.white
         txtPassword.backgroundColor = UIColor.white
         btnRemember.tintColor = AppColor.theamColor
