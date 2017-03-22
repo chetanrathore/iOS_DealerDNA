@@ -24,7 +24,6 @@
 		0C17D6451E826F360055CAE7 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6331E826F360055CAE7 /* IQToolbar.swift */; };
 		0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */; };
-		0C17D67D1E8284690055CAE7 /* lock1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D67C1E8284690055CAE7 /* lock1.png */; };
 		0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C21E8261E8269DF00DEC621 /* Extensions.swift */; };
 		0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9531E811C720079F9A3 /* AppDelegate.swift */; };
 		0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */; };
@@ -63,6 +62,7 @@
 		3079D8A91E827EC300D3DD4D /* drawerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8A71E827EC300D3DD4D /* drawerCell.xib */; };
 		3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8AB1E82842300D3DD4D /* ProfileVC.swift */; };
 		3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AC1E82842300D3DD4D /* ProfileVC.xib */; };
+		3079D8B01E828F4200D3DD4D /* lock1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AF1E828F4200D3DD4D /* lock1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,6 @@
 		0C17D6331E826F360055CAE7 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		0C17D67C1E8284690055CAE7 /* lock1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock1.png; sourceTree = "<group>"; };
 		0C21E8261E8269DF00DEC621 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0C69D9501E811C720079F9A3 /* DealerDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealerDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69D9531E811C720079F9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		3079D8A71E827EC300D3DD4D /* drawerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = drawerCell.xib; sourceTree = "<group>"; };
 		3079D8AB1E82842300D3DD4D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3079D8AC1E82842300D3DD4D /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		3079D8AF1E828F4200D3DD4D /* lock1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +322,7 @@
 		0C69D9871E811D140079F9A3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0C17D67C1E8284690055CAE7 /* lock1.png */,
+				3079D8AF1E828F4200D3DD4D /* lock1.png */,
 				0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */,
 				0C69D9AA1E815B7F0079F9A3 /* email.png */,
 				0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */,
@@ -560,16 +560,14 @@
 				3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */,
 				0C69D99A1E8132970079F9A3 /* user.png in Resources */,
 				0C69D99E1E813CBA0079F9A3 /* RegistrationVC.xib in Resources */,
-
 				0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */,
 				0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */,
 				3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */,
 				3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */,
 				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
-				0C69D9A21E8140180079F9A3 /* Lock.png in Resources */,
 				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
 				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
-
+				3079D8B01E828F4200D3DD4D /* lock1.png in Resources */,
 				0C69D9A71E8145040079F9A3 /* CheckedCheckbox.png in Resources */,
 				3079D8A91E827EC300D3DD4D /* drawerCell.xib in Resources */,
 				0C69D9981E8128F90079F9A3 /* HomeVC.xib in Resources */,
