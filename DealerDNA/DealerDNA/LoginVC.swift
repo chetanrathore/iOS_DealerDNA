@@ -41,6 +41,8 @@ class LoginVC: UIViewController {
     // MARK: Outlet Action
     
     @IBAction func handleBtnSignIn(_ sender: UIButton) {
+        let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     @IBAction func handleBtnRememberMe(_ sender: UIButton) {
@@ -66,9 +68,8 @@ class LoginVC: UIViewController {
     
     @IBAction func handleBtnSignUp(_ sender: UIButton) {
         let registerVC = RegistrationVC(nibName: "RegistrationVC", bundle: nil)
-        self.navigationController?.pushViewController(registerVC, animated: true)
+        self.navigationController?.isContain(view: registerVC)
+        self.navigationController?.pushViewController(registerVC, animated: false)
     }
-    
-    
-
+ 
 }
