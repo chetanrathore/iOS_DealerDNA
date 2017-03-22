@@ -63,6 +63,9 @@
 		3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8AB1E82842300D3DD4D /* ProfileVC.swift */; };
 		3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AC1E82842300D3DD4D /* ProfileVC.xib */; };
 		3079D8B01E828F4200D3DD4D /* lock1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AF1E828F4200D3DD4D /* lock1.png */; };
+		7F6D1BC4C85FBF73C4AF39B4 /* Pods_DealerDNAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */; };
+		871F3F006DA7D9B6DF4D7057 /* Pods_DealerDNATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14DB19FACB0C786DFFCEA1C /* Pods_DealerDNATests.framework */; };
+		8EF3144666ABD7A85B849B0B /* Pods_DealerDNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365458C8718D1811384B753D /* Pods_DealerDNA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A6B3FF2DFC4F5BE7CA50930 /* Pods-DealerDNATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests.debug.xcconfig"; sourceTree = "<group>"; };
 		0C17D6211E826F360055CAE7 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		0C17D6221E826F360055CAE7 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		0C17D6231E826F360055CAE7 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 		0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedCheckbox.png; sourceTree = "<group>"; };
 		0C69D9AA1E815B7F0079F9A3 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealerDNAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F87BCF3E820AE74F78C4246 /* Pods-DealerDNATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests.release.xcconfig"; sourceTree = "<group>"; };
 		3079D8851E8268B700D3DD4D /* homeScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenCell.swift; sourceTree = "<group>"; };
 		3079D8861E8268B700D3DD4D /* homeScreenCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeScreenCell.xib; sourceTree = "<group>"; };
 		3079D88D1E82796800D3DD4D /* InventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVC.swift; sourceTree = "<group>"; };
@@ -146,6 +152,12 @@
 		3079D8AB1E82842300D3DD4D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3079D8AC1E82842300D3DD4D /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		3079D8AF1E828F4200D3DD4D /* lock1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock1.png; sourceTree = "<group>"; };
+		365458C8718D1811384B753D /* Pods_DealerDNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealerDNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1096678925F47D86B0CD8C /* Pods-DealerDNAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNAUITests/Pods-DealerDNAUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNA/Pods-DealerDNA.debug.xcconfig"; sourceTree = "<group>"; };
+		A0AC5742905C752941EDEC9E /* Pods-DealerDNAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNAUITests/Pods-DealerDNAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BAD57BA974F68C078163FA10 /* Pods-DealerDNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNA/Pods-DealerDNA.release.xcconfig"; sourceTree = "<group>"; };
+		F14DB19FACB0C786DFFCEA1C /* Pods_DealerDNATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealerDNATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF3144666ABD7A85B849B0B /* Pods_DealerDNA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871F3F006DA7D9B6DF4D7057 /* Pods_DealerDNATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F6D1BC4C85FBF73C4AF39B4 /* Pods_DealerDNAUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +260,8 @@
 				0C69D96A1E811C720079F9A3 /* DealerDNATests */,
 				0C69D9751E811C730079F9A3 /* DealerDNAUITests */,
 				0C69D9511E811C720079F9A3 /* Products */,
+				940CD37D4F8BC1772C53ECC5 /* Pods */,
+				B90716AA3BCF12E1D4B96BB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -450,6 +467,29 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		940CD37D4F8BC1772C53ECC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */,
+				BAD57BA974F68C078163FA10 /* Pods-DealerDNA.release.xcconfig */,
+				0A6B3FF2DFC4F5BE7CA50930 /* Pods-DealerDNATests.debug.xcconfig */,
+				1F87BCF3E820AE74F78C4246 /* Pods-DealerDNATests.release.xcconfig */,
+				4C1096678925F47D86B0CD8C /* Pods-DealerDNAUITests.debug.xcconfig */,
+				A0AC5742905C752941EDEC9E /* Pods-DealerDNAUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B90716AA3BCF12E1D4B96BB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365458C8718D1811384B753D /* Pods_DealerDNA.framework */,
+				F14DB19FACB0C786DFFCEA1C /* Pods_DealerDNATests.framework */,
+				164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,9 +497,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C69D97B1E811C730079F9A3 /* Build configuration list for PBXNativeTarget "DealerDNA" */;
 			buildPhases = (
+				3CA994F3786EE0D1E0F125D1 /* [CP] Check Pods Manifest.lock */,
 				0C69D94C1E811C720079F9A3 /* Sources */,
 				0C69D94D1E811C720079F9A3 /* Frameworks */,
 				0C69D94E1E811C720079F9A3 /* Resources */,
+				E553B0E59D0F5E691B4A0BE2 /* [CP] Embed Pods Frameworks */,
+				040A64E42C21F350C2D881F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,9 +517,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C69D97E1E811C730079F9A3 /* Build configuration list for PBXNativeTarget "DealerDNATests" */;
 			buildPhases = (
+				D0D754C66F3D1C9378F12D2F /* [CP] Check Pods Manifest.lock */,
 				0C69D9631E811C720079F9A3 /* Sources */,
 				0C69D9641E811C720079F9A3 /* Frameworks */,
 				0C69D9651E811C720079F9A3 /* Resources */,
+				A5AE56ABE77B3CC3C911E89C /* [CP] Embed Pods Frameworks */,
+				CE198F8330CCE27986885690 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -492,9 +538,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C69D9811E811C730079F9A3 /* Build configuration list for PBXNativeTarget "DealerDNAUITests" */;
 			buildPhases = (
+				38434A8D9B0B23A278003436 /* [CP] Check Pods Manifest.lock */,
 				0C69D96E1E811C720079F9A3 /* Sources */,
 				0C69D96F1E811C720079F9A3 /* Frameworks */,
 				0C69D9701E811C720079F9A3 /* Resources */,
+				6C3C494868EB48F03258BD73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -596,6 +644,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		040A64E42C21F350C2D881F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DealerDNA/Pods-DealerDNA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38434A8D9B0B23A278003436 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3CA994F3786EE0D1E0F125D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C3C494868EB48F03258BD73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DealerDNAUITests/Pods-DealerDNAUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AE56ABE77B3CC3C911E89C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE198F8330CCE27986885690 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D754C66F3D1C9378F12D2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E553B0E59D0F5E691B4A0BE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DealerDNA/Pods-DealerDNA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C69D94C1E811C720079F9A3 /* Sources */ = {
@@ -776,6 +947,7 @@
 		};
 		0C69D97C1E811C730079F9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -789,6 +961,7 @@
 		};
 		0C69D97D1E811C730079F9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAD57BA974F68C078163FA10 /* Pods-DealerDNA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -802,6 +975,7 @@
 		};
 		0C69D97F1E811C730079F9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A6B3FF2DFC4F5BE7CA50930 /* Pods-DealerDNATests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -816,6 +990,7 @@
 		};
 		0C69D9801E811C730079F9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F87BCF3E820AE74F78C4246 /* Pods-DealerDNATests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -830,6 +1005,7 @@
 		};
 		0C69D9821E811C730079F9A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C1096678925F47D86B0CD8C /* Pods-DealerDNAUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DealerDNAUITests/Info.plist;
@@ -843,6 +1019,7 @@
 		};
 		0C69D9831E811C730079F9A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0AC5742905C752941EDEC9E /* Pods-DealerDNAUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = DealerDNAUITests/Info.plist;

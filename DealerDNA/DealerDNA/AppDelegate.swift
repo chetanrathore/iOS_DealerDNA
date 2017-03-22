@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import PPRevealSideViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-        window?.rootViewController = UINavigationController(rootViewController: loginVC)
+        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
+        
+        revealSideViewController?.directionsToShowBounce = .none
+        revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
+        revealSideViewController?.setOption(.optionsNoStatusBar)
+        // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
+        // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
+        window?.rootViewController = revealSideViewController
         window?.makeKeyAndVisible()
         return true
     }
