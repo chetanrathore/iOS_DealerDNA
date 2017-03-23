@@ -183,7 +183,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-            <point key="canvasLocation" x="-573" y="-100"/>
+            <point key="canvasLocation" x="-641" y="-123"/>
         </view>
     </objects>
     <resources>
