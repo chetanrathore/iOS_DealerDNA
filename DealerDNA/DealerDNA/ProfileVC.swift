@@ -10,10 +10,15 @@ import UIKit
 
 class ProfileVC: UIViewController {
 
+    @IBOutlet var btnMenu: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +26,12 @@ class ProfileVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Outlet method(s)
+
+    @IBAction func handleBtnMenu(_ sender: Any) {
+        let vc = DrawerVC(nibName: "DrawerVC", bundle: nil)
+        revealSideViewController.push(vc, on: .left, animated: true)
+    }
 
     /*
     // MARK: - Navigation

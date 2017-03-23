@@ -10,6 +10,7 @@ import UIKit
 
 class CustomerListVC: UIViewController {
 
+    @IBOutlet var btnMenu: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +24,12 @@ class CustomerListVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    // MARK: - Outlet Method(s)
+
+    @IBAction func handleBtnMenu(_ sender: UIButton) {
+        let vc = DrawerVC(nibName: "DrawerVC", bundle: nil)
+        revealSideViewController.push(vc, on: .left, animated: true)
     }
     
 

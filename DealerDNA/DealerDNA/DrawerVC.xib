@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawerVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
+                <outlet property="btnProfile" destination="xkR-HA-7RG" id="9Al-ZN-pXI"/>
+                <outlet property="lbUserName" destination="PeK-aQ-I7R" id="86O-gy-2hZ"/>
                 <outlet property="tblDrawer" destination="s2k-Yg-orw" id="sYs-BU-LU4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwProfile" destination="gkU-AZ-7RI" id="tI1-sC-Zgh"/>
@@ -18,11 +20,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-Yg-orw">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -36,39 +38,31 @@
             <point key="canvasLocation" x="25.5" y="52.5"/>
         </view>
         <view contentMode="scaleToFill" id="gkU-AZ-7RI">
-            <rect key="frame" x="0.0" y="0.0" width="311" height="200"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-aQ-I7R">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-aQ-I7R">
                     <rect key="frame" x="16" y="164" width="279" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="HNx-tz-jKf"/>
-                    </constraints>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UncheckedCheckbox.png" translatesAutoresizingMaskIntoConstraints="NO" id="7x1-f1-1Ce">
-                    <rect key="frame" x="105" y="50" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="gVy-dG-Tyj"/>
-                        <constraint firstAttribute="height" constant="100" id="yxv-qs-9kg"/>
-                    </constraints>
-                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkR-HA-7RG">
+                    <rect key="frame" x="105" y="51" width="100" height="100"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="user.png"/>
+                    <connections>
+                        <action selector="handleBtnProfile:" destination="-1" eventType="touchUpInside" id="DVA-o1-HKT"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="7x1-f1-1Ce" firstAttribute="centerX" secondItem="gkU-AZ-7RI" secondAttribute="centerX" id="FXc-FV-HRU"/>
-                <constraint firstItem="PeK-aQ-I7R" firstAttribute="leading" secondItem="gkU-AZ-7RI" secondAttribute="leading" constant="16" id="Gw7-Jh-kqE"/>
-                <constraint firstAttribute="trailing" secondItem="PeK-aQ-I7R" secondAttribute="trailing" constant="16" id="RX9-Fn-AaJ"/>
-                <constraint firstAttribute="bottom" secondItem="PeK-aQ-I7R" secondAttribute="bottom" constant="15" id="h0x-wZ-pQO"/>
-                <constraint firstItem="PeK-aQ-I7R" firstAttribute="top" secondItem="7x1-f1-1Ce" secondAttribute="bottom" constant="14" id="vql-iD-mKP"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-526.5" y="-181"/>
+            <point key="canvasLocation" x="-495" y="-60"/>
         </view>
     </objects>
     <resources>
-        <image name="UncheckedCheckbox.png" width="50" height="50"/>
+        <image name="user.png" width="48" height="48"/>
     </resources>
 </document>
