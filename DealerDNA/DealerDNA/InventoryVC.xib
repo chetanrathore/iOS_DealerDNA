@@ -30,12 +30,11 @@
                                 <constraint firstAttribute="height" constant="11" id="EUS-Lz-vez"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izl-Qt-IrU">
-                            <rect key="frame" x="8" y="17" width="39" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izl-Qt-IrU">
+                            <rect key="frame" x="8" y="17" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <state key="normal" title="LOGOUT">
+                            <state key="normal" image="menu.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -61,4 +60,7 @@
             <point key="canvasLocation" x="-110" y="8"/>
         </view>
     </objects>
+    <resources>
+        <image name="menu.png" width="24" height="24"/>
+    </resources>
 </document>
