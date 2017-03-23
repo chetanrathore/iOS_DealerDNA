@@ -69,9 +69,9 @@
 		3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8AB1E82842300D3DD4D /* ProfileVC.swift */; };
 		3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AC1E82842300D3DD4D /* ProfileVC.xib */; };
 		3079D8B01E828F4200D3DD4D /* lock1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8AF1E828F4200D3DD4D /* lock1.png */; };
-		30FA4A621E829DF4006728E8 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FA4A5F1E829DF4006728E8 /* menu.png */; };
-		30FA4A631E829DF4006728E8 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FA4A601E829DF4006728E8 /* menu@2x.png */; };
-		30FA4A641E829DF4006728E8 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FA4A611E829DF4006728E8 /* menu@3x.png */; };
+		30D6B3C11E83A8C900070D56 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D6B3BE1E83A8C900070D56 /* menu.png */; };
+		30D6B3C21E83A8C900070D56 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D6B3BF1E83A8C900070D56 /* menu@2x.png */; };
+		30D6B3C31E83A8C900070D56 /* menu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D6B3C01E83A8C900070D56 /* menu@3x.png */; };
 		7F6D1BC4C85FBF73C4AF39B4 /* Pods_DealerDNAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */; };
 		871F3F006DA7D9B6DF4D7057 /* Pods_DealerDNATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14DB19FACB0C786DFFCEA1C /* Pods_DealerDNATests.framework */; };
 		8EF3144666ABD7A85B849B0B /* Pods_DealerDNA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365458C8718D1811384B753D /* Pods_DealerDNA.framework */; };
@@ -175,9 +175,9 @@
 		3079D8AB1E82842300D3DD4D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3079D8AC1E82842300D3DD4D /* ProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		3079D8AF1E828F4200D3DD4D /* lock1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock1.png; sourceTree = "<group>"; };
-		30FA4A5F1E829DF4006728E8 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = ../../../../Downloads/ic_dehaze_white_24dp/ios/ic_dehaze_white.imageset/menu.png; sourceTree = "<group>"; };
-		30FA4A601E829DF4006728E8 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@2x.png"; path = "../../../../Downloads/ic_dehaze_white_24dp/ios/ic_dehaze_white.imageset/menu@2x.png"; sourceTree = "<group>"; };
-		30FA4A611E829DF4006728E8 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "menu@3x.png"; path = "../../../../Downloads/ic_dehaze_white_24dp/ios/ic_dehaze_white.imageset/menu@3x.png"; sourceTree = "<group>"; };
+		30D6B3BE1E83A8C900070D56 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		30D6B3BF1E83A8C900070D56 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		30D6B3C01E83A8C900070D56 /* menu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@3x.png"; sourceTree = "<group>"; };
 		365458C8718D1811384B753D /* Pods_DealerDNA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealerDNA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1096678925F47D86B0CD8C /* Pods-DealerDNAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNAUITests/Pods-DealerDNAUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNA/Pods-DealerDNA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -367,9 +367,9 @@
 		0C69D9871E811D140079F9A3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				30FA4A5F1E829DF4006728E8 /* menu.png */,
-				30FA4A601E829DF4006728E8 /* menu@2x.png */,
-				30FA4A611E829DF4006728E8 /* menu@3x.png */,
+				30D6B3BE1E83A8C900070D56 /* menu.png */,
+				30D6B3BF1E83A8C900070D56 /* menu@2x.png */,
+				30D6B3C01E83A8C900070D56 /* menu@3x.png */,
 				3079D8AF1E828F4200D3DD4D /* lock1.png */,
 				0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */,
 				0C69D9AA1E815B7F0079F9A3 /* email.png */,
@@ -664,7 +664,7 @@
 				3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */,
 				3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */,
 				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
-				30FA4A621E829DF4006728E8 /* menu.png in Resources */,
+				30D6B3C11E83A8C900070D56 /* menu.png in Resources */,
 				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
 				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
 				3079D8B01E828F4200D3DD4D /* lock1.png in Resources */,
@@ -678,8 +678,8 @@
 				0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */,
 				0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */,
 				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
-				30FA4A641E829DF4006728E8 /* menu@3x.png in Resources */,
-				30FA4A631E829DF4006728E8 /* menu@2x.png in Resources */,
+				30D6B3C31E83A8C900070D56 /* menu@3x.png in Resources */,
+				30D6B3C21E83A8C900070D56 /* menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
