@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController {
+class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var txtUserName: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -24,6 +24,10 @@ class RegistrationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtPassword.delegate = self
+        txtUserName.delegate = self
+        txtEmail.delegate = self
+        txtConfirmPwd.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,7 +43,6 @@ class RegistrationVC: UIViewController {
     
     func setLayout() {
         self.navigationController?.navigationBar.isHidden = true
-
         txtUserName.backgroundColor = UIColor.white
         txtPassword.backgroundColor = UIColor.white
         txtConfirmPwd.backgroundColor = UIColor.white
@@ -51,9 +54,22 @@ class RegistrationVC: UIViewController {
         lblAlreadyAccount.font = appFont(size: AppFont.normalFontSize)
         lblTitle.font = appFont(size: AppFont.titleFontSize)
         viewTop.backgroundColor = AppColor.theamColor
-
+        
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtUserName{
+            txtPassword.becomeFirstResponder()
+        }else if textField == txtPassword{
+            txtConfirmPwd.becomeFirstResponder()
+        }else if textField == txtConfirmPwd{
+            txtEmail.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
+        return true
     }
     
     // MARK: Outlet Actions

@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum KLogin: String{
+    case kUserName = "UserName",
+    kPassword = "Password",
+    kRemember = "Remember"
+}
+
 class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var txtUserName: UITextField!
@@ -34,6 +40,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         setLayout()
+        let defaults = UserDefaults()
+        guard let isRemember = defaults.object(forKey: KLogin.kRemember.rawValue) else {
+            return
+        }
+        self.isRemember = isRemember as! Bool
+        guard let username = defaults.object(forKey: KLogin.kUserName.rawValue), let password = defaults.object(forKey: KLogin.kPassword.rawValue) else {
+            return
+        }
+        self.txtUserName.text = username as? String
+        self.txtPassword.text = password as? String
+        (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
     }
     
     override func viewDidLayoutSubviews() {
@@ -47,6 +64,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     // MARK: Interface design
     
     func setLayout() {
+        self.txtUserName.text = ""
+        self.txtPassword.text = ""
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         txtUserName.backgroundColor = UIColor.white
@@ -64,7 +83,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         lblTitle.font = appFont(size: AppFont.titleFontSize)
         (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
     }
- 
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtUserName{
+            txtPassword.becomeFirstResponder()
+        }else{
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
     // MARK: Outlet Action
     
     @IBAction func handleBtnSignIn(_ sender: UIButton) {
@@ -78,6 +106,18 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }else if(!isValidPassword(strPassword: txtPassword.text!)){
             showAlertView(title: "Message", message: "Password must contain atleast 8 characters.", view: self)
         }else{
+            let username = txtUserName.text!.trimmingCharacters(in: .whitespaces)
+            let password = txtPassword.text!.trimmingCharacters(in: .whitespaces)
+            let defaults = UserDefaults()
+            if btnRemember.is_Selected(){
+                defaults.set(username, forKey: KLogin.kUserName.rawValue)
+                defaults.set(password, forKey: KLogin.kPassword.rawValue)
+                defaults.set(true, forKey: KLogin.kRemember.rawValue)
+            }else{
+                defaults.removeObject(forKey: KLogin.kRemember.rawValue)
+                defaults.removeObject(forKey: KLogin.kUserName.rawValue)
+                defaults.removeObject(forKey: KLogin.kPassword.rawValue)
+            }
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

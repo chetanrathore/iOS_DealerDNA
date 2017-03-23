@@ -44,6 +44,12 @@
 		0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */; };
 		0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AA1E815B7F0079F9A3 /* email.png */; };
 		0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */; };
+		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
+		0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */; };
+		0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */; };
+		0CF6971D1E82AF4E00F867FA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697151E82AF4E00F867FA /* AFURLRequestSerialization.m */; };
+		0CF6971E1E82AF4E00F867FA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697171E82AF4E00F867FA /* AFURLResponseSerialization.m */; };
+		0CF6971F1E82AF4E00F867FA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697191E82AF4E00F867FA /* AFURLSessionManager.m */; };
 		3079D8871E8268B700D3DD4D /* homeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8851E8268B700D3DD4D /* homeScreenCell.swift */; };
 		3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8861E8268B700D3DD4D /* homeScreenCell.xib */; };
 		3079D88F1E82796800D3DD4D /* InventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D88D1E82796800D3DD4D /* InventoryVC.swift */; };
@@ -134,6 +140,20 @@
 		0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedCheckbox.png; sourceTree = "<group>"; };
 		0C69D9AA1E815B7F0079F9A3 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		0CF6970D1E82AF4E00F867FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		0CF6970F1E82AF4E00F867FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		0CF697101E82AF4E00F867FA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		0CF697121E82AF4E00F867FA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		0CF697141E82AF4E00F867FA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		0CF697151E82AF4E00F867FA /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		0CF697161E82AF4E00F867FA /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		0CF697171E82AF4E00F867FA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		0CF697181E82AF4E00F867FA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		0CF697191E82AF4E00F867FA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		0CF697341E82B1F100F867FA /* DealerDNA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DealerDNA-Bridging-Header.h"; sourceTree = "<group>"; };
 		164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealerDNAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F87BCF3E820AE74F78C4246 /* Pods-DealerDNATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests.release.xcconfig"; sourceTree = "<group>"; };
 		3079D8851E8268B700D3DD4D /* homeScreenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homeScreenCell.swift; sourceTree = "<group>"; };
@@ -294,6 +314,7 @@
 				0C69D95F1E811C720079F9A3 /* LaunchScreen.storyboard */,
 				0C69D9621E811C720079F9A3 /* Info.plist */,
 				0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */,
+				0CF697341E82B1F100F867FA /* DealerDNA-Bridging-Header.h */,
 			);
 			path = DealerDNA;
 			sourceTree = "<group>";
@@ -319,6 +340,7 @@
 		0C69D9841E811CE30079F9A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CF6970C1E82AF4E00F867FA /* AFNetworking */,
 				0C17D61F1E826F360055CAE7 /* IQKeyboardManagerSwift */,
 			);
 			name = Frameworks;
@@ -418,6 +440,26 @@
 				0C69D9A41E81444B0079F9A3 /* CheckBoxButton.swift */,
 			);
 			name = CustomControl;
+			sourceTree = "<group>";
+		};
+		0CF6970C1E82AF4E00F867FA /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0CF6970D1E82AF4E00F867FA /* AFHTTPSessionManager.h */,
+				0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */,
+				0CF6970F1E82AF4E00F867FA /* AFNetworking.h */,
+				0CF697101E82AF4E00F867FA /* AFNetworkReachabilityManager.h */,
+				0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */,
+				0CF697121E82AF4E00F867FA /* AFSecurityPolicy.h */,
+				0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */,
+				0CF697141E82AF4E00F867FA /* AFURLRequestSerialization.h */,
+				0CF697151E82AF4E00F867FA /* AFURLRequestSerialization.m */,
+				0CF697161E82AF4E00F867FA /* AFURLResponseSerialization.h */,
+				0CF697171E82AF4E00F867FA /* AFURLResponseSerialization.m */,
+				0CF697181E82AF4E00F867FA /* AFURLSessionManager.h */,
+				0CF697191E82AF4E00F867FA /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		3079D8891E8278DE00D3DD4D /* Settings */ = {
@@ -796,21 +838,27 @@
 				0C69D99D1E813CBA0079F9A3 /* RegistrationVC.swift in Sources */,
 				0C17D6431E826F360055CAE7 /* IQPreviousNextView.swift in Sources */,
 				0C17D6441E826F360055CAE7 /* IQTitleBarButtonItem.swift in Sources */,
+				0CF6971D1E82AF4E00F867FA /* AFURLRequestSerialization.m in Sources */,
 				0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */,
 				0C17D63E1E826F360055CAE7 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0C17D6381E826F360055CAE7 /* IQUIScrollView+Additions.swift in Sources */,
+				0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */,
 				0C17D63A1E826F360055CAE7 /* IQUIView+Hierarchy.swift in Sources */,
+				0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */,
 				0C17D6451E826F360055CAE7 /* IQToolbar.swift in Sources */,
 				0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */,
 				0C17D63B1E826F360055CAE7 /* IQUIViewController+Additions.swift in Sources */,
 				0C17D6401E826F360055CAE7 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				0C17D6391E826F360055CAE7 /* IQUITextFieldView+Additions.swift in Sources */,
+				0CF6971F1E82AF4E00F867FA /* AFURLSessionManager.m in Sources */,
 				0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */,
 				3079D8A41E827D5B00D3DD4D /* DrawerVC.swift in Sources */,
 				0C69D9A51E81444B0079F9A3 /* CheckBoxButton.swift in Sources */,
 				0C17D63F1E826F360055CAE7 /* IQKeyboardManager.swift in Sources */,
+				0CF6971E1E82AF4E00F867FA /* AFURLResponseSerialization.m in Sources */,
 				0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */,
+				0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */,
 				0C17D6421E826F360055CAE7 /* IQBarButtonItem.swift in Sources */,
 				3079D88F1E82796800D3DD4D /* InventoryVC.swift in Sources */,
 				0C69D98F1E811E200079F9A3 /* Constants.swift in Sources */,
@@ -967,6 +1015,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.DealerDNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -981,6 +1030,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.DealerDNA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
