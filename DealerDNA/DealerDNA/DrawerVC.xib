@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,46 +20,49 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-Yg-orw">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-Yg-orw">
+                    <rect key="frame" x="0.0" y="200" width="320" height="280"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkU-AZ-7RI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-aQ-I7R">
+                            <rect key="frame" x="16" y="164" width="279" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkR-HA-7RG">
+                            <rect key="frame" x="105" y="51" width="100" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="user.png"/>
+                            <connections>
+                                <action selector="handleBtnProfile:" destination="-1" eventType="touchUpInside" id="DVA-o1-HKT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="asK-o7-O1F"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="s2k-Yg-orw" secondAttribute="bottom" id="B1c-Hj-7js"/>
-                <constraint firstAttribute="trailing" secondItem="s2k-Yg-orw" secondAttribute="trailing" id="Gtu-x1-GN4"/>
-                <constraint firstItem="s2k-Yg-orw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="do9-EY-ZBd"/>
-                <constraint firstItem="s2k-Yg-orw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fkf-4P-lJ2"/>
+                <constraint firstItem="s2k-Yg-orw" firstAttribute="top" secondItem="gkU-AZ-7RI" secondAttribute="bottom" id="0Cg-sc-Bh9"/>
+                <constraint firstAttribute="trailing" secondItem="s2k-Yg-orw" secondAttribute="trailing" id="3dp-cv-O4n"/>
+                <constraint firstAttribute="trailing" secondItem="gkU-AZ-7RI" secondAttribute="trailing" id="HVZ-CR-jtk"/>
+                <constraint firstAttribute="bottom" secondItem="s2k-Yg-orw" secondAttribute="bottom" id="UYf-Vo-mgO"/>
+                <constraint firstItem="gkU-AZ-7RI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iwH-YL-sVI"/>
+                <constraint firstItem="gkU-AZ-7RI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="n9M-kd-J5s"/>
+                <constraint firstItem="s2k-Yg-orw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t1K-9x-vFq"/>
             </constraints>
-            <point key="canvasLocation" x="25.5" y="52.5"/>
-        </view>
-        <view contentMode="scaleToFill" id="gkU-AZ-7RI">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
-            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-aQ-I7R">
-                    <rect key="frame" x="16" y="164" width="279" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkR-HA-7RG">
-                    <rect key="frame" x="105" y="51" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="user.png"/>
-                    <connections>
-                        <action selector="handleBtnProfile:" destination="-1" eventType="touchUpInside" id="DVA-o1-HKT"/>
-                    </connections>
-                </button>
-            </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-495" y="-60"/>
+            <point key="canvasLocation" x="-457" y="27"/>
         </view>
     </objects>
     <resources>
