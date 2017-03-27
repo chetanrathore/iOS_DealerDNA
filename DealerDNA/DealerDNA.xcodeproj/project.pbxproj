@@ -25,6 +25,14 @@
 		0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */; };
 		0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C21E8261E8269DF00DEC621 /* Extensions.swift */; };
+		0C3730631E83C16D00D684E3 /* InventoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730611E83C16D00D684E3 /* InventoryListCell.swift */; };
+		0C3730641E83C16D00D684E3 /* InventoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3730621E83C16D00D684E3 /* InventoryListCell.xib */; };
+		0C3730671E83CECE00D684E3 /* AddInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730651E83CECE00D684E3 /* AddInventoryVC.swift */; };
+		0C3730681E83CECE00D684E3 /* AddInventoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3730661E83CECE00D684E3 /* AddInventoryVC.xib */; };
+		0C37306B1E83D09900D684E3 /* InventoryDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730691E83D09900D684E3 /* InventoryDetailVC.swift */; };
+		0C37306C1E83D09900D684E3 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */; };
+		0C37306E1E83D2CA00D684E3 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306D1E83D2CA00D684E3 /* left-arrow.png */; };
+		0C3730701E83F00C00D684E3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306F1E83F00C00D684E3 /* left.png */; };
 		0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9531E811C720079F9A3 /* AppDelegate.swift */; };
 		0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */; };
 		0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D95D1E811C720079F9A3 /* Assets.xcassets */; };
@@ -44,6 +52,16 @@
 		0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */; };
 		0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AA1E815B7F0079F9A3 /* email.png */; };
 		0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */; };
+		0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE052FB1E84E888003ADF91 /* RadioButton.swift */; };
+		0CE053011E84E8AE003ADF91 /* R_C.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FD1E84E8AE003ADF91 /* R_C.png */; };
+		0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */; };
+		0CE053031E84E8AE003ADF91 /* R_U_C.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FF1E84E8AE003ADF91 /* R_U_C.png */; };
+		0CE053041E84E8AE003ADF91 /* R_U_C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE053001E84E8AE003ADF91 /* R_U_C@2x.png */; };
+		0CE053081E8518F4003ADF91 /* MainDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE053061E8518F4003ADF91 /* MainDashboardVC.swift */; };
+		0CE053091E8518F4003ADF91 /* MainDashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CE053071E8518F4003ADF91 /* MainDashboardVC.xib */; };
+		0CE053101E852994003ADF91 /* bike1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CE0530F1E852994003ADF91 /* bike1.jpg */; };
+		0CE053121E852A13003ADF91 /* bike2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CE053111E852A13003ADF91 /* bike2.jpg */; };
+		0CE053141E8534C2003ADF91 /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE053131E8534C2003ADF91 /* CustomNavigationBar.swift */; };
 		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
 		0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */; };
 		0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */; };
@@ -115,6 +133,14 @@
 		0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		0C21E8261E8269DF00DEC621 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C3730611E83C16D00D684E3 /* InventoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListCell.swift; sourceTree = "<group>"; };
+		0C3730621E83C16D00D684E3 /* InventoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryListCell.xib; sourceTree = "<group>"; };
+		0C3730651E83CECE00D684E3 /* AddInventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryVC.swift; sourceTree = "<group>"; };
+		0C3730661E83CECE00D684E3 /* AddInventoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddInventoryVC.xib; sourceTree = "<group>"; };
+		0C3730691E83D09900D684E3 /* InventoryDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryDetailVC.swift; sourceTree = "<group>"; };
+		0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
+		0C37306D1E83D2CA00D684E3 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
+		0C37306F1E83F00C00D684E3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		0C69D9501E811C720079F9A3 /* DealerDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealerDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69D9531E811C720079F9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C69D95B1E811C720079F9A3 /* DealerDNA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DealerDNA.xcdatamodel; sourceTree = "<group>"; };
@@ -140,6 +166,16 @@
 		0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedCheckbox.png; sourceTree = "<group>"; };
 		0C69D9AA1E815B7F0079F9A3 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		0CE052FB1E84E888003ADF91 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		0CE052FD1E84E8AE003ADF91 /* R_C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_C.png; sourceTree = "<group>"; };
+		0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R_C@2x.png"; sourceTree = "<group>"; };
+		0CE052FF1E84E8AE003ADF91 /* R_U_C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_U_C.png; sourceTree = "<group>"; };
+		0CE053001E84E8AE003ADF91 /* R_U_C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R_U_C@2x.png"; sourceTree = "<group>"; };
+		0CE053061E8518F4003ADF91 /* MainDashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDashboardVC.swift; sourceTree = "<group>"; };
+		0CE053071E8518F4003ADF91 /* MainDashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDashboardVC.xib; sourceTree = "<group>"; };
+		0CE0530F1E852994003ADF91 /* bike1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike1.jpg; sourceTree = "<group>"; };
+		0CE053111E852A13003ADF91 /* bike2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike2.jpg; sourceTree = "<group>"; };
+		0CE053131E8534C2003ADF91 /* CustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		0CF6970D1E82AF4E00F867FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		0CF6970F1E82AF4E00F867FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -349,6 +385,7 @@
 		0C69D9851E811CFC0079F9A3 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				0CE053051E8518C0003ADF91 /* WorkFlow */,
 				0C69D98D1E811DFE0079F9A3 /* CustomCells */,
 				0C69D98C1E811DE50079F9A3 /* ViewControllers */,
 				0C69D98B1E811DDD0079F9A3 /* Models */,
@@ -367,6 +404,14 @@
 		0C69D9871E811D140079F9A3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0CE053111E852A13003ADF91 /* bike2.jpg */,
+				0CE0530F1E852994003ADF91 /* bike1.jpg */,
+				0CE052FD1E84E8AE003ADF91 /* R_C.png */,
+				0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */,
+				0CE052FF1E84E8AE003ADF91 /* R_U_C.png */,
+				0CE053001E84E8AE003ADF91 /* R_U_C@2x.png */,
+				0C37306F1E83F00C00D684E3 /* left.png */,
+				0C37306D1E83D2CA00D684E3 /* left-arrow.png */,
 				30D6B3BE1E83A8C900070D56 /* menu.png */,
 				30D6B3BF1E83A8C900070D56 /* menu@2x.png */,
 				30D6B3C01E83A8C900070D56 /* menu@3x.png */,
@@ -417,6 +462,8 @@
 				3079D8861E8268B700D3DD4D /* homeScreenCell.xib */,
 				3079D8A61E827EC300D3DD4D /* drawerCell.swift */,
 				3079D8A71E827EC300D3DD4D /* drawerCell.xib */,
+				0C3730611E83C16D00D684E3 /* InventoryListCell.swift */,
+				0C3730621E83C16D00D684E3 /* InventoryListCell.xib */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -438,8 +485,19 @@
 			isa = PBXGroup;
 			children = (
 				0C69D9A41E81444B0079F9A3 /* CheckBoxButton.swift */,
+				0CE052FB1E84E888003ADF91 /* RadioButton.swift */,
+				0CE053131E8534C2003ADF91 /* CustomNavigationBar.swift */,
 			);
 			name = CustomControl;
+			sourceTree = "<group>";
+		};
+		0CE053051E8518C0003ADF91 /* WorkFlow */ = {
+			isa = PBXGroup;
+			children = (
+				0CE053061E8518F4003ADF91 /* MainDashboardVC.swift */,
+				0CE053071E8518F4003ADF91 /* MainDashboardVC.xib */,
+			);
+			name = WorkFlow;
 			sourceTree = "<group>";
 		};
 		0CF6970C1E82AF4E00F867FA /* AFNetworking */ = {
@@ -487,6 +545,10 @@
 			children = (
 				3079D88D1E82796800D3DD4D /* InventoryVC.swift */,
 				3079D88E1E82796800D3DD4D /* InventoryVC.xib */,
+				0C3730651E83CECE00D684E3 /* AddInventoryVC.swift */,
+				0C3730661E83CECE00D684E3 /* AddInventoryVC.xib */,
+				0C3730691E83D09900D684E3 /* InventoryDetailVC.swift */,
+				0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -617,15 +679,18 @@
 				TargetAttributes = {
 					0C69D94F1E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y55EBSG532;
 						ProvisioningStyle = Manual;
 					};
 					0C69D9661E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y55EBSG532;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C69D94F1E811C720079F9A3;
 					};
 					0C69D9711E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y55EBSG532;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C69D94F1E811C720079F9A3;
 					};
@@ -660,22 +725,34 @@
 				0C69D99A1E8132970079F9A3 /* user.png in Resources */,
 				0C69D99E1E813CBA0079F9A3 /* RegistrationVC.xib in Resources */,
 				0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */,
+				0CE053031E84E8AE003ADF91 /* R_U_C.png in Resources */,
+				0CE053101E852994003ADF91 /* bike1.jpg in Resources */,
 				0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */,
+				0C3730701E83F00C00D684E3 /* left.png in Resources */,
+				0CE053011E84E8AE003ADF91 /* R_C.png in Resources */,
 				3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */,
 				3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */,
 				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
+				0C37306E1E83D2CA00D684E3 /* left-arrow.png in Resources */,
+				0CE053091E8518F4003ADF91 /* MainDashboardVC.xib in Resources */,
 				30D6B3C11E83A8C900070D56 /* menu.png in Resources */,
 				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
 				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
 				3079D8B01E828F4200D3DD4D /* lock1.png in Resources */,
+				0C3730641E83C16D00D684E3 /* InventoryListCell.xib in Resources */,
 				0C69D9A71E8145040079F9A3 /* CheckedCheckbox.png in Resources */,
 				3079D8A91E827EC300D3DD4D /* drawerCell.xib in Resources */,
+				0C37306C1E83D09900D684E3 /* InventoryDetailVC.xib in Resources */,
 				0C69D9981E8128F90079F9A3 /* HomeVC.xib in Resources */,
 				0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */,
 				3079D8901E82796800D3DD4D /* InventoryVC.xib in Resources */,
 				3079D89C1E8279AB00D3DD4D /* DLScanVC.xib in Resources */,
 				0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */,
+				0CE053041E84E8AE003ADF91 /* R_U_C@2x.png in Resources */,
 				0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */,
+				0CE053121E852A13003ADF91 /* bike2.jpg in Resources */,
+				0C3730681E83CECE00D684E3 /* AddInventoryVC.xib in Resources */,
+				0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */,
 				0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */,
 				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
 				30D6B3C31E83A8C900070D56 /* menu@3x.png in Resources */,
@@ -841,12 +918,17 @@
 				0CF6971D1E82AF4E00F867FA /* AFURLRequestSerialization.m in Sources */,
 				0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */,
 				0C17D63E1E826F360055CAE7 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				0CE053081E8518F4003ADF91 /* MainDashboardVC.swift in Sources */,
 				0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0C17D6381E826F360055CAE7 /* IQUIScrollView+Additions.swift in Sources */,
 				0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */,
+				0C3730671E83CECE00D684E3 /* AddInventoryVC.swift in Sources */,
 				0C17D63A1E826F360055CAE7 /* IQUIView+Hierarchy.swift in Sources */,
+				0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */,
 				0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */,
+				0C37306B1E83D09900D684E3 /* InventoryDetailVC.swift in Sources */,
 				0C17D6451E826F360055CAE7 /* IQToolbar.swift in Sources */,
+				0C3730631E83C16D00D684E3 /* InventoryListCell.swift in Sources */,
 				0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */,
 				0C17D63B1E826F360055CAE7 /* IQUIViewController+Additions.swift in Sources */,
 				0C17D6401E826F360055CAE7 /* IQKeyboardReturnKeyHandler.swift in Sources */,
@@ -861,6 +943,7 @@
 				0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */,
 				0C17D6421E826F360055CAE7 /* IQBarButtonItem.swift in Sources */,
 				3079D88F1E82796800D3DD4D /* InventoryVC.swift in Sources */,
+				0CE053141E8534C2003ADF91 /* CustomNavigationBar.swift in Sources */,
 				0C69D98F1E811E200079F9A3 /* Constants.swift in Sources */,
 				0C17D6371E826F360055CAE7 /* IQNSArray+Sort.swift in Sources */,
 				0C17D63D1E826F360055CAE7 /* IQKeyboardManagerConstants.swift in Sources */,
@@ -933,9 +1016,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -955,6 +1040,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -983,9 +1069,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -998,6 +1086,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1010,13 +1099,19 @@
 			baseConfigurationReference = 8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.DealerDNA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1025,13 +1120,19 @@
 			baseConfigurationReference = BAD57BA974F68C078163FA10 /* Pods-DealerDNA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanet.DealerDNA;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
 				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

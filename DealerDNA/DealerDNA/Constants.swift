@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+var appDelegate: AppDelegate{
+    struct Singleton{
+        static let instance = AppDelegate()
+    }
+    return Singleton.instance
+}
+
 struct Constants{
     
     struct AppUrl {
@@ -40,8 +47,8 @@ struct AppColor {
 
 struct Screen {
     static let device = UIDevice.current.userInterfaceIdiom
-    static let screenWidth = UIScreen.main.bounds.width
-    static let screenHeight = UIScreen.main.bounds.height
+    static var screenWidth = UIScreen.main.bounds.width
+    static var screenHeight = UIScreen.main.bounds.height
 }
 
 // MARK: Validations
@@ -58,8 +65,12 @@ func isValidPassword(strPassword : String) -> Bool{
 }
 
 func appFont(size: CGFloat = AppFont.normalFontSize) -> UIFont{
-    let font = UIFont(name: AppFont.fontName, size: size)!
+    var font = UIFont(name: AppFont.fontName, size: size)!
+    if size == AppFont.titleFontSize{
+        font = UIFont.boldSystemFont(ofSize: AppFont.titleFontSize)
+    }
     return font
+    
 }
 
 func showAlertView(title: String, message: String, cancelButtonTitle: String = "Ok",view: UIViewController) {
