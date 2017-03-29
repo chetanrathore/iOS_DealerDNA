@@ -41,8 +41,8 @@ struct AppFont {
 
 struct AppColor {
     static let textFieldColor = UIColor.white
-    static let theamColor = UIColor(colorLiteralRed: 110/255, green: 168/255, blue: 20/255, alpha: 1)
-    
+    static let theamColor = UIColor(colorLiteralRed: 129/255, green: 183/255, blue: 26/255, alpha: 1)
+    static let theamDarkColor = UIColor(colorLiteralRed: 107/255, green: 152/255, blue: 22/255, alpha: 1)
 }
 
 struct Screen {
