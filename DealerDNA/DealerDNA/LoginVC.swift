@@ -11,11 +11,13 @@ import UIKit
 enum KLogin: String{
     case kUserName = "UserName",
     kPassword = "Password",
+    kPhoneNo = "PhoneNo",
     kRemember = "Remember"
 }
 
 class LoginVC: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var txtAutomotiveGroup: TextField!
     @IBOutlet var txtUserName: UITextField!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var btnRemember: CheckBoxButton!
@@ -23,15 +25,19 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var btnForgotPwd: UIButton!
     @IBOutlet var btnSignUp: UIButton!
     @IBOutlet var viewTop: UIView!
+    @IBOutlet var viewHeaderBottom: UIView!
     var isRemember: Bool = false
     @IBOutlet var btnRememberMe: UIButton!
     @IBOutlet var lblNeedAccount: UILabel!
     @IBOutlet var lblTitle: UILabel!
+    @IBOutlet var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         txtUserName.delegate = self
         txtPassword.delegate = self
+        txtAutomotiveGroup.delegate = self
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,9 +51,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             return
         }
         self.isRemember = isRemember as! Bool
-        guard let username = defaults.object(forKey: KLogin.kUserName.rawValue), let password = defaults.object(forKey: KLogin.kPassword.rawValue) else {
+        guard let username = defaults.object(forKey: KLogin.kUserName.rawValue), let password = defaults.object(forKey: KLogin.kPassword.rawValue), let phoneNo = defaults.object(forKey: KLogin.kPhoneNo.rawValue) else {
             return
         }
+        self.txtAutomotiveGroup.text = phoneNo as? String
         self.txtUserName.text = username as? String
         self.txtPassword.text = password as? String
         (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
@@ -64,28 +71,36 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     // MARK: Interface design
     
     func setLayout() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.view.backgroundColor = AppColor.theamColor
         self.txtUserName.text = ""
         self.txtPassword.text = ""
+        self.txtAutomotiveGroup.text = ""
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         txtUserName.backgroundColor = UIColor.white
         txtPassword.backgroundColor = UIColor.white
+        txtAutomotiveGroup.backgroundColor = UIColor.white
         btnRemember.tintColor = AppColor.theamColor
         btnSignIn.backgroundColor = AppColor.theamColor
         btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize)
-        btnSignIn.layer.cornerRadius = 5
+        btnSignIn.layer.cornerRadius = 3
         viewTop.backgroundColor = AppColor.theamColor
+        viewHeaderBottom.backgroundColor = AppColor.theamDarkColor
         txtUserName.font = appFont(size: AppFont.txtFontSize)
         txtPassword.font = appFont(size: AppFont.txtFontSize)
+        txtAutomotiveGroup.font = appFont(size: AppFont.txtFontSize)
         btnSignUp.titleLabel?.font = appFont(size: AppFont.normalFontSize)
         btnSignUp.setTitleColor(AppColor.theamColor, for: .normal)
         lblNeedAccount.font = appFont(size: AppFont.normalFontSize)
-        lblTitle.font = appFont(size: AppFont.titleFontSize)
         (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
+        txtAutomotiveGroup.addTarget(self, action: #selector(textChange), for: .editingChanged)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == txtUserName{
+        if textField == txtAutomotiveGroup{
+            txtUserName.becomeFirstResponder()
+        }else if textField == txtUserName{
             txtPassword.becomeFirstResponder()
         }else{
             textField.resignFirstResponder()
@@ -93,12 +108,48 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func textChange(_ textField: UITextField) {
+        let txt = textField.text!.trimmingCharacters(in: .whitespaces)
+        formatNumber(phoneNo: txt)
+    }
+    
+    func formatNumber(phoneNo: String){
+        let regex = try? NSRegularExpression(pattern: "[\\s-\\(\\)]", options: .caseInsensitive)
+        let phoneno = regex?.stringByReplacingMatches(in: phoneNo, options: [], range: NSRange(location: 0, length: phoneNo.characters.count), withTemplate: "")
+        var num = phoneno!
+        if num.characters.count > 10 {
+            let strIndex = num.index(num.startIndex, offsetBy: 10)
+            let num = num.substring(to: strIndex)
+            let firstthree: String = (num as NSString).substring(with: NSRange(location: 0, length: 3))
+            let secondthree: String = (num as NSString).substring(with: NSRange(location: 3, length: 3))
+            let last: String = (num as NSString).substring(with: NSRange(location: 6, length: num.characters.count - 6))
+            let str1 = "(" + firstthree + ") " + secondthree + "-" + last
+            self.txtAutomotiveGroup.text = str1
+        }else if num.characters.count >= 7{
+            let firstthree: String = (num as NSString).substring(with: NSRange(location: 0, length: 3))
+            let secondthree: String = (num as NSString).substring(with: NSRange(location: 3, length: 3))
+            let last: String = (num as NSString).substring(with: NSRange(location: 6, length: num.characters.count - 6))
+            let str1 = "(" + firstthree + ") " + secondthree + "-" + last
+            self.txtAutomotiveGroup.text = str1
+        }else if num.characters.count >= 4{
+            let firstthree: String = (num as NSString).substring(with: NSRange(location: 0, length: 3))
+            let secondthree: String = (num as NSString).substring(with: NSRange(location: 3, length: num.characters.count - 3))
+            let str1 = "(" + firstthree + ") " + secondthree
+            self.txtAutomotiveGroup.text = str1
+        }
+    }
+    
     // MARK: Outlet Action
     
     @IBAction func handleBtnSignIn(_ sender: UIButton) {
         hideKeyboard()
-        if txtUserName.isEmpty() && txtPassword.isEmpty(){
+        
+        let regex = try? NSRegularExpression(pattern: "[\\s-\\(\\)]", options: .caseInsensitive)
+        let phoneno = regex?.stringByReplacingMatches(in: self.txtAutomotiveGroup.text!, options: [], range: NSRange(location: 0, length: self.txtAutomotiveGroup.text!.characters.count), withTemplate: "")
+        if txtAutomotiveGroup.isEmpty() && txtUserName.isEmpty() && txtPassword.isEmpty(){
             showAlertView(title: "Message", message: "Username and password are required.", view: self)
+        }else if phoneno?.characters.count != 10{
+            showAlertView(title: "Message", message: "Phone number is invalid.", view: self)
         }else if(txtUserName.isEmpty()){
             showAlertView(title: "Message", message: "Username is required.", view: self)
         }else if(txtPassword.isEmpty()){
@@ -108,12 +159,15 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }else{
             let username = txtUserName.text!.trimmingCharacters(in: .whitespaces)
             let password = txtPassword.text!.trimmingCharacters(in: .whitespaces)
+            let phoneNo = txtAutomotiveGroup.text!.trimmingCharacters(in: .whitespaces)
             let defaults = UserDefaults()
             if btnRemember.is_Selected(){
+                defaults.set(phoneNo, forKey: KLogin.kPhoneNo.rawValue)
                 defaults.set(username, forKey: KLogin.kUserName.rawValue)
                 defaults.set(password, forKey: KLogin.kPassword.rawValue)
                 defaults.set(true, forKey: KLogin.kRemember.rawValue)
             }else{
+                defaults.removeObject(forKey: KLogin.kPhoneNo.rawValue)
                 defaults.removeObject(forKey: KLogin.kRemember.rawValue)
                 defaults.removeObject(forKey: KLogin.kUserName.rawValue)
                 defaults.removeObject(forKey: KLogin.kPassword.rawValue)
@@ -152,6 +206,9 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     // MARK: Custom Methods
     func hideKeyboard(){
+        if txtAutomotiveGroup.isFirstResponder{
+            txtAutomotiveGroup.resignFirstResponder()
+        }
         if txtUserName.isFirstResponder{
             txtUserName.resignFirstResponder()
         }

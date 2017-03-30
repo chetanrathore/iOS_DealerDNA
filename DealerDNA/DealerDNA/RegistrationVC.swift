@@ -10,6 +10,8 @@ import UIKit
 
 class RegistrationVC: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var txtAutomotiveGroup: TextField!
+    @IBOutlet var txtDealerShipName: TextField!
     @IBOutlet var txtUserName: UITextField!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var txtConfirmPwd: UITextField!
@@ -17,6 +19,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var btnSignUp: UIButton!
     @IBOutlet var btnSignIn: UIButton!
     @IBOutlet var viewTop: UIView!
+    @IBOutlet var viewHeaderBottom: UIView!
     
     @IBOutlet var lblTitle: UILabel!
     
@@ -43,17 +46,19 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     func setLayout() {
         self.navigationController?.navigationBar.isHidden = true
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.view.backgroundColor = AppColor.theamColor
         txtUserName.backgroundColor = UIColor.white
         txtPassword.backgroundColor = UIColor.white
         txtConfirmPwd.backgroundColor = UIColor.white
         txtEmail.backgroundColor = UIColor.white
         btnSignUp.backgroundColor = AppColor.theamColor
-        btnSignUp.layer.cornerRadius = 5
+        btnSignUp.layer.cornerRadius = 3
         btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize)
         btnSignIn.setTitleColor(AppColor.theamColor, for: .normal)
         lblAlreadyAccount.font = appFont(size: AppFont.normalFontSize)
-        lblTitle.font = appFont(size: AppFont.titleFontSize)
-        viewTop.backgroundColor = AppColor.theamColor
+      //  lblTitle.font = appFont(size: AppFont.titleFontSize)
+     //   viewTop.backgroundColor = AppColor.theamColor
         
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
