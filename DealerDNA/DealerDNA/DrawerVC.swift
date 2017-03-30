@@ -10,15 +10,17 @@ import UIKit
 
 class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var vwTop: UIView!
     @IBOutlet var vwProfile: UIView!
+    @IBOutlet var vwProfileDetail: UIView!
     @IBOutlet var tblDrawer: UITableView!
     @IBOutlet var lbUserName: UILabel!
-    var arr = ["Home" , "DLScan" , "Inventory" , "Customers" , "Settings" , "Log Out"]
-    
+    @IBOutlet var lblPosition: UILabel!
     @IBOutlet var btnProfile: UIButton!
+    var arr = ["Home" , "DLScan" , "Inventory" , "Customers" , "Settings" , "LogOut"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tblDrawer.delegate = self
         tblDrawer.dataSource = self
         tblDrawer.register(UINib(nibName: "drawerCell", bundle: nil), forCellReuseIdentifier: "drawerCell")
@@ -27,16 +29,26 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-//        tblDrawer.tableHeaderView = vwProfile
+        //        tblDrawer.tableHeaderView = vwProfile
+        
+        self.view.backgroundColor = AppColor.sideBarColor
     }
     
     override func viewDidLayoutSubviews() {
-        let newWidth = (vwProfile.frame.size.width*77)/100
-        print(newWidth)
-        btnProfile.frame = CGRect(x: (newWidth/2)-50, y: (vwProfile.frame.size.height/2)-50, width: 100, height: 100)
-        btnProfile.backgroundColor = UIColor.black
-        btnProfile.layer.cornerRadius = 50
-        lbUserName.frame = CGRect(x: 10, y: btnProfile.frame.origin.y+btnProfile.frame.size.height+10, width: newWidth-20, height: 30)
+        //        let newWidth = (vwProfile.frame.size.width*77)/100
+        //        print(newWidth)
+        //    btnProfile.frame = CGRect(x: (newWidth/2)-50, y: (vwProfile.frame.size.height/2)-50, width: 100, height: 100)
+        //        btnProfile.backgroundColor = UIColor.black
+        //        btnProfile.layer.cornerRadius = btnProfile.bounds.width/2
+        //  lbUserName.frame = CGRect(x: 10, y: btnProfile.frame.origin.y+btnProfile.frame.size.height+10, width: newWidth-20, height: 30)
+        btnProfile.layer.cornerRadius = btnProfile.bounds.width/2
+        btnProfile.layer.borderWidth = 2
+        btnProfile.layer.borderColor = AppColor.theamColor.cgColor
+        vwTop.backgroundColor = AppColor.theamColor
+        vwProfileDetail.backgroundColor = AppColor.sideBarColor
+        lbUserName.textColor = UIColor.white.withAlphaComponent(0.8)
+        lblPosition.textColor = UIColor.gray
+        
     }
     
     // MARK: - tableView Method(s)
@@ -46,44 +58,60 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        //return arr.count
+        return appDelegate.sideMenuItem.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "drawerCell", for: indexPath) as? drawerCell
-        cell?.lbCell.text = arr[indexPath.row]
+        if indexPath.row == 0{
+            cell?.v1.isHidden = true
+        }
+        if indexPath.row == appDelegate.sideMenuItem.count - 1{
+            cell?.v2.isHidden = true
+        }
+        let str = appDelegate.sideMenuItem.object(at: indexPath.row) as! String
+        if str == appDelegate.selectedMenu{
+            cell?.selectedCell()
+        }else{
+            cell?.otherCell()
+        }
+        cell?.lblMenuTitle.text = str
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let str = appDelegate.sideMenuItem.object(at: indexPath.row) as! String
+        appDelegate.selectedMenu = str
         let cell = tblDrawer.cellForRow(at: indexPath) as! drawerCell
-        if let itemName = cell.lbCell.text{
-            if itemName == "DLScan"{
-                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
-                let nav = UINavigationController(rootViewController: vc)
-                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
-            }else if itemName == "Inventory"{
-                let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
-                let nav = UINavigationController(rootViewController: vc)
-                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
-            }else if itemName == "Customers"{
-                let vc = CustomerListVC(nibName: "CustomerListVC", bundle: nil)
-                let nav = UINavigationController(rootViewController: vc)
-                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
-            }else if itemName == "Settings"{
-                let vc = SettingsVC(nibName: "SettingsVC", bundle: nil)
-                let nav = UINavigationController(rootViewController: vc)
-                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
-            }else if itemName == "Home"{
+        if let itemName = cell.lblMenuTitle.text{
+            if itemName == DashBoardMenu.home{
                 let vc = HomeVC(nibName: "HomeVC", bundle: nil)
                 let nav = UINavigationController(rootViewController: vc)
                 revealSideViewController.popViewController(withNewCenter: nav, animated: true)
-            }else if itemName == "Log Out"{
+            }else if itemName == DashBoardMenu.dlScan{
+                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
+                let nav = UINavigationController(rootViewController: vc)
+                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
+            }else if itemName == DashBoardMenu.inventory{
+                let vc = InventoryVC(nibName: "InventoryVC", bundle: nil)
+                let nav = UINavigationController(rootViewController: vc)
+                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
+            }else if itemName == DashBoardMenu.customer{
+                let vc = CustomerListVC(nibName: "CustomerListVC", bundle: nil)
+                let nav = UINavigationController(rootViewController: vc)
+                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
+            }else if itemName == DashBoardMenu.setting{
+                let vc = SettingsVC(nibName: "SettingsVC", bundle: nil)
+                let nav = UINavigationController(rootViewController: vc)
+                revealSideViewController.popViewController(withNewCenter: nav, animated: true)
+            }else if itemName == DashBoardMenu.logout{
                 if let viewControllers = self.navigationController?.viewControllers{
                     for _ in viewControllers{
                         _ = self.navigationController?.popViewController(animated: false)
                     }
                 }
+                appDelegate.logut()
                 let vc = LoginVC(nibName: "LoginVC", bundle: nil)
                 let nav = UINavigationController(rootViewController: vc)
                 revealSideViewController.popViewController(withNewCenter: nav, animated: false)

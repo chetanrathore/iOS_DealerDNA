@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C08E3071E8CF9E700B9025F /* DashboardConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C08E3061E8CF9E700B9025F /* DashboardConstant.swift */; };
 		0C17D6371E826F360055CAE7 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6211E826F360055CAE7 /* IQNSArray+Sort.swift */; };
 		0C17D6381E826F360055CAE7 /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6221E826F360055CAE7 /* IQUIScrollView+Additions.swift */; };
 		0C17D6391E826F360055CAE7 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6231E826F360055CAE7 /* IQUITextFieldView+Additions.swift */; };
@@ -119,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		0A6B3FF2DFC4F5BE7CA50930 /* Pods-DealerDNATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealerDNATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealerDNATests/Pods-DealerDNATests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C08E3061E8CF9E700B9025F /* DashboardConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardConstant.swift; sourceTree = "<group>"; };
 		0C17D6211E826F360055CAE7 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		0C17D6221E826F360055CAE7 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		0C17D6231E826F360055CAE7 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 			children = (
 				0C69D98E1E811E200079F9A3 /* Constants.swift */,
 				0C21E8261E8269DF00DEC621 /* Extensions.swift */,
+				0C08E3061E8CF9E700B9025F /* DashboardConstant.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -968,6 +971,7 @@
 				0C17D6371E826F360055CAE7 /* IQNSArray+Sort.swift in Sources */,
 				0C17D63D1E826F360055CAE7 /* IQKeyboardManagerConstants.swift in Sources */,
 				0C17D6411E826F360055CAE7 /* IQTextView.swift in Sources */,
+				0C08E3071E8CF9E700B9025F /* DashboardConstant.swift in Sources */,
 				0C17D63C1E826F360055CAE7 /* IQUIWindow+Hierarchy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

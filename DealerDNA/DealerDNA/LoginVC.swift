@@ -32,6 +32,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var imgPhoneIcon: UIImageView!
+    @IBOutlet var imgUserIcon: UIImageView!
+    @IBOutlet var imgPwdIcon: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         txtUserName.delegate = self
@@ -95,6 +99,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         lblNeedAccount.font = appFont(size: AppFont.normalFontSize)
         (self.isRemember) ? btnRemember.did_Selected() : btnRemember.did_UnSelected()
         txtAutomotiveGroup.addTarget(self, action: #selector(textChange), for: .editingChanged)
+        
+        imgUserIcon.setTintColor(color: AppColor.textFieldIcon)
+        imgPwdIcon.setTintColor(color: AppColor.textFieldIcon)
+        imgPhoneIcon.setTintColor(color: AppColor.textFieldIcon)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -137,6 +145,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             let str1 = "(" + firstthree + ") " + secondthree
             self.txtAutomotiveGroup.text = str1
         }
+        
     }
     
     // MARK: Outlet Action
@@ -147,8 +156,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let regex = try? NSRegularExpression(pattern: "[\\s-\\(\\)]", options: .caseInsensitive)
         let phoneno = regex?.stringByReplacingMatches(in: self.txtAutomotiveGroup.text!, options: [], range: NSRange(location: 0, length: self.txtAutomotiveGroup.text!.characters.count), withTemplate: "")
         if txtAutomotiveGroup.isEmpty() && txtUserName.isEmpty() && txtPassword.isEmpty(){
-            showAlertView(title: "Message", message: "Username and password are required.", view: self)
-        }else if phoneno?.characters.count != 10{
+            showAlertView(title: "Message", message: "Please fill in all fields.", view: self)
+        }else if(txtAutomotiveGroup.isEmpty()){
+            showAlertView(title: "Message", message: "Phone number is required.", view: self)
+        }   else if phoneno?.characters.count != 10{
             showAlertView(title: "Message", message: "Phone number is invalid.", view: self)
         }else if(txtUserName.isEmpty()){
             showAlertView(title: "Message", message: "Username is required.", view: self)
@@ -172,6 +183,20 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 defaults.removeObject(forKey: KLogin.kUserName.rawValue)
                 defaults.removeObject(forKey: KLogin.kPassword.rawValue)
             }
+            
+            appDelegate.sideMenuItem.add(DashBoardMenu.home)
+            appDelegate.sideMenuItem.add(DashBoardMenu.dlScan)
+            appDelegate.sideMenuItem.add(DashBoardMenu.inventory)
+            appDelegate.sideMenuItem.add(DashBoardMenu.customer)
+            appDelegate.sideMenuItem.add(DashBoardMenu.setting)
+            appDelegate.sideMenuItem.add(DashBoardMenu.logout)
+            
+            appDelegate.dashBoardTiles.add(DashBoardMenu.home)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.dlScan)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.customer)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.setting)
+            
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }
@@ -202,6 +227,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         let registerVC = RegistrationVC(nibName: "RegistrationVC", bundle: nil)
         self.navigationController?.isContain(view: registerVC)
         self.navigationController?.pushViewController(registerVC, animated: false)
+        //        self.present(registerVC, animated:true, completion: nil)
     }
     
     // MARK: Custom Methods

@@ -35,14 +35,14 @@ class CustomNavigationBar: UIViewController {
         Screen.screenWidth = UIScreen.main.bounds.width
         Screen.screenHeight = UIScreen.main.bounds.height
         
-        let view = UIView(frame: CGRect(x: 0, y: 20, width: Screen.screenWidth, height: 44))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Screen.screenWidth, height: 64))
         view.backgroundColor = AppColor.theamColor
         
         view.autoresizingMask = .flexibleWidth
         let backButton = UIButton()
         switch backBtn {
         case .back:
-            backButton.frame = CGRect(x: 5, y: 5, width: 30, height: 30)
+            backButton.frame = CGRect(x: 5, y: 25, width: 30, height: 30)
             backButton.setImage(UIImage(named: "left.png"), for: .normal)
             backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
@@ -50,13 +50,13 @@ class CustomNavigationBar: UIViewController {
         case .noBack:
             break
         case .menu:
-            backButton.frame = CGRect(x: 5, y: 0, width: 35, height: 44)
+            backButton.frame = CGRect(x: 5, y: 20, width: 35, height: 44)
             backButton.setImage(UIImage(named: "menu.png"), for: .normal)
             backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
             break
         }
-        let label = UILabel(frame: CGRect(x: 40, y: 5, width: Screen.screenWidth - 80, height: 30))
+        let label = UILabel(frame: CGRect(x: 40, y: 25, width: Screen.screenWidth - 80, height: 30))
         label.font = appFont(size: AppFont.titleFontSize)
         label.textColor = UIColor.white
         label.text = title
@@ -66,13 +66,13 @@ class CustomNavigationBar: UIViewController {
         if isRightRequired{
             if rightBtnTitle != nil{
                 let backButton = UIButton()
-                backButton.frame = CGRect(x: Screen.screenWidth - 50, y: 5, width: 50, height: 30)
+                backButton.frame = CGRect(x: Screen.screenWidth - 50, y: 25, width: 50, height: 30)
                 backButton.setTitle(rightBtnTitle!, for: .normal)
                 backButton.addTarget(self, action: #selector(btnRightClick), for: .touchUpInside)
                 view.addSubview(backButton)
             }else if rightButtonImage != nil{
                 let backButton = UIButton()
-                backButton.frame = CGRect(x: 5, y: 5, width: 30, height: 30)
+                backButton.frame = CGRect(x: 5, y: 25, width: 30, height: 30)
                 backButton.setImage(UIImage(named: "menu.png"), for: .normal)
                 backButton.addTarget(self, action: #selector(btnRightClick), for: .touchUpInside)
                 view.addSubview(backButton)
