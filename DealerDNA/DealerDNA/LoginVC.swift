@@ -196,7 +196,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
             appDelegate.dashBoardTiles.add(DashBoardMenu.customer)
             appDelegate.dashBoardTiles.add(DashBoardMenu.setting)
-            
+    
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

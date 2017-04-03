@@ -53,6 +53,8 @@
 		0C69D9A91E81450A0079F9A3 /* UncheckedCheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */; };
 		0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AA1E815B7F0079F9A3 /* email.png */; };
 		0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */; };
+		0C879B351E9268B500BF16FF /* InventoryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C879B331E9268B500BF16FF /* InventoryImageVC.swift */; };
+		0C879B361E9268B500BF16FF /* InventoryImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C879B341E9268B500BF16FF /* InventoryImageVC.xib */; };
 		0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE052FB1E84E888003ADF91 /* RadioButton.swift */; };
 		0CE053011E84E8AE003ADF91 /* R_C.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FD1E84E8AE003ADF91 /* R_C.png */; };
 		0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */; };
@@ -173,6 +175,8 @@
 		0C69D9A81E81450A0079F9A3 /* UncheckedCheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UncheckedCheckbox.png; sourceTree = "<group>"; };
 		0C69D9AA1E815B7F0079F9A3 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		0C879B331E9268B500BF16FF /* InventoryImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryImageVC.swift; sourceTree = "<group>"; };
+		0C879B341E9268B500BF16FF /* InventoryImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryImageVC.xib; sourceTree = "<group>"; };
 		0CE052FB1E84E888003ADF91 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		0CE052FD1E84E8AE003ADF91 /* R_C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_C.png; sourceTree = "<group>"; };
 		0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R_C@2x.png"; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 				0C3730661E83CECE00D684E3 /* AddInventoryVC.xib */,
 				0C3730691E83D09900D684E3 /* InventoryDetailVC.swift */,
 				0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */,
+				0C879B331E9268B500BF16FF /* InventoryImageVC.swift */,
+				0C879B341E9268B500BF16FF /* InventoryImageVC.xib */,
 			);
 			name = Inventory;
 			sourceTree = "<group>";
@@ -746,6 +752,7 @@
 				0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */,
 				0CE053031E84E8AE003ADF91 /* R_U_C.png in Resources */,
 				0CE053101E852994003ADF91 /* bike1.jpg in Resources */,
+				0C879B361E9268B500BF16FF /* InventoryImageVC.xib in Resources */,
 				0C69D9941E81286F0079F9A3 /* LoginVC.xib in Resources */,
 				0C3730701E83F00C00D684E3 /* left.png in Resources */,
 				0CE5D4641E8BABFF003DA666 /* Phone_1.png in Resources */,
@@ -973,6 +980,7 @@
 				0C17D6411E826F360055CAE7 /* IQTextView.swift in Sources */,
 				0C08E3071E8CF9E700B9025F /* DashboardConstant.swift in Sources */,
 				0C17D63C1E826F360055CAE7 /* IQUIWindow+Hierarchy.swift in Sources */,
+				0C879B351E9268B500BF16FF /* InventoryImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1127,7 +1135,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1148,7 +1156,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
 				DEVELOPMENT_TEAM = Y55EBSG532;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

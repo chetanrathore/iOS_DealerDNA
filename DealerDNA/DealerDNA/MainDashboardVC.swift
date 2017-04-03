@@ -11,6 +11,10 @@ import MessageUI
 
 class MainDashboardVC: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
+    
+    @IBOutlet var scrollView: UIScrollView!
+    var timer: Timer!
+    let count = 5
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +25,30 @@ class MainDashboardVC: UIViewController, UINavigationControllerDelegate, MFMailC
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        sendMail()
+        
+        for i in 0..<count{
+            let imageView = UIImageView()
+            imageView.frame = CGRect(x: i * Int(Screen.screenWidth), y: 0, width: Int(Screen.screenWidth), height: 320)
+            imageView.image = UIImage(named: "bike1.jpg")
+            imageView.contentMode = .scaleAspectFit
+            scrollView.addSubview(imageView)
+            
+        }
+        scrollView.contentSize = CGSize(width: count * Int(Screen.screenWidth), height: 320)
+//        sendMail()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
+    }
+    
+    func slider() {
+        let x = self.scrollView.bounds.origin.x
+        let width = self.scrollView.contentSize.width
+        if x+Screen.screenWidth == width{
+            let point = CGPoint(x: 0, y: self.scrollView.bounds.origin.y)
+            self.scrollView.setContentOffset(point, animated: false)
+        }else{
+            let point = CGPoint(x: x + Screen.screenWidth, y: self.scrollView.bounds.origin.y)
+            self.scrollView.setContentOffset(point, animated: true)
+        }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

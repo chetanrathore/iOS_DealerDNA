@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedMenu: String?
     var dashBoardTiles = NSMutableArray()
     var sideMenuItem = NSMutableArray()
-    
+    var appCityLocation: String!
+    var temprature:NSMutableDictionary!
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // NotificationCenter.default.addObserver(self, selector: #selector(self.changeDeviceOrientation), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -34,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         revealSideViewController?.setOption(.optionsNoStatusBar)
         // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
         // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
+//        let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         window?.rootViewController = revealSideViewController
         window?.makeKeyAndVisible()
         return true
