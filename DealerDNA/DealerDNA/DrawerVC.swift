@@ -17,7 +17,6 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var lbUserName: UILabel!
     @IBOutlet var lblPosition: UILabel!
     @IBOutlet var btnProfile: UIButton!
-    var arr = ["Home" , "DLScan" , "Inventory" , "Customers" , "Settings" , "LogOut"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +70,20 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell?.v2.isHidden = true
         }
         let str = appDelegate.sideMenuItem.object(at: indexPath.row) as! String
+        
+        if str == DashBoardMenu.customer{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_customer")
+        }else if str == DashBoardMenu.dlScan{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_dlscan")
+        }else if str == DashBoardMenu.home{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_home")
+        }else if str == DashBoardMenu.setting{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_setting")
+        }else if str == DashBoardMenu.inventory{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_invetory")
+        }else if str == DashBoardMenu.logout{
+            cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_signout")
+        }
         if str == appDelegate.selectedMenu{
             cell?.selectedCell()
         }else{

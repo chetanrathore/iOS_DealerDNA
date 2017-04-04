@@ -24,12 +24,11 @@ struct DashBoardMenu {
     static let settingTilesIcon = "Settings"
     static let logoutTilesIcon = "LogOut"
     
-    static let homeTilesColor = "Home"
-    static let inventoryTilesColor = "Inventory"
-    static let dlScanTilesColor = "DLScan"
-    static let customerTilesColor = "Customers"
-    static let settingTilesColor = "Settings"
-    static let logoutTilesColor = "LogOut"
-    
+    static let homeTilesColor = hexStringToUIColor(hex: "CD1C00")
+    static let inventoryTilesColor = hexStringToUIColor(hex: "EE6C1C")
+    static let dlScanTilesColor = hexStringToUIColor(hex: "5DB000")
+    static let customerTilesColor = hexStringToUIColor(hex: "35b7e3")
+    static let settingTilesColor = hexStringToUIColor(hex: "125469")
+    static let logoutTilesColor = hexStringToUIColor(hex: "CD1C00")
     
 }
