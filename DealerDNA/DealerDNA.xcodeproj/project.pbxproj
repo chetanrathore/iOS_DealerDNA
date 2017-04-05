@@ -26,6 +26,7 @@
 		0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */; };
 		0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C21E8261E8269DF00DEC621 /* Extensions.swift */; };
+		0C2396EF1E94B2A3002CE936 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */; };
 		0C3730631E83C16D00D684E3 /* InventoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730611E83C16D00D684E3 /* InventoryListCell.swift */; };
 		0C3730641E83C16D00D684E3 /* InventoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3730621E83C16D00D684E3 /* InventoryListCell.xib */; };
 		0C3730671E83CECE00D684E3 /* AddInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730651E83CECE00D684E3 /* AddInventoryVC.swift */; };
@@ -34,6 +35,8 @@
 		0C37306C1E83D09900D684E3 /* InventoryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */; };
 		0C37306E1E83D2CA00D684E3 /* left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306D1E83D2CA00D684E3 /* left-arrow.png */; };
 		0C3730701E83F00C00D684E3 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C37306F1E83F00C00D684E3 /* left.png */; };
+		0C40B34E1E94BE4000656605 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40B34C1E94BE4000656605 /* DashboardVC.swift */; };
+		0C40B34F1E94BE4000656605 /* DashboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C40B34D1E94BE4000656605 /* DashboardVC.xib */; };
 		0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9531E811C720079F9A3 /* AppDelegate.swift */; };
 		0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */; };
 		0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D95D1E811C720079F9A3 /* Assets.xcassets */; };
@@ -142,6 +145,7 @@
 		0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		0C21E8261E8269DF00DEC621 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		0C3730611E83C16D00D684E3 /* InventoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListCell.swift; sourceTree = "<group>"; };
 		0C3730621E83C16D00D684E3 /* InventoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryListCell.xib; sourceTree = "<group>"; };
 		0C3730651E83CECE00D684E3 /* AddInventoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInventoryVC.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 		0C37306A1E83D09900D684E3 /* InventoryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryDetailVC.xib; sourceTree = "<group>"; };
 		0C37306D1E83D2CA00D684E3 /* left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left-arrow.png"; sourceTree = "<group>"; };
 		0C37306F1E83F00C00D684E3 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		0C40B34C1E94BE4000656605 /* DashboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		0C40B34D1E94BE4000656605 /* DashboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardVC.xib; sourceTree = "<group>"; };
 		0C69D9501E811C720079F9A3 /* DealerDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealerDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69D9531E811C720079F9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C69D95B1E811C720079F9A3 /* DealerDNA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DealerDNA.xcdatamodel; sourceTree = "<group>"; };
@@ -331,6 +337,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		0C2396F01E94B55E002CE936 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				0C40B34C1E94BE4000656605 /* DashboardVC.swift */,
+				0C40B34D1E94BE4000656605 /* DashboardVC.xib */,
+			);
+			name = Dashboard;
+			sourceTree = "<group>";
+		};
 		0C69D9471E811C720079F9A3 = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +467,7 @@
 				0C69D98E1E811E200079F9A3 /* Constants.swift */,
 				0C21E8261E8269DF00DEC621 /* Extensions.swift */,
 				0C08E3061E8CF9E700B9025F /* DashboardConstant.swift */,
+				0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -466,6 +482,7 @@
 		0C69D98C1E811DE50079F9A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C2396F01E94B55E002CE936 /* Dashboard */,
 				3079D8AA1E82840A00D3DD4D /* User */,
 				3079D8A11E827D4200D3DD4D /* DrawerController */,
 				3079D88C1E82790300D3DD4D /* DLScan */,
@@ -781,6 +798,7 @@
 				0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */,
 				0CE053121E852A13003ADF91 /* bike2.jpg in Resources */,
 				0C3730681E83CECE00D684E3 /* AddInventoryVC.xib in Resources */,
+				0C40B34F1E94BE4000656605 /* DashboardVC.xib in Resources */,
 				0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */,
 				0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */,
 				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
@@ -948,6 +966,7 @@
 				0CF6971D1E82AF4E00F867FA /* AFURLRequestSerialization.m in Sources */,
 				0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */,
 				0C17D63E1E826F360055CAE7 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				0C2396EF1E94B2A3002CE936 /* TabbarVC.swift in Sources */,
 				0CE053081E8518F4003ADF91 /* MainDashboardVC.swift in Sources */,
 				0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0C17D6381E826F360055CAE7 /* IQUIScrollView+Additions.swift in Sources */,
@@ -956,6 +975,7 @@
 				0C17D63A1E826F360055CAE7 /* IQUIView+Hierarchy.swift in Sources */,
 				0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */,
 				0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */,
+				0C40B34E1E94BE4000656605 /* DashboardVC.swift in Sources */,
 				0C37306B1E83D09900D684E3 /* InventoryDetailVC.swift in Sources */,
 				0C17D6451E826F360055CAE7 /* IQToolbar.swift in Sources */,
 				0C3730631E83C16D00D684E3 /* InventoryListCell.swift in Sources */,
