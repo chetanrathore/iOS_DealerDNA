@@ -29,14 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
+        let vc = TabbarVC()
+        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: vc))
         
         revealSideViewController?.directionsToShowBounce = .none
         revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
         revealSideViewController?.setOption(.optionsNoStatusBar)
         // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
         // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
-         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
+//         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         window?.rootViewController = revealSideViewController
         window?.makeKeyAndVisible()
         return true
