@@ -12,6 +12,9 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
     
     let customNav = CustomNavigationBar()
     @IBOutlet var scrollVWImage: UIScrollView!
+    @IBOutlet var scrollViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet var navTopSpace: NSLayoutConstraint!
     let totalImages = 5
     var timer: Timer!
     
@@ -51,9 +54,13 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
             imageView.image = UIImage(named: "bike1.jpg")
             imageView.contentMode = .scaleAspectFit
             scrollVWImage.addSubview(imageView)
+            imageView.tag = i
         }
         scrollVWImage.contentSize = CGSize(width: self.totalImages * Int(Screen.screenWidth), height: Int(scrollVWImage.bounds.height))
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.changeScrollViewSize))
+        scrollVWImage.addGestureRecognizer(tapGesture)
+        
     }
     
     func slider() {
@@ -68,4 +75,13 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
         }
     }
     
+    func changeScrollViewSize(){
+        //self.scrollVWImage.contentOffset.x / self.scrollVWImage.frame.width
+//        self.view.layer.layoutIfNeeded()
+//        UIView.animate(withDuration: 0.3) {
+//            self.navTopSpace.constant = 0
+//            self.scrollViewHeight.constant = Screen.screenHeight
+//            self.view.layer.layoutIfNeeded()
+//        }
+    }
 }

@@ -4,14 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
-                <outlet property="btnMenu" destination="9Fl-gD-C5a" id="Aeo-AT-0pJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,47 +17,7 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7c-8C-Avq">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fl-gD-C5a">
-                            <rect key="frame" x="8" y="17" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <state key="normal" image="menu.png">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="handleBtnMenu:" destination="-1" eventType="touchUpInside" id="AOs-9N-5hO"/>
-                            </connections>
-                        </button>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbK-BC-VLu">
-                            <rect key="frame" x="0.0" y="53" width="320" height="11"/>
-                            <color key="backgroundColor" red="0.34509803919999998" green="0.52549019610000003" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="11" id="xzP-lW-wcm"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstItem="WbK-BC-VLu" firstAttribute="leading" secondItem="d7c-8C-Avq" secondAttribute="leading" id="A37-P9-SVf"/>
-                        <constraint firstAttribute="bottom" secondItem="WbK-BC-VLu" secondAttribute="bottom" id="K7V-qb-iMR"/>
-                        <constraint firstAttribute="height" constant="64" id="KFO-11-fHV"/>
-                        <constraint firstAttribute="trailing" secondItem="WbK-BC-VLu" secondAttribute="trailing" id="UD6-bv-Eax"/>
-                    </constraints>
-                </view>
-            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="d7c-8C-Avq" secondAttribute="trailing" id="IyG-fA-5JZ"/>
-                <constraint firstItem="d7c-8C-Avq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lGl-LP-RpW"/>
-                <constraint firstItem="d7c-8C-Avq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oTG-B6-AuP"/>
-            </constraints>
         </view>
     </objects>
-    <resources>
-        <image name="menu.png" width="24" height="24"/>
-    </resources>
 </document>

@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryDetailVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
+                <outlet property="navTopSpace" destination="Ki8-Pc-qWs" id="Bd0-kh-SMg"/>
                 <outlet property="scrollVWImage" destination="ByH-st-6am" id="Okq-8M-NCe"/>
+                <outlet property="scrollViewHeight" destination="day-dw-Xya" id="Rpd-PQ-uZg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,11 +34,11 @@
                                         <constraint firstAttribute="height" constant="236" id="day-dw-Xya"/>
                                     </constraints>
                                 </scrollView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-js-nPd">
-                                    <rect key="frame" x="0.0" y="235" width="320" height="228"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-js-nPd">
+                                    <rect key="frame" x="0.0" y="236" width="320" height="227"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEb-C1-XqA">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2017 Harley-Davidson Touring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMh-Mk-BcP">
                                                     <rect key="frame" x="29" y="8" width="271" height="24"/>
@@ -106,7 +108,7 @@
                                 <constraint firstAttribute="trailing" secondItem="ByH-st-6am" secondAttribute="trailing" id="CUy-2A-Rap"/>
                                 <constraint firstAttribute="trailing" secondItem="rGW-js-nPd" secondAttribute="trailing" id="Vmr-lY-fWI"/>
                                 <constraint firstAttribute="height" constant="463" id="VsN-KP-eLr"/>
-                                <constraint firstItem="rGW-js-nPd" firstAttribute="top" secondItem="ByH-st-6am" secondAttribute="bottom" constant="-1" id="ZTc-vG-Ad9"/>
+                                <constraint firstItem="rGW-js-nPd" firstAttribute="top" secondItem="ByH-st-6am" secondAttribute="bottom" id="ZTc-vG-Ad9"/>
                                 <constraint firstItem="rGW-js-nPd" firstAttribute="leading" secondItem="aEE-pr-7Ea" secondAttribute="leading" id="cdN-ui-oGA"/>
                                 <constraint firstAttribute="bottom" secondItem="rGW-js-nPd" secondAttribute="bottom" id="dZ1-VW-y0N"/>
                                 <constraint firstItem="ByH-st-6am" firstAttribute="leading" secondItem="aEE-pr-7Ea" secondAttribute="leading" id="fN8-hi-g8m"/>

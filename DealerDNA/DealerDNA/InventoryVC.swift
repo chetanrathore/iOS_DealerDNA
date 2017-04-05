@@ -23,7 +23,6 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         tblInventory.dataSource = self
         tblInventory.delegate = self
         customNav.delegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
