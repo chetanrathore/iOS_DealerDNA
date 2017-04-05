@@ -8,20 +8,36 @@
 
 import UIKit
 
-class DLScanVC: UIViewController {
-
+class DLScanVC: UIViewController, CustomNevigationDeletegate {
+    
+    let customNav = CustomNavigationBar()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-    }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setLayout()
+    }
+    
+    func setLayout() {
+        self.navigationController?.navigationBar.isHidden = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        customNav.createView(self.view, title: "DL Scan", backBtn: .menu, rightBtnTitle: nil, rightButtonImage: nil)
+        customNav.delegate = self
+    }
+    
+    func btnLeftClick() {
+        let vc = DrawerVC(nibName: "DrawerVC", bundle: nil)
+        revealSideViewController.push(vc, on: .left, animated: true)
+    }
+    
 }

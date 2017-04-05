@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate {
+class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSource ,UICollectionViewDelegateFlowLayout, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate {
     
     @IBOutlet var vwTop: UIView!
     @IBOutlet var vwTopBottom: UIView!
@@ -18,7 +18,13 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
     @IBOutlet var btnLogOut: UIButton!
     @IBOutlet var imgWeather: UIImageView!
     @IBOutlet var collectionViewHome: UICollectionView!
+    @IBOutlet var viewContext: UIView!
+    @IBOutlet var tblSelectRoofTop: UITableView!
+    @IBOutlet var vwContextHeight: NSLayoutConstraint!
+    
     fileprivate var longPressGesture: UILongPressGestureRecognizer!
+    var tapGesture: UITapGestureRecognizer!
+    
     let locationManager = CLLocationManager()
     let QUERY_PREFIX = "https://query.yahooapis.com/v1/public/yql?q="
     let QUERY_SUFFIX = "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback="
@@ -30,7 +36,10 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         collectionViewHome.register(UINib(nibName: "homeScreenCell", bundle: nil), forCellWithReuseIdentifier: "homeScreenCell")
         longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.handleLongGesture(gesture:)))
         self.collectionViewHome.addGestureRecognizer(longPressGesture)
-        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(_:)))
+        tapGesture.delegate = self
+        tblSelectRoofTop.dataSource = self
+        tblSelectRoofTop.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +55,11 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         } else {
             showAlertView(title: "Message", message: "Location services are not enabled", view: self)
         }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -122,6 +136,35 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         appDelegate.dashBoardTiles.insert(obj, at: destinationIndexPath.row)
     }
     
+    // Mark: Table view
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = "Temp"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        self.lblRoofTop.setTitle("Temp", for: .normal)
+        if !self.viewContext.isHidden{
+            self.viewContext.isHidden = true
+        }
+        self.view.removeGestureRecognizer(tapGesture)
+        
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if  touch.view! == self.viewContext || touch.view!.superview! == self.viewContext || touch.view!.superview!.superview!.superview! == self.tblSelectRoofTop || touch.view!.superview! == self.tblSelectRoofTop  || touch.view!.superview!.superview! == self.tblSelectRoofTop{
+            return false
+        }
+        return true
+    }
+    
     // MARK: Interface design
     
     func setLayout() {
@@ -132,9 +175,18 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         btnLogOut.layer.cornerRadius = 5
         vwTop.backgroundColor = AppColor.theamColor
         vwTopBottom.backgroundColor = AppColor.theamDarkColor
+        viewContext.isHidden = true
+        viewContext.layer.cornerRadius = 3
+        viewContext.layer.shadowColor = UIColor.gray.cgColor
+        viewContext.layer.shadowOffset = CGSize.zero
+        viewContext.layer.shadowOpacity = 1
+        viewContext.layer.shadowRadius = 3
+        viewContext.layer.shadowPath = UIBezierPath(rect: self.viewContext.bounds).cgPath
+        
     }
     
     // MARK: Outlet Action
+    
     @IBAction func handleBtnLogOut(_ sender: Any) {
         if let viewControllers = self.navigationController?.viewControllers{
             for _ in viewControllers{
@@ -146,9 +198,12 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func handleBtnRooftop(_ sender: UIButton) {
+        self.view.addGestureRecognizer(tapGesture)
+        viewContext.isHidden = false
+        self.vwContextHeight.constant = 40 * 5
+        self.view.bringSubview(toFront: self.viewContext)
+        
     }
     
     func handleLongGesture(gesture: UILongPressGestureRecognizer) {
@@ -173,6 +228,13 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
                 collectionViewHome.cancelInteractiveMovement()
             }
         }
+    }
+    
+    func handleTapGesture(_ sender: UITapGestureRecognizer){
+        if !self.viewContext.isHidden{
+            self.viewContext.isHidden = true
+        }
+        self.view.removeGestureRecognizer(tapGesture)
     }
     
     // MARK:- Location Delegates
@@ -208,7 +270,6 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
                 })
         })
     }
-    
     
     func getWeatherInformation() {
         let queryPlace: String = "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text=\"\(appDelegate.appCityLocation!)\") and u='f'"
@@ -257,122 +318,122 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
                     if let item = (channel as AnyObject).value(forKey:"item"){
                         if let condition = (item as AnyObject).value(forKey:"condition"){
                             if let strCode = Int(((condition as AnyObject).value(forKey:"code") as? String)!){
-                              /*  switch (strCode)
-                                {
-                                case 0:
-                                    self.imgWeather.image = UIImage(named: "tornado.png")
-                                    break;
-                                case 1:
-                                    self.imgWeather.image = UIImage(named: "severe_thunderstorms.png")
-                                    break;
-                                case 2:
-                                    self.imgWeather.image = UIImage(named: "hurricane.png")
-                                    break;
-                                case 3:
-                                    self.imgWeather.image = UIImage(named: "severe_thunderstorms.png")
-                                    break;
-                                case 4:
-                                    self.imgWeather.image = UIImage(named: "thunderstorms.png")
-                                    break;
-                                case 5:
-                                    self.imgWeather.image = UIImage(named: "mixed_rain_and_snow.png")
-                                    break;
-                                case 6:
-                                    self.imgWeather.image = UIImage(named: "mixed_rain_sleet.png")
-                                    break;
-                                case 7:
-                                    self.imgWeather.image = UIImage(named: "mixed_rain_sleet.png")
-                                    break;
-                                case 8:
-                                    self.imgWeather.image = UIImage(named: "freezing_drizzle.png")
-                                    break;
-                                case 9:
-                                    self.imgWeather.image = UIImage(named: "drizzle.png")
-                                    break;
-                                case 10:
-                                    self.imgWeather.image = UIImage(named: "freezing_rain.png")
-                                    break;
-                                case 11:
-                                    self.imgWeather.image = UIImage(named: "showers.png")
-                                    break;
-                                case 12:
-                                    self.imgWeather.image = UIImage(named: "showers.png")
-                                    break;
-                                case 13:
-                                    self.imgWeather.image = UIImage(named: "snow_flurries.png")
-                                    break;
-                                case 14:
-                                    self.imgWeather.image = UIImage(named: "light_snow_showers.png")
-                                    break;
-                                case 15:
-                                    self.imgWeather.image = UIImage(named: "blowing_snow.png")
-                                    break;
-                                case 16:
-                                    self.imgWeather.image = UIImage(named: "snow.png")
-                                    break;
-                                case 17:
-                                    self.imgWeather.image = UIImage(named: "hail.png")
-                                    break;
-                                case 18:
-                                    self.imgWeather.image = UIImage(named: "sleet.png")
-                                    break;
-                                case 19:
-                                    self.imgWeather.image = UIImage(named: "dust.png")
-                                    break;
-                                case 20:
-                                    self.imgWeather.image = UIImage(named: "foggy.png")
-                                    break;
-                                case 21:
-                                    self.imgWeather.image = UIImage(named: "haze.png")
-                                    break;
-                                case 22:
-                                    self.imgWeather.image = UIImage(named: "haze.png")
-                                    break;
-                                case 23:
-                                    self.imgWeather.image = UIImage(named: "blustery.png")
-                                    break;
-                                case 24:
-                                    self.imgWeather.image = UIImage(named: "windy.png")
-                                    break;
-                                case 25:
-                                    self.imgWeather.image = UIImage(named: "cold.png")
-                                    break;
-                                case 26:
-                                    self.imgWeather.image = UIImage(named: "cloudy.png")
-                                    break;
-                                case 27:
-                                    self.imgWeather.image = UIImage(named: "mostly_cloudy_(night).png")
-                                    break;
-                                case 28:
-                                    self.imgWeather.image = UIImage(named: "mostly_cloudy_(day).png")
-                                    break;
-                                case 29:
-                                    self.imgWeather.image = UIImage(named: "partly_cloudy_(night).png")
-                                    break;
-                                case 30:
-                                    self.imgWeather.image = UIImage(named: "partly_cloudy_(day).png")
-                                    break;
-                                case 31:
-                                    self.imgWeather.image = UIImage(named: "clear_(night).png")
-                                    break;
-                                case 32:
-                                    self.imgWeather.image = UIImage(named: "sunny.png")
-                                    break;
-                                case 33:
-                                    self.imgWeather.image = UIImage(named: "sunny.png")
-                                    break;
-                                case 34:
-                                    self.imgWeather.image = UIImage(named: "sunny.png")
-                                    break;
-                                case 35:
-                                    self.imgWeather.image = UIImage(named: "mixed_rain_hail.png")
-                                    break;
-                                case 36:
-                                    self.imgWeather.image = UIImage(named: "sunny.png")
-                                default:
-                                    self.imgWeather.image = UIImage()
-                                }
-                             */
+                                /*  switch (strCode)
+                                 {
+                                 case 0:
+                                 self.imgWeather.image = UIImage(named: "tornado.png")
+                                 break;
+                                 case 1:
+                                 self.imgWeather.image = UIImage(named: "severe_thunderstorms.png")
+                                 break;
+                                 case 2:
+                                 self.imgWeather.image = UIImage(named: "hurricane.png")
+                                 break;
+                                 case 3:
+                                 self.imgWeather.image = UIImage(named: "severe_thunderstorms.png")
+                                 break;
+                                 case 4:
+                                 self.imgWeather.image = UIImage(named: "thunderstorms.png")
+                                 break;
+                                 case 5:
+                                 self.imgWeather.image = UIImage(named: "mixed_rain_and_snow.png")
+                                 break;
+                                 case 6:
+                                 self.imgWeather.image = UIImage(named: "mixed_rain_sleet.png")
+                                 break;
+                                 case 7:
+                                 self.imgWeather.image = UIImage(named: "mixed_rain_sleet.png")
+                                 break;
+                                 case 8:
+                                 self.imgWeather.image = UIImage(named: "freezing_drizzle.png")
+                                 break;
+                                 case 9:
+                                 self.imgWeather.image = UIImage(named: "drizzle.png")
+                                 break;
+                                 case 10:
+                                 self.imgWeather.image = UIImage(named: "freezing_rain.png")
+                                 break;
+                                 case 11:
+                                 self.imgWeather.image = UIImage(named: "showers.png")
+                                 break;
+                                 case 12:
+                                 self.imgWeather.image = UIImage(named: "showers.png")
+                                 break;
+                                 case 13:
+                                 self.imgWeather.image = UIImage(named: "snow_flurries.png")
+                                 break;
+                                 case 14:
+                                 self.imgWeather.image = UIImage(named: "light_snow_showers.png")
+                                 break;
+                                 case 15:
+                                 self.imgWeather.image = UIImage(named: "blowing_snow.png")
+                                 break;
+                                 case 16:
+                                 self.imgWeather.image = UIImage(named: "snow.png")
+                                 break;
+                                 case 17:
+                                 self.imgWeather.image = UIImage(named: "hail.png")
+                                 break;
+                                 case 18:
+                                 self.imgWeather.image = UIImage(named: "sleet.png")
+                                 break;
+                                 case 19:
+                                 self.imgWeather.image = UIImage(named: "dust.png")
+                                 break;
+                                 case 20:
+                                 self.imgWeather.image = UIImage(named: "foggy.png")
+                                 break;
+                                 case 21:
+                                 self.imgWeather.image = UIImage(named: "haze.png")
+                                 break;
+                                 case 22:
+                                 self.imgWeather.image = UIImage(named: "haze.png")
+                                 break;
+                                 case 23:
+                                 self.imgWeather.image = UIImage(named: "blustery.png")
+                                 break;
+                                 case 24:
+                                 self.imgWeather.image = UIImage(named: "windy.png")
+                                 break;
+                                 case 25:
+                                 self.imgWeather.image = UIImage(named: "cold.png")
+                                 break;
+                                 case 26:
+                                 self.imgWeather.image = UIImage(named: "cloudy.png")
+                                 break;
+                                 case 27:
+                                 self.imgWeather.image = UIImage(named: "mostly_cloudy_(night).png")
+                                 break;
+                                 case 28:
+                                 self.imgWeather.image = UIImage(named: "mostly_cloudy_(day).png")
+                                 break;
+                                 case 29:
+                                 self.imgWeather.image = UIImage(named: "partly_cloudy_(night).png")
+                                 break;
+                                 case 30:
+                                 self.imgWeather.image = UIImage(named: "partly_cloudy_(day).png")
+                                 break;
+                                 case 31:
+                                 self.imgWeather.image = UIImage(named: "clear_(night).png")
+                                 break;
+                                 case 32:
+                                 self.imgWeather.image = UIImage(named: "sunny.png")
+                                 break;
+                                 case 33:
+                                 self.imgWeather.image = UIImage(named: "sunny.png")
+                                 break;
+                                 case 34:
+                                 self.imgWeather.image = UIImage(named: "sunny.png")
+                                 break;
+                                 case 35:
+                                 self.imgWeather.image = UIImage(named: "mixed_rain_hail.png")
+                                 break;
+                                 case 36:
+                                 self.imgWeather.image = UIImage(named: "sunny.png")
+                                 default:
+                                 self.imgWeather.image = UIImage()
+                                 }
+                                 */
                             }
                         }
                     }
