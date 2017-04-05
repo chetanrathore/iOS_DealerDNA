@@ -18,14 +18,14 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         var navigationVC4 = UINavigationController()
         var navigationVC5 = UINavigationController()
         
-        var viewController1 = MainDashboardVC()
-        var viewController2 = MainDashboardVC()
+        var viewController1 = DashboardVC()
+        var viewController2 = HomeVC()
         var viewController3 = MainDashboardVC()
         var viewController4 = MainDashboardVC()
         var viewController5 = MainDashboardVC()
         
-        viewController1 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
-        viewController2 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
+        viewController1 = DashboardVC(nibName: "DashboardVC", bundle: nil)
+        viewController2 = HomeVC(nibName: "HomeVC", bundle: nil)
         viewController3 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         viewController4 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         viewController5 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
@@ -42,22 +42,22 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
             tag: 0)
         viewController2.tabBarItem = UITabBarItem(
             title: "Reports",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabpiechart"),
             tag: 1)
         
         viewController3.tabBarItem = UITabBarItem(
             title: "Tasks",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabcalender"),
             tag: 2)
         
         viewController4.tabBarItem = UITabBarItem(
             title: "Appts",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabcalender"),
             tag: 3)
         
         viewController5.tabBarItem = UITabBarItem(
             title: "Search",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabSearch"),
             tag: 4)
         
         
@@ -73,16 +73,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         self.viewControllers = [navigationVC1,navigationVC2, navigationVC3, navigationVC4, navigationVC5]
         self.selectedIndex = 0
         
-        self.tabBar.items?[3].badgeValue = "20"
-        
-        
-        self.tabBar.items?[2].badgeValue = "31"
-        if #available(iOS 10.0, *) {
-            self.tabBar.items?[2].badgeColor = UIColor.green
-        } else {
-            // Fallback on earlier versions
-        }
-        
+        appDelegate.setBadgeValue(viewWithTabbar: self)
         
     }
     
@@ -118,5 +109,5 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }

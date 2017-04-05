@@ -38,10 +38,15 @@ class MainDashboardVC: UIViewController, UINavigationControllerDelegate, MFMailC
         scrollView.contentSize = CGSize(width: count * Int(Screen.screenWidth), height: 320)
         //        sendMail()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
+        
     }
     
     override func viewDidLayoutSubviews() {
 //        self.vwTopConstrain.constant = -300
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
     }
     
     func slider() {

@@ -110,7 +110,10 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         //        let cell = collectionViewHome.cellForItem(at: indexPath) as? homeScreenCell
         if let itemName = appDelegate.dashBoardTiles[indexPath.row] as? String{
             appDelegate.selectedMenu = itemName
-            if itemName == DashBoardMenu.dlScan{
+            if itemName == DashBoardMenu.home{
+                let vc = TabbarVC()
+                self.view.window?.rootViewController = vc
+            }else if itemName == DashBoardMenu.dlScan{
                 let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)
             }else if itemName == DashBoardMenu.inventory{
@@ -193,6 +196,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
                 _ = self.navigationController?.popViewController(animated: false)
             }
         }
+        self.hidesBottomBarWhenPushed = true
         appDelegate.logut()
         let vc = LoginVC(nibName: "LoginVC", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: false)
