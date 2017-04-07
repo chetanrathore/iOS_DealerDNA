@@ -99,7 +99,8 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tblDrawer.cellForRow(at: indexPath) as! drawerCell
         if let itemName = cell.lblMenuTitle.text{
             if itemName == DashBoardMenu.home{
-                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+                 let vc = TabbarVC()
+//                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
                 let nav = UINavigationController(rootViewController: vc)
                 revealSideViewController.popViewController(withNewCenter: nav, animated: true)
             }else if itemName == DashBoardMenu.dlScan{
@@ -130,6 +131,13 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 revealSideViewController.popViewController(withNewCenter: nav, animated: false)
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if Screen.device == .pad{
+            return 60
+        }
+        return 44
     }
     
     @IBAction func handleBtnProfile(_ sender: UIButton) {

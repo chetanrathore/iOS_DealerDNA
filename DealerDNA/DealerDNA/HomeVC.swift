@@ -21,6 +21,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
     @IBOutlet var viewContext: UIView!
     @IBOutlet var tblSelectRoofTop: UITableView!
     @IBOutlet var vwContextHeight: NSLayoutConstraint!
+    @IBOutlet var imgLogo: UIImageView!
     
     fileprivate var longPressGesture: UILongPressGestureRecognizer!
     var tapGesture: UITapGestureRecognizer!
@@ -55,6 +56,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         } else {
             showAlertView(title: "Message", message: "Location services are not enabled", view: self)
         }
+        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,6 +66,10 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
     
     override func viewWillDisappear(_ animated: Bool) {
         locationManager.stopUpdatingLocation()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        //collectionViewHome.reloadData()
     }
     
     // MARK: CollectionView Method(s)
@@ -112,7 +118,8 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
             appDelegate.selectedMenu = itemName
             if itemName == DashBoardMenu.home{
                 let vc = TabbarVC()
-                self.view.window?.rootViewController = vc
+                //                self.view.window?.rootViewController = vc
+                self.navigationController?.pushViewController(vc, animated: true)
             }else if itemName == DashBoardMenu.dlScan{
                 let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
                 self.navigationController?.pushViewController(vc, animated: true)

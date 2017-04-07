@@ -39,6 +39,7 @@ class MainDashboardVC: UIViewController, UINavigationControllerDelegate, MFMailC
         //        sendMail()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
         
+        
     }
     
     override func viewDidLayoutSubviews() {

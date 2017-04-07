@@ -10,9 +10,13 @@ import UIKit
 
 class DashboardCollectionCell: UICollectionViewCell {
 
+    @IBOutlet var lblTitle: UILabel!
+    @IBOutlet var lblCount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lblTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
+        lblCount.font = appFont(size: (Screen.device == .pad) ? 55 : 30, fontWeight: .kBold)
     }
 
 }

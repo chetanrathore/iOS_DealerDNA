@@ -42,7 +42,7 @@ class CustomNavigationBar: UIViewController {
         let backButton = UIButton()
         switch backBtn {
         case .back:
-            backButton.frame = CGRect(x: 5, y: 25, width: 30, height: 30)
+            backButton.frame = CGRect(x: 10, y: 25, width: 30, height: 30)
             backButton.setImage(UIImage(named: "left.png"), for: .normal)
             backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
@@ -50,8 +50,8 @@ class CustomNavigationBar: UIViewController {
         case .noBack:
             break
         case .menu:
-            backButton.frame = CGRect(x: 5, y: 20, width: 35, height: 44)
-            backButton.setImage(UIImage(named: "menu.png"), for: .normal)
+            backButton.frame = CGRect(x: 10, y: 20, width: 30, height: 32)
+            backButton.setImage(#imageLiteral(resourceName: "sidemenuicon"), for: .normal)
             backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
             break

@@ -26,10 +26,14 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+    }
+    
     override func viewDidLayoutSubviews() {
         setInterface()
         appDelegate.tabAppts = "434"
         appDelegate.setBadgeValue(viewWithTabbar: self)
+        tblDashboard.reloadData()
     }
     
     func setView(){
@@ -40,6 +44,9 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
+        self.btnDate.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kBold)
+        self.lblTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kHeavy)
+        self.lblSubTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
     }
     
     // Mark: Tableview
@@ -62,11 +69,12 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 25))
+        let returnedView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: (Screen.device == .pad) ? 45 : 35))
         returnedView.backgroundColor = UIColor.groupTableViewBackground
-        let label = UILabel(frame: CGRect(x: 10, y: 7, width: view.frame.size.width, height: 25))
+        let height = CGFloat((Screen.device == .pad) ? 35 : 30)
+        let label = UILabel(frame: CGRect(x: 10, y: (returnedView.frame.height-height)/2 , width: view.frame.size.width, height: height))
         label.text = "Temp 1"
-        label.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightSemibold)
+        label.font =  appFont(size: AppFont.normalFontSize, fontWeight: .kBold)
         label.textColor = UIColor.darkGray
         returnedView.addSubview(label)
         return returnedView
@@ -74,13 +82,20 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 1{
-            return 60 + 20
+            if Screen.device == .pad{
+                return 80 + 20
+            }
+            return 55 + 20
+            
         }
-        return 150
+        if Screen.device == .pad{
+            return 160 + 30
+        }
+        return 140
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 35
+        return (Screen.device == .pad) ? 45 : 35
     }
     
     // Mark: Collection view
@@ -103,7 +118,10 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let size = collectionView.bounds.width / 3 - 6
-        return CGSize(width: size, height: 60)
+        if Screen.device == .pad{
+            return CGSize(width: size, height: 80)
+        }
+        return CGSize(width: size, height: 55)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

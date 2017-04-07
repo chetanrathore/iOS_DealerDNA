@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="btnLogOut" destination="rnv-u5-nGK" id="m9T-Sv-NTe"/>
                 <outlet property="collectionViewHome" destination="bRp-IS-1gV" id="j1j-ST-llw"/>
+                <outlet property="imgLogo" destination="zX6-SK-sKf" id="unN-Gb-Owk"/>
                 <outlet property="lblRoofTop" destination="pfg-85-9d5" id="bmg-Tc-ezq"/>
                 <outlet property="lblUserName" destination="qWj-8p-R13" id="z82-Wc-7Sc"/>
                 <outlet property="tblSelectRoofTop" destination="VCO-mx-Wlk" id="gx3-U9-TOI"/>
@@ -78,9 +79,8 @@
                                 <action selector="handleBtnRooftop:" destination="-1" eventType="touchUpInside" id="IQY-aF-klE"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zX6-SK-sKf">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zX6-SK-sKf">
                             <rect key="frame" x="8" y="23" width="170" height="80"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,11 +89,15 @@
                         <constraint firstItem="rnv-u5-nGK" firstAttribute="top" secondItem="5ut-jN-D2c" secondAttribute="top" constant="23" id="FPk-uI-kJN"/>
                         <constraint firstAttribute="trailing" secondItem="rnv-u5-nGK" secondAttribute="trailing" constant="5" id="P9p-5Y-0Px"/>
                         <constraint firstAttribute="height" constant="115" id="TMo-x8-X5k"/>
+                        <constraint firstItem="zX6-SK-sKf" firstAttribute="leading" secondItem="5ut-jN-D2c" secondAttribute="leading" constant="8" id="VSR-Dt-WTV"/>
+                        <constraint firstItem="Du2-3e-3vf" firstAttribute="top" secondItem="zX6-SK-sKf" secondAttribute="bottom" constant="2" id="Za5-YB-DLz"/>
                         <constraint firstAttribute="trailing" secondItem="qWj-8p-R13" secondAttribute="trailing" constant="5" id="aHF-bE-au5"/>
                         <constraint firstAttribute="trailing" secondItem="Du2-3e-3vf" secondAttribute="trailing" id="c4Y-Us-5NL"/>
                         <constraint firstAttribute="bottom" secondItem="Du2-3e-3vf" secondAttribute="bottom" id="f4B-sg-WJp"/>
+                        <constraint firstItem="rnv-u5-nGK" firstAttribute="leading" secondItem="zX6-SK-sKf" secondAttribute="trailing" constant="49" id="hsb-r5-wNH"/>
                         <constraint firstItem="Du2-3e-3vf" firstAttribute="leading" secondItem="5ut-jN-D2c" secondAttribute="leading" id="iL0-td-bDh"/>
                         <constraint firstItem="qWj-8p-R13" firstAttribute="top" secondItem="rnv-u5-nGK" secondAttribute="bottom" constant="5" id="sUf-kt-TpP"/>
+                        <constraint firstItem="zX6-SK-sKf" firstAttribute="top" secondItem="5ut-jN-D2c" secondAttribute="top" constant="23" id="uH3-v4-Fab"/>
                         <constraint firstAttribute="trailing" secondItem="pfg-85-9d5" secondAttribute="trailing" constant="5" id="v9l-Kw-wzd"/>
                     </constraints>
                 </view>
