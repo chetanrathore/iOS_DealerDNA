@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
 //        let vc = TabbarVC()
+        
+        let passcodeVC = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
         let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
         
         revealSideViewController?.directionsToShowBounce = .none
@@ -45,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
         // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
         //         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
-        window?.rootViewController = revealSideViewController
+        window?.rootViewController = passcodeVC//revealSideViewController
         window?.makeKeyAndVisible()
         return true
     }

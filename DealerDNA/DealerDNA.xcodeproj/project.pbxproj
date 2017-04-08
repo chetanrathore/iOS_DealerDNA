@@ -77,6 +77,9 @@
 		0CE5D4651E8BABFF003DA666 /* User_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4621E8BABFF003DA666 /* User_1.png */; };
 		0CE5D4681E8BB7FC003DA666 /* View_Details_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4661E8BB7FC003DA666 /* View_Details_1.png */; };
 		0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */; };
+		0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */; };
+		0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */; };
+		0CF67B651E99044D009E1A5E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B641E99044D009E1A5E /* KeychainWrapper.m */; };
 		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
 		0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */; };
 		0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */; };
@@ -206,6 +209,10 @@
 		0CE5D4621E8BABFF003DA666 /* User_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User_1.png; sourceTree = "<group>"; };
 		0CE5D4661E8BB7FC003DA666 /* View_Details_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Details_1.png; sourceTree = "<group>"; };
 		0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Details_2.png; sourceTree = "<group>"; };
+		0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeVC.swift; sourceTree = "<group>"; };
+		0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeVC.xib; sourceTree = "<group>"; };
+		0CF67B631E99044D009E1A5E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		0CF67B641E99044D009E1A5E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		0CF6970D1E82AF4E00F867FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		0CF6970F1E82AF4E00F867FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -415,6 +422,7 @@
 		0C69D9841E811CE30079F9A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CF67B621E99044D009E1A5E /* KeychainWrapper */,
 				0CF6970C1E82AF4E00F867FA /* AFNetworking */,
 				0C17D61F1E826F360055CAE7 /* IQKeyboardManagerSwift */,
 			);
@@ -551,6 +559,15 @@
 			name = WorkFlow;
 			sourceTree = "<group>";
 		};
+		0CF67B621E99044D009E1A5E /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				0CF67B631E99044D009E1A5E /* KeychainWrapper.h */,
+				0CF67B641E99044D009E1A5E /* KeychainWrapper.m */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
 		0CF6970C1E82AF4E00F867FA /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +593,8 @@
 			children = (
 				3079D89D1E8279D200D3DD4D /* SettingsVC.swift */,
 				3079D89E1E8279D200D3DD4D /* SettingsVC.xib */,
+				0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */,
+				0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -818,6 +837,7 @@
 				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
 				30D6B3C31E83A8C900070D56 /* menu@3x.png in Resources */,
 				0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */,
+				0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */,
 				30D6B3C21E83A8C900070D56 /* menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -967,7 +987,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */,
+				0CF67B651E99044D009E1A5E /* KeychainWrapper.m in Sources */,
 				3079D8971E82799800D3DD4D /* CustomerDetailsVC.swift in Sources */,
+				0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */,
 				3079D8931E82798500D3DD4D /* CustomerListVC.swift in Sources */,
 				3079D8871E8268B700D3DD4D /* homeScreenCell.swift in Sources */,
 				3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */,
