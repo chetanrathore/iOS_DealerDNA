@@ -11,7 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
-                <outlet property="btnMenu" destination="izl-Qt-IrU" id="Btj-cT-miR"/>
+                <outlet property="segmentFilter" destination="RTT-yq-aH3" id="iND-zD-mcc"/>
+                <outlet property="tblInventory" destination="DMZ-mJ-WkN" id="hCi-zj-8DZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,45 +21,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51h-sd-h1N">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0T-XP-H3k">
-                            <rect key="frame" x="0.0" y="53" width="320" height="11"/>
-                            <color key="backgroundColor" red="0.34509803919999998" green="0.52549019610000003" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="11" id="EUS-Lz-vez"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izl-Qt-IrU">
-                            <rect key="frame" x="8" y="17" width="39" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <state key="normal" title="LOGOUT">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="handleBtnMenu:" destination="-1" eventType="touchUpInside" id="lD3-xn-CJ2"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="P0T-XP-H3k" secondAttribute="trailing" id="2m3-1q-OXD"/>
-                        <constraint firstAttribute="height" constant="64" id="Kzu-RK-QkI"/>
-                        <constraint firstItem="P0T-XP-H3k" firstAttribute="leading" secondItem="51h-sd-h1N" secondAttribute="leading" id="u6W-vW-uve"/>
-                        <constraint firstAttribute="bottom" secondItem="P0T-XP-H3k" secondAttribute="bottom" id="ugH-8o-Fjp"/>
-                    </constraints>
-                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DMZ-mJ-WkN">
+                    <rect key="frame" x="0.0" y="103" width="320" height="376"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RTT-yq-aH3">
+                    <rect key="frame" x="8" y="70" width="304" height="29"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <segments>
+                        <segment title="All"/>
+                        <segment>
+                            <string key="title" base64-UTF8="YES">
+EE5ldw
+</string>
+                        </segment>
+                        <segment title="PreOwned"/>
+                    </segments>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="51h-sd-h1N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7IR-EI-1bP"/>
-                <constraint firstAttribute="trailing" secondItem="51h-sd-h1N" secondAttribute="trailing" id="WXI-rE-ztJ"/>
-                <constraint firstItem="51h-sd-h1N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hFr-lx-fp5"/>
-            </constraints>
-            <point key="canvasLocation" x="-110" y="8"/>
+            <point key="canvasLocation" x="-463" y="-110"/>
         </view>
     </objects>
 </document>

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,14 +21,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqj-Xs-uXx">
                         <rect key="frame" x="5" y="5" width="90" height="90"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-eE-V8j">
-                                <rect key="frame" x="15" y="7" width="60" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="NXh-eE-V8j">
+                                <rect key="frame" x="16.5" y="7" width="57" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="NXh-eE-V8j" secondAttribute="height" multiplier="1:1" id="08u-j5-VuR"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAp-tz-kTp">
-                                <rect key="frame" x="3" y="73" width="84" height="17"/>
+                                <rect key="frame" x="3" y="70" width="84" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="gcS-NY-1zH"/>
                                 </constraints>
@@ -42,7 +41,7 @@
                         <constraints>
                             <constraint firstItem="FAp-tz-kTp" firstAttribute="top" secondItem="NXh-eE-V8j" secondAttribute="bottom" constant="6" id="Zmn-YD-6BK"/>
                             <constraint firstAttribute="trailing" secondItem="FAp-tz-kTp" secondAttribute="trailing" constant="3" id="fDF-w0-ZC0"/>
-                            <constraint firstAttribute="bottom" secondItem="FAp-tz-kTp" secondAttribute="bottom" id="i6X-ZK-zir"/>
+                            <constraint firstAttribute="bottom" secondItem="FAp-tz-kTp" secondAttribute="bottom" constant="3" id="i6X-ZK-zir"/>
                             <constraint firstItem="FAp-tz-kTp" firstAttribute="leading" secondItem="xqj-Xs-uXx" secondAttribute="leading" constant="3" id="ilN-Uq-mJb"/>
                             <constraint firstItem="NXh-eE-V8j" firstAttribute="centerX" secondItem="xqj-Xs-uXx" secondAttribute="centerX" id="tfW-qI-OgV"/>
                             <constraint firstItem="NXh-eE-V8j" firstAttribute="top" secondItem="xqj-Xs-uXx" secondAttribute="top" constant="7" id="ytr-dl-xcL"/>
@@ -60,8 +59,9 @@
             <connections>
                 <outlet property="imgViewCell" destination="NXh-eE-V8j" id="OEp-7T-EnB"/>
                 <outlet property="lbCell" destination="FAp-tz-kTp" id="1Gk-4K-K8c"/>
+                <outlet property="vwBack" destination="xqj-Xs-uXx" id="tBB-hc-SqT"/>
             </connections>
-            <point key="canvasLocation" x="72" y="97"/>
+            <point key="canvasLocation" x="-254" y="-34"/>
         </collectionViewCell>
     </objects>
     <resources>

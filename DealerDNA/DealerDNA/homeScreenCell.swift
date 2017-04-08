@@ -10,6 +10,7 @@ import UIKit
 
 class homeScreenCell: UICollectionViewCell {
 
+    @IBOutlet var vwBack: UIView!
     @IBOutlet var imgViewCell: UIImageView!
     @IBOutlet var lbCell: UILabel!
     override func awakeFromNib() {

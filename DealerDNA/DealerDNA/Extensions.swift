@@ -51,3 +51,11 @@ extension UINavigationController{
         }
     }
 }
+
+extension UIImageView{
+    
+    func setTintColor(color: UIColor){
+        self.image = self.image?.withRenderingMode(.alwaysTemplate)
+        self.tintColor = color
+    }
+}
