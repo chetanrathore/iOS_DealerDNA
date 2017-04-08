@@ -19,12 +19,14 @@ class drawerCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         lblMenuTitle.font = appFont()
-        viewOuter.layer.cornerRadius = viewOuter.bounds.width/2
+        viewOuter.layer.cornerRadius = (Screen.device == .pad) ? 15 : viewOuter.bounds.width/2
         v1.backgroundColor = AppColor.selectedSideBarColor
         v2.backgroundColor = AppColor.selectedSideBarColor
         otherCell()
     }
 
+    
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -17,12 +17,16 @@ class CustomerListVC: UIViewController, CustomNevigationDeletegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setLayout()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setLayout()
     }
     
     func setLayout() {
@@ -36,5 +40,5 @@ class CustomerListVC: UIViewController, CustomNevigationDeletegate {
         let vc = DrawerVC(nibName: "DrawerVC", bundle: nil)
         revealSideViewController.push(vc, on: .left, animated: true)
     }
-
+    
 }

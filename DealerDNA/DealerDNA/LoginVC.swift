@@ -103,6 +103,10 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         imgUserIcon.setTintColor(color: AppColor.textFieldIcon)
         imgPwdIcon.setTintColor(color: AppColor.textFieldIcon)
         imgPhoneIcon.setTintColor(color: AppColor.textFieldIcon)
+        
+        btnForgotPwd.titleLabel?.font = appFont(size: AppFont.normalFontSize)
+        btnForgotPwd.setTitleColor(AppColor.theamColor, for: .normal)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

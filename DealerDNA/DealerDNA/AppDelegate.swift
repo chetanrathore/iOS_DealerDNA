@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appCityLocation: String!
     var temprature:NSMutableDictionary!
     
+    //For Tabbadge value
+    var tabDashboard = ""
+    var tabReports = ""
+    var tabTasks = ""
+    var tabSearch = ""
+    var tabAppts = ""
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // NotificationCenter.default.addObserver(self, selector: #selector(self.changeDeviceOrientation), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
@@ -29,15 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.sharedManager().enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
         let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-        let vc = TabbarVC()
-        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: vc))
+//        let vc = TabbarVC()
+        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
         
         revealSideViewController?.directionsToShowBounce = .none
         revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
         revealSideViewController?.setOption(.optionsNoStatusBar)
         // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
         // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
-//         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
+        //         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         window?.rootViewController = revealSideViewController
         window?.makeKeyAndVisible()
         return true
@@ -125,6 +132,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func logut(){
         appDelegate.dashBoardTiles.removeAllObjects()
         appDelegate.sideMenuItem.removeAllObjects()
+    }
+    
+    //Set Tabbar BadgeValue
+    func setBadgeValue(viewWithTabbar: UIViewController){
+        if !appDelegate.tabDashboard.isEmpty{
+            viewWithTabbar.tabBarController?.tabBar.items?[0].badgeValue = appDelegate.tabDashboard
+        }
+        if !appDelegate.tabReports.isEmpty{
+            viewWithTabbar.tabBarController?.tabBar.items![1].badgeValue = appDelegate.tabReports
+        }
+        if !appDelegate.tabTasks.isEmpty{
+            viewWithTabbar.tabBarController?.tabBar.items![2].badgeValue = appDelegate.tabTasks
+        }
+        if !appDelegate.tabAppts.isEmpty{
+            viewWithTabbar.tabBarController?.tabBar.items![3].badgeValue = appDelegate.tabAppts
+            if #available(iOS 10.0, *) {
+                viewWithTabbar.tabBarController?.tabBar.items?[3].badgeColor = AppColor.greenColor
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+        if !appDelegate.tabSearch.isEmpty{
+            viewWithTabbar.tabBarController?.tabBar.items![4].badgeValue = appDelegate.tabSearch
+        }
     }
     
 }
