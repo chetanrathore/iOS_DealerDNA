@@ -25,6 +25,15 @@
 		0C17D6451E826F360055CAE7 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6331E826F360055CAE7 /* IQToolbar.swift */; };
 		0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */; };
+		0C1FC4791E9B3EC6003EB402 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1FC4781E9B3EC6003EB402 /* Security.framework */; };
+		0C1FC47A1E9B3FBE003EB402 /* KeychainWrapper.h in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B631E99044D009E1A5E /* KeychainWrapper.h */; };
+		0C1FC47B1E9B3FCA003EB402 /* KeychainWrapper.m in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B641E99044D009E1A5E /* KeychainWrapper.m */; };
+		0C1FC4811E9B47FA003EB402 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4801E9B47FA003EB402 /* KeychainItemAccessibility.swift */; };
+		0C1FC4831E9B480A003EB402 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4821E9B480A003EB402 /* KeychainWrapper.swift */; };
+		0C1FC4851E9B5E6E003EB402 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4841E9B5E6E003EB402 /* StringConstant.swift */; };
+		0C1FC4881E9B632B003EB402 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4861E9B632B003EB402 /* SettingsCell.swift */; };
+		0C1FC4891E9B632B003EB402 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1FC4871E9B632B003EB402 /* SettingsCell.xib */; };
+		0C1FC48B1E9B9062003EB402 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC48A1E9B9062003EB402 /* User.swift */; };
 		0C21E8271E8269DF00DEC621 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C21E8261E8269DF00DEC621 /* Extensions.swift */; };
 		0C2396EF1E94B2A3002CE936 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */; };
 		0C3730631E83C16D00D684E3 /* InventoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3730611E83C16D00D684E3 /* InventoryListCell.swift */; };
@@ -79,7 +88,6 @@
 		0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */; };
 		0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */; };
 		0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */; };
-		0CF67B651E99044D009E1A5E /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B641E99044D009E1A5E /* KeychainWrapper.m */; };
 		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
 		0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697111E82AF4E00F867FA /* AFNetworkReachabilityManager.m */; };
 		0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF697131E82AF4E00F867FA /* AFSecurityPolicy.m */; };
@@ -151,6 +159,13 @@
 		0C17D6331E826F360055CAE7 /* IQToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQToolbar.swift; sourceTree = "<group>"; };
 		0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		0C1FC4781E9B3EC6003EB402 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0C1FC4801E9B47FA003EB402 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		0C1FC4821E9B480A003EB402 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		0C1FC4841E9B5E6E003EB402 /* StringConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstant.swift; sourceTree = "<group>"; };
+		0C1FC4861E9B632B003EB402 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		0C1FC4871E9B632B003EB402 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		0C1FC48A1E9B9062003EB402 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0C21E8261E8269DF00DEC621 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		0C3730611E83C16D00D684E3 /* InventoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryListCell.swift; sourceTree = "<group>"; };
@@ -264,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1FC4791E9B3EC6003EB402 /* Security.framework in Frameworks */,
 				8EF3144666ABD7A85B849B0B /* Pods_DealerDNA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +500,7 @@
 				0C21E8261E8269DF00DEC621 /* Extensions.swift */,
 				0C08E3061E8CF9E700B9025F /* DashboardConstant.swift */,
 				0C2396EE1E94B2A3002CE936 /* TabbarVC.swift */,
+				0C1FC4841E9B5E6E003EB402 /* StringConstant.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -491,6 +508,7 @@
 		0C69D98B1E811DDD0079F9A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0C1FC48A1E9B9062003EB402 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -523,6 +541,8 @@
 				0C40B3511E94CD5E00656605 /* DashboardCell.xib */,
 				0C40B3541E94CDE300656605 /* DashboardCollectionCell.swift */,
 				0C40B3551E94CDE300656605 /* DashboardCollectionCell.xib */,
+				0C1FC4861E9B632B003EB402 /* SettingsCell.swift */,
+				0C1FC4871E9B632B003EB402 /* SettingsCell.xib */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -562,6 +582,8 @@
 		0CF67B621E99044D009E1A5E /* KeychainWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				0C1FC4821E9B480A003EB402 /* KeychainWrapper.swift */,
+				0C1FC4801E9B47FA003EB402 /* KeychainItemAccessibility.swift */,
 				0CF67B631E99044D009E1A5E /* KeychainWrapper.h */,
 				0CF67B641E99044D009E1A5E /* KeychainWrapper.m */,
 			);
@@ -668,6 +690,7 @@
 		B90716AA3BCF12E1D4B96BB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C1FC4781E9B3EC6003EB402 /* Security.framework */,
 				365458C8718D1811384B753D /* Pods_DealerDNA.framework */,
 				F14DB19FACB0C786DFFCEA1C /* Pods_DealerDNATests.framework */,
 				164B76917546C997776A5B71 /* Pods_DealerDNAUITests.framework */,
@@ -793,6 +816,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1FC4891E9B632B003EB402 /* SettingsCell.xib in Resources */,
+				0C1FC47B1E9B3FCA003EB402 /* KeychainWrapper.m in Resources */,
+				0C1FC47A1E9B3FBE003EB402 /* KeychainWrapper.h in Resources */,
 				0C40B3571E94CDE300656605 /* DashboardCollectionCell.xib in Resources */,
 				3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */,
 				0CE5D4651E8BABFF003DA666 /* User_1.png in Resources */,
@@ -987,7 +1013,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */,
-				0CF67B651E99044D009E1A5E /* KeychainWrapper.m in Sources */,
 				3079D8971E82799800D3DD4D /* CustomerDetailsVC.swift in Sources */,
 				0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */,
 				3079D8931E82798500D3DD4D /* CustomerListVC.swift in Sources */,
@@ -1000,6 +1025,8 @@
 				0C17D6431E826F360055CAE7 /* IQPreviousNextView.swift in Sources */,
 				0C17D6441E826F360055CAE7 /* IQTitleBarButtonItem.swift in Sources */,
 				0CF6971D1E82AF4E00F867FA /* AFURLRequestSerialization.m in Sources */,
+				0C1FC4831E9B480A003EB402 /* KeychainWrapper.swift in Sources */,
+				0C1FC4881E9B632B003EB402 /* SettingsCell.swift in Sources */,
 				0C69D9971E8128F90079F9A3 /* HomeVC.swift in Sources */,
 				0C17D63E1E826F360055CAE7 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				0C2396EF1E94B2A3002CE936 /* TabbarVC.swift in Sources */,
@@ -1009,6 +1036,7 @@
 				0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */,
 				0C3730671E83CECE00D684E3 /* AddInventoryVC.swift in Sources */,
 				0C17D63A1E826F360055CAE7 /* IQUIView+Hierarchy.swift in Sources */,
+				0C1FC4811E9B47FA003EB402 /* KeychainItemAccessibility.swift in Sources */,
 				0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */,
 				0CF6971B1E82AF4E00F867FA /* AFNetworkReachabilityManager.m in Sources */,
 				0C40B34E1E94BE4000656605 /* DashboardVC.swift in Sources */,
@@ -1024,6 +1052,7 @@
 				3079D8A41E827D5B00D3DD4D /* DrawerVC.swift in Sources */,
 				0C69D9A51E81444B0079F9A3 /* CheckBoxButton.swift in Sources */,
 				0C17D63F1E826F360055CAE7 /* IQKeyboardManager.swift in Sources */,
+				0C1FC4851E9B5E6E003EB402 /* StringConstant.swift in Sources */,
 				0CF6971E1E82AF4E00F867FA /* AFURLResponseSerialization.m in Sources */,
 				0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */,
 				0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */,
@@ -1039,6 +1068,7 @@
 				0C17D63C1E826F360055CAE7 /* IQUIWindow+Hierarchy.swift in Sources */,
 				0C879B351E9268B500BF16FF /* InventoryImageVC.swift in Sources */,
 				0C40B3561E94CDE300656605 /* DashboardCollectionCell.swift in Sources */,
+				0C1FC48B1E9B9062003EB402 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

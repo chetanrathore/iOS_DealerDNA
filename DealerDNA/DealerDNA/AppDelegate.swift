@@ -35,20 +35,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         IQKeyboardManager.sharedManager().enable = true
         window = UIWindow(frame: UIScreen.main.bounds)
-        let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
-//        let vc = TabbarVC()
-        
-        let passcodeVC = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
-        let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
-        
-        revealSideViewController?.directionsToShowBounce = .none
-        revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
-        revealSideViewController?.setOption(.optionsNoStatusBar)
-        // revealSideViewController?.fakeiOS7StatusBarColor = UIColor.clear
-        // revealSideViewController?.panInteractionsWhenClosed = [.navigationBar,.contentView]
-        //         let main = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
-        window?.rootViewController = passcodeVC//revealSideViewController
+        self.getAppDetails()
+        //Already login and pincode not set
+        let userDefault = UserDefaults.standard
+        if userDefault.value(forKey: isLoggedIn) != nil{
+            if userDefault.value(forKey: "isPasscodeSet") != nil{
+                self.getAppDetails()
+                //Dashboard View
+                let main = HomeVC(nibName: "HomeVC", bundle: nil)
+                let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: main))
+                revealSideViewController?.directionsToShowBounce = .none
+                revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
+                revealSideViewController?.setOption(.optionsNoStatusBar)
+                window?.rootViewController = revealSideViewController
+            }else{
+                self.getAppDetails()
+                //passcode view
+                let passcodeVC = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
+                passcodeVC.passcodeVCFor = .kCheckPasscode
+                window?.rootViewController = passcodeVC
+            }
+        }else{
+            //Login view
+            let loginVC = LoginVC(nibName: "LoginVC", bundle: nil)
+            let revealSideViewController = PPRevealSideViewController(rootViewController: UINavigationController(rootViewController: loginVC))
+            revealSideViewController?.directionsToShowBounce = .none
+            revealSideViewController?.resetOption(.optionsiOS7StatusBarFading)
+            revealSideViewController?.setOption(.optionsNoStatusBar)
+            window?.rootViewController = revealSideViewController
+        }
         window?.makeKeyAndVisible()
+        
         return true
     }
     
@@ -132,8 +149,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func logut(){
+        let userDefault = UserDefaults.standard
+        if userDefault.value(forKey: isLoggedIn) != nil{
+            userDefault.set(nil, forKey: isLoggedIn)
+        }
+        userDefault.synchronize()
         appDelegate.dashBoardTiles.removeAllObjects()
         appDelegate.sideMenuItem.removeAllObjects()
+    }
+    
+    func getAppDetails(){
+        let userDefault = UserDefaults.standard
+        if userDefault.value(forKey: appDetails) != nil{
+            let nsData = userDefault.value(forKey: appDetails) as! Data
+            let data = NSKeyedUnarchiver.unarchiveObject(with: nsData) as! AppData
+            appDelegate.dashBoardTiles = data.dashBoardTiles as! NSMutableArray
+            appDelegate.sideMenuItem = data.sideMenuItem as! NSMutableArray
+        }
     }
     
     //Set Tabbar BadgeValue

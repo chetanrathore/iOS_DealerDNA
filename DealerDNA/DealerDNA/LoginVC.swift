@@ -8,13 +8,6 @@
 
 import UIKit
 
-enum KLogin: String{
-    case kUserName = "UserName",
-    kPassword = "Password",
-    kPhoneNo = "PhoneNo",
-    kRemember = "Remember"
-}
-
 class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var txtAutomotiveGroup: TextField!
@@ -187,6 +180,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 defaults.removeObject(forKey: KLogin.kUserName.rawValue)
                 defaults.removeObject(forKey: KLogin.kPassword.rawValue)
             }
+            appDelegate.dashBoardTiles.removeAllObjects()
+            appDelegate.sideMenuItem.removeAllObjects()
             
             appDelegate.sideMenuItem.add(DashBoardMenu.home)
             appDelegate.sideMenuItem.add(DashBoardMenu.dlScan)
@@ -200,7 +195,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
             appDelegate.dashBoardTiles.add(DashBoardMenu.customer)
             appDelegate.dashBoardTiles.add(DashBoardMenu.setting)
-    
+            defaults.set(true, forKey: isLoggedIn)
+            
+            let data = AppData(dashBoardTiles: appDelegate.dashBoardTiles, sideMenuItem: appDelegate.sideMenuItem)
+            let nsData: Data = NSKeyedArchiver.archivedData(withRootObject: data)
+            defaults.set(nsData, forKey: appDetails)
+            defaults.synchronize()
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

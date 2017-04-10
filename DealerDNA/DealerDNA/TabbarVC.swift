@@ -20,13 +20,13 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         
         var viewController1 = DashboardVC()
         var viewController2 = HomeVC()
-        var viewController3 = MainDashboardVC()
+        var viewController3 = PasscodeVC()
         var viewController4 = MainDashboardVC()
         var viewController5 = MainDashboardVC()
         
         viewController1 = DashboardVC(nibName: "DashboardVC", bundle: nil)
         viewController2 = HomeVC(nibName: "HomeVC", bundle: nil)
-        viewController3 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
+        viewController3 = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
         viewController4 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         viewController5 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
         
