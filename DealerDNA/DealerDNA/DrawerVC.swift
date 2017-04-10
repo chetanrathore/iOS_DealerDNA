@@ -99,8 +99,8 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tblDrawer.cellForRow(at: indexPath) as! drawerCell
         if let itemName = cell.lblMenuTitle.text{
             if itemName == DashBoardMenu.home{
-                 let vc = TabbarVC()
-//                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+                let vc = TabbarVC()
+                //                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
                 let nav = UINavigationController(rootViewController: vc)
                 revealSideViewController.popViewController(withNewCenter: nav, animated: true)
             }else if itemName == DashBoardMenu.dlScan{

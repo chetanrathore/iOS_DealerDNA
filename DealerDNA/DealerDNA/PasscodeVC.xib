@@ -11,7 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PasscodeVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancelBack" destination="EyP-bf-aNq" id="BqG-CC-pvb"/>
+                <outlet property="btnSetPasscode" destination="TOF-bC-ROI" id="fu2-2h-J8y"/>
                 <outlet property="constCenterDotViww" destination="MyZ-AM-4jV" id="2A8-da-GAg"/>
+                <outlet property="lblButtonTitle" destination="yVU-O7-AOl" id="ok2-AR-cFc"/>
+                <outlet property="lblTitle" destination="8Uk-fK-my5" id="zxo-cA-PNe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwDots" destination="Bgo-Yu-A8i" id="Cuz-ep-vId"/>
                 <outletCollection property="pinDotViews" destination="32w-rx-cdl" collectionClass="NSMutableArray" id="qRM-vg-cd9"/>
@@ -55,7 +59,7 @@
                                     <rect key="frame" x="16" y="20" width="289" height="420"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Passcode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uk-fK-my5">
-                                            <rect key="frame" x="40" y="3" width="209" height="30"/>
+                                            <rect key="frame" x="10" y="3" width="269" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="eIm-HM-C3O"/>
                                             </constraints>
@@ -427,8 +431,8 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFW-aI-n8G">
-                                                            <rect key="frame" x="15" y="8" width="40" height="40"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="35"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -519,7 +523,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="K4D-7h-snz" firstAttribute="centerX" secondItem="714-Df-vYf" secondAttribute="centerX" id="1Wq-gu-DNk"/>
-                                        <constraint firstItem="8Uk-fK-my5" firstAttribute="leading" secondItem="714-Df-vYf" secondAttribute="leading" constant="40" id="3FU-CG-RmN"/>
+                                        <constraint firstItem="8Uk-fK-my5" firstAttribute="leading" secondItem="714-Df-vYf" secondAttribute="leading" constant="10" id="3FU-CG-RmN"/>
                                         <constraint firstItem="8Uk-fK-my5" firstAttribute="top" secondItem="714-Df-vYf" secondAttribute="top" constant="3" id="GHh-v3-EXR"/>
                                         <constraint firstItem="Bgo-Yu-A8i" firstAttribute="centerX" secondItem="714-Df-vYf" secondAttribute="centerX" id="MyZ-AM-4jV"/>
                                         <constraint firstItem="Bgo-Yu-A8i" firstAttribute="top" secondItem="8Uk-fK-my5" secondAttribute="bottom" constant="5" id="YK9-9C-Hn2"/>
@@ -527,7 +531,7 @@
                                         <constraint firstAttribute="height" constant="420" id="mvO-td-M5t">
                                             <variation key="heightClass=regular-widthClass=regular" constant="460"/>
                                         </constraint>
-                                        <constraint firstAttribute="trailing" secondItem="8Uk-fK-my5" secondAttribute="trailing" constant="40" id="xnb-Wg-zXy"/>
+                                        <constraint firstAttribute="trailing" secondItem="8Uk-fK-my5" secondAttribute="trailing" constant="10" id="xnb-Wg-zXy"/>
                                         <constraint firstAttribute="width" constant="289" id="y3g-mQ-mbd">
                                             <variation key="heightClass=compact-widthClass=compact" constant="319"/>
                                         </constraint>
@@ -550,6 +554,16 @@
                         <constraint firstAttribute="bottom" secondItem="WVr-9X-GrR" secondAttribute="bottom" id="orh-Eb-3Jh"/>
                     </constraints>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyP-bf-aNq">
+                    <rect key="frame" x="15" y="20" width="65" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Close">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnCancelBack:" destination="-1" eventType="touchUpInside" id="N6b-bZ-bBa"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -560,7 +574,7 @@
                 <constraint firstItem="Ne0-0k-NCc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FcK-Eq-hNZ"/>
                 <constraint firstItem="WVr-9X-GrR" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Nx3-em-DVK"/>
             </constraints>
-            <point key="canvasLocation" x="-1541" y="-450"/>
+            <point key="canvasLocation" x="-2254" y="-729"/>
         </view>
     </objects>
 </document>

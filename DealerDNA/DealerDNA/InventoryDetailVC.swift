@@ -76,6 +76,9 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
     }
     
     func changeScrollViewSize(){
+        let vc = InventoryImageVC(nibName: "InventoryImageVC", bundle: nil)
+        //vc.img.image =  UIImage(named: "bike1.jpg")
+        self.present(vc, animated: true, completion: nil)
         //self.scrollVWImage.contentOffset.x / self.scrollVWImage.frame.width
 //        self.view.layer.layoutIfNeeded()
 //        UIView.animate(withDuration: 0.3) {
