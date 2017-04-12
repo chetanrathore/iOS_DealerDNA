@@ -56,7 +56,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         } else {
             showAlertView(title: "Message", message: "Location services are not enabled", view: self)
         }
-        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
+//        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,7 +117,10 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         if let itemName = appDelegate.dashBoardTiles[indexPath.row] as? String{
             appDelegate.selectedMenu = itemName
             if itemName == DashBoardMenu.dashboard{
-                let vc = TabbarVC()
+                
+//                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
+//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = DashboardVC(nibName: "DashboardVC", bundle: nil) //TabbarVC()
                 //                self.view.window?.rootViewController = vc
                 self.navigationController?.pushViewController(vc, animated: true)
             }else if itemName == DashBoardMenu.dlScan{

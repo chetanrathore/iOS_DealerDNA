@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefault = UserDefaults.standard
         
         if userDefault.value(forKey: isLoggedIn) != nil{
-            if userDefault.value(forKey: "isPasscodeSet") != nil{
+            if userDefault.value(forKey: isSetPasscode) == nil{
                 self.getAppDetails()
                 //Dashboard View
                 let main = HomeVC(nibName: "HomeVC", bundle: nil)
@@ -51,10 +51,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 window?.rootViewController = revealSideViewController
             }else{
                 self.getAppDetails()
-                //passcode view
-                let passcodeVC = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
-                passcodeVC.passcodeVCFor = .kCheckPasscode
-                window?.rootViewController = passcodeVC
+                
+                if KeychainWrapper.standard.string(forKey: kSecValueData as String) != nil{
+                    let passcodeVC = PasscodeVC(nibName: "PasscodeVC", bundle: nil)
+                    passcodeVC.passcodeVCFor = .kCheckPasscode
+                    window?.rootViewController = passcodeVC
+                }
             }
         }else{
             //Login view

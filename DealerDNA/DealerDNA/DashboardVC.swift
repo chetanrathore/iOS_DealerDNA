@@ -17,12 +17,47 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var btnDate: UIButton!
     var arrSection = [Dasdhboard]()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpDashboard()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setInterface()
+        appDelegate.tabAppts = "31"
+        appDelegate.tabTasks = "234"
+        appDelegate.setBadgeValue(viewWithTabbar: self)
+        
+    }
+    
+    func setView(){
+        self.tblDashboard.dataSource = self
+        self.tblDashboard.delegate = self
+        self.tblDashboard.register(UINib(nibName: "DashboardCell",bundle: nil), forCellReuseIdentifier: "DashboardCell")
+        self.tblDashboard.tableFooterView = UIView()
+    }
+    
+    func setInterface(){
+        self.navigationController?.navigationBar.isHidden = true
+        self.btnDate.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kBold)
+        self.lblTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kHeavy)
+        self.lblSubTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
+    }
+    
+    func setUpDashboard(){
         let d1 = DashboadMster(title: "Working", count: 10, backColor: AppColor.lightBlueColor)
         let d2 = DashboadMster(title: "Accepted", count: 9, backColor: AppColor.lightGreenColor)
         let d3 = DashboadMster(title: "Forgotten", count: 133, backColor: AppColor.darkRedColor)
@@ -45,36 +80,8 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let d42 = DashboadMster(title: "Demo", count: 8, backColor: AppColor.lightBlueColor)
         let d43 = DashboadMster(title: "Write Up", count: 9, backColor: AppColor.lightBlueColor)
         arrSection.append(Dasdhboard(mainTitle: "Showroom", subSection: [d41,d42,d43]))
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setInterface()
-        appDelegate.tabAppts = "31"
-        appDelegate.tabTasks = "234"
-        appDelegate.setBadgeValue(viewWithTabbar: self)
         tblDashboard.reloadData()
-    }
-    
-    func setView(){
-        self.tblDashboard.dataSource = self
-        self.tblDashboard.delegate = self
-        self.tblDashboard.register(UINib(nibName: "DashboardCell",bundle: nil), forCellReuseIdentifier: "DashboardCell")
-    }
-    
-    func setInterface(){
-        self.navigationController?.navigationBar.isHidden = true
-        self.btnDate.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kBold)
-        self.lblTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kHeavy)
-        self.lblSubTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
+
     }
     
     // Mark: Tableview
@@ -143,7 +150,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionCell", for: indexPath) as! DashboardCollectionCell
-        print(collectionView.tag)
+        //print(collectionView.tag)
         let data = arrSection[collectionView.tag].subSection[indexPath.row]
         cell.lblTitle.text = data.title
         cell.lblCount.text = String(data.count)

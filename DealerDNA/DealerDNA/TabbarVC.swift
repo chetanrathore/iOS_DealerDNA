@@ -60,7 +60,6 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
             image: #imageLiteral(resourceName: "tabSearch"),
             tag: 4)
         
-        
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = UIColor.black
         
