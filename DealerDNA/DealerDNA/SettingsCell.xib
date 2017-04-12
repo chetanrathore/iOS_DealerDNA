@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piv-it-dBt">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="piv-it-dBt">
                         <rect key="frame" x="10" y="9" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
@@ -30,7 +30,14 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imgIcon" destination="piv-it-dBt" id="rhY-Zb-1bV"/>
+                <outlet property="lblTitle" destination="byp-zV-3WF" id="tBD-kv-3Wb"/>
+            </connections>
             <point key="canvasLocation" x="-157" y="-133"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="settings" width="65" height="65"/>
+    </resources>
 </document>

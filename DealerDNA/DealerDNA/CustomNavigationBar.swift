@@ -37,14 +37,13 @@ class CustomNavigationBar: UIViewController {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: Screen.screenWidth, height: 64))
         view.backgroundColor = AppColor.theamColor
-        
+        view.tag = 3434
         view.autoresizingMask = .flexibleWidth
         let backButton = UIButton()
         switch backBtn {
         case .back:
             backButton.frame = CGRect(x: 10, y: 25, width: 30, height: 30)
             backButton.setImage(UIImage(named: "left.png"), for: .normal)
-            backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
             break
         case .noBack:
@@ -52,10 +51,18 @@ class CustomNavigationBar: UIViewController {
         case .menu:
             backButton.frame = CGRect(x: 10, y: 20, width: 30, height: 32)
             backButton.setImage(#imageLiteral(resourceName: "sidemenuicon"), for: .normal)
-            backButton.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
             view.addSubview(backButton)
             break
         }
+        
+        if backBtn == .menu || backBtn == .back{
+            let btn = UIButton()
+            btn.frame = CGRect(x: 0, y: 0, width: 60, height: 64)
+            btn.addTarget(self, action: #selector(btnLeftClick), for: .touchUpInside)
+            view.addSubview(btn)
+            
+        }
+        
         let label = UILabel(frame: CGRect(x: 40, y: 25, width: Screen.screenWidth - 80, height: 30))
         label.font = appFont(size: AppFont.titleFontSize)
         label.textColor = UIColor.white

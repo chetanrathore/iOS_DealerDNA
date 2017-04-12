@@ -28,7 +28,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        getInventory()
+       // getInventory()
     }
     
     override func viewDidLayoutSubviews() {

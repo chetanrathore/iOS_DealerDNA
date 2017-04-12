@@ -85,12 +85,13 @@ class InventoryImageVC: UIViewController {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let loc = touches.first?.location(in: self.view)
         self.img.center = loc!
-        self.dismiss(animated: true, completion: nil)
+        
         
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleDone()
+        self.dismiss(animated: true, completion: nil)
+        //handleDone()
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {

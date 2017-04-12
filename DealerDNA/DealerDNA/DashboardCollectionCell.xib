@@ -56,6 +56,7 @@
             <connections>
                 <outlet property="lblCount" destination="SjL-Sj-Wss" id="ymk-9T-L1e"/>
                 <outlet property="lblTitle" destination="hWH-OZ-Xgw" id="L7Q-MK-yQ1"/>
+                <outlet property="vwBack" destination="ovk-Ix-J0b" id="Vld-9i-ybP"/>
             </connections>
             <point key="canvasLocation" x="-382" y="-129"/>
         </collectionViewCell>

@@ -9,6 +9,7 @@
 import UIKit
 
 class DashboardCollectionCell: UICollectionViewCell {
+    @IBOutlet var vwBack: UIView!
 
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblCount: UILabel!

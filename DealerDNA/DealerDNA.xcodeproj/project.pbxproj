@@ -86,6 +86,8 @@
 		0CE5D4651E8BABFF003DA666 /* User_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4621E8BABFF003DA666 /* User_1.png */; };
 		0CE5D4681E8BB7FC003DA666 /* View_Details_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4661E8BB7FC003DA666 /* View_Details_1.png */; };
 		0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */; };
+		0CEFBEA21E9CF03200A1B01B /* InventoryVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFBEA01E9CF03200A1B01B /* InventoryVideoVC.swift */; };
+		0CEFBEA31E9CF03200A1B01B /* InventoryVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CEFBEA11E9CF03200A1B01B /* InventoryVideoVC.xib */; };
 		0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */; };
 		0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */; };
 		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
@@ -224,6 +226,8 @@
 		0CE5D4621E8BABFF003DA666 /* User_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User_1.png; sourceTree = "<group>"; };
 		0CE5D4661E8BB7FC003DA666 /* View_Details_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Details_1.png; sourceTree = "<group>"; };
 		0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Details_2.png; sourceTree = "<group>"; };
+		0CEFBEA01E9CF03200A1B01B /* InventoryVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVideoVC.swift; sourceTree = "<group>"; };
+		0CEFBEA11E9CF03200A1B01B /* InventoryVideoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVideoVC.xib; sourceTree = "<group>"; };
 		0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeVC.swift; sourceTree = "<group>"; };
 		0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeVC.xib; sourceTree = "<group>"; };
 		0CF67B631E99044D009E1A5E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
@@ -575,6 +579,8 @@
 			children = (
 				0CE053061E8518F4003ADF91 /* MainDashboardVC.swift */,
 				0CE053071E8518F4003ADF91 /* MainDashboardVC.xib */,
+				0CEFBEA01E9CF03200A1B01B /* InventoryVideoVC.swift */,
+				0CEFBEA11E9CF03200A1B01B /* InventoryVideoVC.xib */,
 			);
 			name = WorkFlow;
 			sourceTree = "<group>";
@@ -839,6 +845,7 @@
 				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
 				0C37306E1E83D2CA00D684E3 /* left-arrow.png in Resources */,
 				0CE053091E8518F4003ADF91 /* MainDashboardVC.xib in Resources */,
+				0CEFBEA31E9CF03200A1B01B /* InventoryVideoVC.xib in Resources */,
 				30D6B3C11E83A8C900070D56 /* menu.png in Resources */,
 				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
 				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
@@ -1055,6 +1062,7 @@
 				0C1FC4851E9B5E6E003EB402 /* StringConstant.swift in Sources */,
 				0CF6971E1E82AF4E00F867FA /* AFURLResponseSerialization.m in Sources */,
 				0C69D9931E81286F0079F9A3 /* LoginVC.swift in Sources */,
+				0CEFBEA21E9CF03200A1B01B /* InventoryVideoVC.swift in Sources */,
 				0CF6971C1E82AF4E00F867FA /* AFSecurityPolicy.m in Sources */,
 				0C17D6421E826F360055CAE7 /* IQBarButtonItem.swift in Sources */,
 				0C40B3521E94CD5E00656605 /* DashboardCell.swift in Sources */,
@@ -1157,7 +1165,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
@@ -1204,7 +1212,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
 				SDKROOT = iphoneos;

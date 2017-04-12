@@ -38,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.getAppDetails()
         //Already login and pincode not set
         let userDefault = UserDefaults.standard
+        
         if userDefault.value(forKey: isLoggedIn) != nil{
             if userDefault.value(forKey: "isPasscodeSet") != nil{
                 self.getAppDetails()
@@ -64,6 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             revealSideViewController?.setOption(.optionsNoStatusBar)
             window?.rootViewController = revealSideViewController
         }
+        
+        //        let tmpVC = InventoryVideoVC(nibName: "InventoryVideoVC", bundle: nil)
+        //
+        //        window?.rootViewController = tmpVC
         window?.makeKeyAndVisible()
         
         return true

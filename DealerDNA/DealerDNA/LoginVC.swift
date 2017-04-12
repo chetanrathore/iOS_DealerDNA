@@ -190,7 +190,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             appDelegate.sideMenuItem.add(DashBoardMenu.setting)
             appDelegate.sideMenuItem.add(DashBoardMenu.logout)
             
-            appDelegate.dashBoardTiles.add(DashBoardMenu.home)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.dashboard)
             appDelegate.dashBoardTiles.add(DashBoardMenu.dlScan)
             appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
             appDelegate.dashBoardTiles.add(DashBoardMenu.customer)

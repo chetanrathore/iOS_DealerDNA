@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,40 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="2046"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acz-fr-cgD">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-p5-FNP">
-                            <rect key="frame" x="0.0" y="53" width="320" height="11"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" red="0.34509803919999998" green="0.52549019610000003" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sx4-W5-9Un">
-                            <rect key="frame" x="75" y="19" width="170" height="26"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-Pl-9rR">
-                            <rect key="frame" x="5" y="15" width="50" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="2"/>
-                            <state key="normal" backgroundImage="left.png">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="handleBtnBack:" destination="-1" eventType="touchUpInside" id="sVJ-AU-9Dk"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="atp-LZ-27W"/>
-                    </constraints>
-                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-Nm-s4R">
                     <rect key="frame" x="0.0" y="64" width="320" height="1982"/>
                     <subviews>
@@ -71,7 +36,7 @@
                                     <rect key="frame" x="15" y="46" width="25" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="tintColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.023529411760000001" green="0.6705882353" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal">
                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </state>
@@ -80,7 +45,7 @@
                                     <rect key="frame" x="137" y="46" width="25" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <color key="tintColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.023529411760000001" green="0.6705882353" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal">
                                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </state>
@@ -100,7 +65,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIl-Cj-zvl">
                                     <rect key="frame" x="14" y="81" width="291" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.023529411760000001" green="0.6705882353" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="Tap Here to Scan VIN">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,7 +88,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ET-lh-gP3">
                                     <rect key="frame" x="14" y="205" width="291" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.023529411760000001" green="0.6705882353" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="Retrieve Inventory">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,7 +427,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2b-5U-m6F">
                                     <rect key="frame" x="14" y="1990" width="291" height="40"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.42352941179999998" green="0.65098039220000004" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.023529411760000001" green="0.6705882353" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                     <state key="normal" title="Tap Here to Scan VIN">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -492,20 +457,13 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="U9P-Nm-s4R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6m5-wi-hUw"/>
-                <constraint firstAttribute="trailing" secondItem="acz-fr-cgD" secondAttribute="trailing" id="AHt-fI-2uI"/>
                 <constraint firstAttribute="trailing" secondItem="U9P-Nm-s4R" secondAttribute="trailing" id="GxL-l2-3Qn"/>
-                <constraint firstItem="acz-fr-cgD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KEP-Yo-swk"/>
                 <constraint firstAttribute="bottom" secondItem="U9P-Nm-s4R" secondAttribute="bottom" id="YdA-eC-LKX"/>
-                <constraint firstItem="U9P-Nm-s4R" firstAttribute="top" secondItem="acz-fr-cgD" secondAttribute="bottom" id="bLQ-VN-4gL"/>
                 <constraint firstItem="U9P-Nm-s4R" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="eR7-7P-Bds"/>
-                <constraint firstItem="acz-fr-cgD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="i8l-47-l2z"/>
                 <constraint firstItem="Ll4-ly-Uh4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="v1R-Kz-Mj7"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-2875" y="-914"/>
         </view>
     </objects>
-    <resources>
-        <image name="left.png" width="50" height="50"/>
-    </resources>
 </document>

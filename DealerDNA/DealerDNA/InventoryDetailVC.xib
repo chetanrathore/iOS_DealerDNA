@@ -10,29 +10,32 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryDetailVC" customModule="DealerDNA" customModuleProvider="target">
             <connections>
+                <outlet property="btnCloseSlide" destination="plt-Ht-IzJ" id="BrP-4P-Lqg"/>
+                <outlet property="mainScrollView" destination="o3G-tO-Vfl" id="gLX-IN-Rbm"/>
                 <outlet property="scrollVWImage" destination="ByH-st-6am" id="Okq-8M-NCe"/>
+                <outlet property="scrollViewTop" destination="Pge-ey-As5" id="4z0-9a-HiL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwDetailHeight" destination="OgD-Sb-O7t" id="WSF-6X-CCa"/>
+                <outlet property="vwHeight" destination="TsG-5Q-aa7" id="rG1-t7-gxb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="527"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3G-tO-Vfl">
-                    <rect key="frame" x="0.0" y="64" width="320" height="463"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEE-pr-7Ea">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="463"/>
                             <subviews>
-                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByH-st-6am">
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByH-st-6am">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="236"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <gestureRecognizers/>
                                 </scrollView>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-js-nPd">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-js-nPd">
                                     <rect key="frame" x="0.0" y="236" width="320" height="227"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vEb-C1-XqA">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="227"/>
@@ -92,32 +95,55 @@
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="227" id="OgD-Sb-O7t"/>
+                                    </constraints>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="463" id="OON-RZ-Xvp"/>
+                                <constraint firstAttribute="bottom" secondItem="rGW-js-nPd" secondAttribute="bottom" id="3Z3-Yy-zWT"/>
+                                <constraint firstItem="rGW-js-nPd" firstAttribute="leading" secondItem="aEE-pr-7Ea" secondAttribute="leading" id="71k-Jr-IOY"/>
+                                <constraint firstItem="rGW-js-nPd" firstAttribute="top" secondItem="ByH-st-6am" secondAttribute="bottom" id="BRy-Is-Kwp"/>
+                                <constraint firstItem="ByH-st-6am" firstAttribute="leading" secondItem="aEE-pr-7Ea" secondAttribute="leading" id="LEt-Sg-pqW"/>
+                                <constraint firstAttribute="trailing" secondItem="rGW-js-nPd" secondAttribute="trailing" id="NVh-Bu-9BQ"/>
+                                <constraint firstItem="ByH-st-6am" firstAttribute="top" secondItem="aEE-pr-7Ea" secondAttribute="top" id="QF2-zB-qIK"/>
+                                <constraint firstAttribute="height" constant="463" id="TsG-5Q-aa7"/>
+                                <constraint firstAttribute="trailing" secondItem="ByH-st-6am" secondAttribute="trailing" id="yzn-uZ-CNP"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="aEE-pr-7Ea" secondAttribute="bottom" id="0Mi-9i-FQr"/>
-                        <constraint firstAttribute="trailing" secondItem="aEE-pr-7Ea" secondAttribute="trailing" id="IhO-9q-M7s"/>
-                        <constraint firstItem="aEE-pr-7Ea" firstAttribute="top" secondItem="o3G-tO-Vfl" secondAttribute="top" id="LQ2-Y7-4bp"/>
-                        <constraint firstItem="aEE-pr-7Ea" firstAttribute="leading" secondItem="o3G-tO-Vfl" secondAttribute="leading" id="vTi-M5-HhJ"/>
+                        <constraint firstAttribute="bottom" secondItem="aEE-pr-7Ea" secondAttribute="bottom" id="0og-br-dFY"/>
+                        <constraint firstItem="aEE-pr-7Ea" firstAttribute="leading" secondItem="o3G-tO-Vfl" secondAttribute="leading" id="GfW-na-auf"/>
+                        <constraint firstAttribute="trailing" secondItem="aEE-pr-7Ea" secondAttribute="trailing" id="RiE-uE-8JL"/>
+                        <constraint firstItem="aEE-pr-7Ea" firstAttribute="top" secondItem="o3G-tO-Vfl" secondAttribute="top" id="sSr-cd-ysN"/>
                     </constraints>
                 </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="dnF-GL-oA6">
+                    <rect key="frame" x="275" y="15" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plt-Ht-IzJ">
+                    <rect key="frame" x="270" y="10" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="btnCloseSlide:" destination="-1" eventType="touchUpInside" id="yYQ-gv-bd8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="o3G-tO-Vfl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="OGH-Du-uwn"/>
-                <constraint firstAttribute="bottom" secondItem="o3G-tO-Vfl" secondAttribute="bottom" id="OaJ-J0-Xl3"/>
-                <constraint firstItem="o3G-tO-Vfl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QNk-9Q-LBv"/>
-                <constraint firstAttribute="trailing" secondItem="o3G-tO-Vfl" secondAttribute="trailing" id="j7V-Px-hqX"/>
-                <constraint firstItem="aEE-pr-7Ea" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wIx-30-Bdr"/>
+                <constraint firstAttribute="trailing" secondItem="o3G-tO-Vfl" secondAttribute="trailing" id="4v7-xR-rBF"/>
+                <constraint firstItem="o3G-tO-Vfl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Ya-gm-gLj"/>
+                <constraint firstAttribute="bottom" secondItem="o3G-tO-Vfl" secondAttribute="bottom" id="7du-pm-aL8"/>
+                <constraint firstItem="aEE-pr-7Ea" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="J47-5B-Z2U"/>
+                <constraint firstItem="o3G-tO-Vfl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Pge-ey-As5"/>
             </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-2715" y="-527"/>
+            <point key="canvasLocation" x="-3568" y="-581"/>
         </view>
     </objects>
+    <resources>
+        <image name="cancel" width="50" height="50"/>
+    </resources>
 </document>

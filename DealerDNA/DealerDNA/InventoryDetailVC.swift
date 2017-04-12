@@ -12,9 +12,17 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
     
     let customNav = CustomNavigationBar()
     @IBOutlet var scrollVWImage: UIScrollView!
-    @IBOutlet var scrollViewHeight: NSLayoutConstraint!
     
-    @IBOutlet var navTopSpace: NSLayoutConstraint!
+    @IBOutlet var mainScrollView: UIScrollView!
+    @IBOutlet var vwDetailHeight: NSLayoutConstraint!
+    
+    @IBOutlet var vwHeight: NSLayoutConstraint!
+    
+    @IBOutlet var scrollViewTop: NSLayoutConstraint!
+    
+    @IBOutlet var btnCloseSlide: UIButton!
+    
+    var isSlideed = false
     let totalImages = 5
     var timer: Timer!
     
@@ -28,17 +36,26 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setLayout()
+        //        setLayout()
         setSlidetImages()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if self.view.viewWithTag(3434) == nil{
+            if !self.isSlideed{ setLayout()}
+        }
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
+        
     }
     
     func setLayout(){
         customNav.delegate = self
         customNav.createView(self.view, title: "Inventory detail", backBtn: .back, isRightRequired: false, rightBtnTitle: nil, rightButtonImage: nil)
+        
     }
     
     func btnLeftClick() {
@@ -55,9 +72,10 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
             imageView.contentMode = .scaleAspectFit
             scrollVWImage.addSubview(imageView)
             imageView.tag = i
+            imageView.autoresizingMask = [.flexibleHeight]
         }
         scrollVWImage.contentSize = CGSize(width: self.totalImages * Int(Screen.screenWidth), height: Int(scrollVWImage.bounds.height))
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(self.slider), userInfo: nil, repeats: true)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.changeScrollViewSize))
         scrollVWImage.addGestureRecognizer(tapGesture)
         
@@ -75,16 +93,54 @@ class InventoryDetailVC: UIViewController, CustomNevigationDeletegate, UIScrollV
         }
     }
     
-    func changeScrollViewSize(){
-        let vc = InventoryImageVC(nibName: "InventoryImageVC", bundle: nil)
-        //vc.img.image =  UIImage(named: "bike1.jpg")
-        self.present(vc, animated: true, completion: nil)
+    func changeScrollViewSize(_ sender: UITapGestureRecognizer){
+        self.isSlideed = true
+        
+        let window = UIApplication.shared.keyWindow
+        window?.windowLevel = UIWindowLevelStatusBar + 1
+        
+        
+        if self.view.viewWithTag(3434) != nil{
+            self.view.viewWithTag(3434)!.removeFromSuperview()
+        }
+        self.mainScrollView.isScrollEnabled = false
+        
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.3) {
+            self.vwDetailHeight.constant = 0
+            self.vwHeight.constant = UIScreen.main.bounds.height
+            self.scrollViewTop.constant = 0
+            self.view.layoutIfNeeded()
+        }
+        
+        //        let vc = InventoryImageVC(nibName: "InventoryImageVC", bundle: nil)
+        //        //vc.img.image =  UIImage(named: "bike1.jpg")
+        //        self.present(vc, animated: true, completion: nil)
         //self.scrollVWImage.contentOffset.x / self.scrollVWImage.frame.width
-//        self.view.layer.layoutIfNeeded()
-//        UIView.animate(withDuration: 0.3) {
-//            self.navTopSpace.constant = 0
-//            self.scrollViewHeight.constant = Screen.screenHeight
-//            self.view.layer.layoutIfNeeded()
-//        }
+        //        self.view.layer.layoutIfNeeded()
+        //        UIView.animate(withDuration: 0.3) {
+        //            self.navTopSpace.constant = 0
+        //            self.scrollViewHeight.constant = Screen.screenHeight
+        //            self.view.layer.layoutIfNeeded()
+        //        }
     }
+    
+    @IBAction func btnCloseSlide(_ sender: UIButton) {
+        self.isSlideed = false
+        self.mainScrollView.isScrollEnabled = true
+        
+        let window = UIApplication.shared.keyWindow
+        window?.windowLevel = UIWindowLevelNormal
+        
+        
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 0.3) {
+            self.vwDetailHeight.constant = 227
+            self.vwHeight.constant = 463
+            self.scrollViewTop.constant = 64
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
 }

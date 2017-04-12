@@ -93,8 +93,8 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         }else if str == DashBoardMenu.dlScan{
             color = DashBoardMenu.dlScanTilesColor
             cell?.imgViewCell.image = #imageLiteral(resourceName: "dlscan")
-        }else if str == DashBoardMenu.home{
-            color = DashBoardMenu.homeTilesColor
+        }else if str == DashBoardMenu.dashboard{
+            color = DashBoardMenu.dashboardTilesColor
             cell?.imgViewCell.image = #imageLiteral(resourceName: "home")
         }else if str == DashBoardMenu.setting{
             color = DashBoardMenu.settingTilesColor
@@ -116,7 +116,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         //        let cell = collectionViewHome.cellForItem(at: indexPath) as? homeScreenCell
         if let itemName = appDelegate.dashBoardTiles[indexPath.row] as? String{
             appDelegate.selectedMenu = itemName
-            if itemName == DashBoardMenu.home{
+            if itemName == DashBoardMenu.dashboard{
                 let vc = TabbarVC()
                 //                self.view.window?.rootViewController = vc
                 self.navigationController?.pushViewController(vc, animated: true)
