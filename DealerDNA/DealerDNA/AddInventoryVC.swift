@@ -44,9 +44,9 @@ class AddInventoryVC: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         txtDate.inputView = datePicker
         customNav.delegate = self
         customNav.createView(self.view, title: "Add Inventory", backBtn: .back, isRightRequired: false, rightBtnTitle: nil, rightButtonImage: nil)
+        self.automaticallyAdjustsScrollViewInsets = false
         
     }
-    
     
     func btnLeftClick() {
         self.navigationController?.popViewController(animated: true)

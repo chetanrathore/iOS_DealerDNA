@@ -8,13 +8,6 @@
 
 import UIKit
 
-enum KLogin: String{
-    case kUserName = "UserName",
-    kPassword = "Password",
-    kPhoneNo = "PhoneNo",
-    kRemember = "Remember"
-}
-
 class LoginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var txtAutomotiveGroup: TextField!
@@ -87,7 +80,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         txtAutomotiveGroup.backgroundColor = UIColor.white
         btnRemember.tintColor = AppColor.theamColor
         btnSignIn.backgroundColor = AppColor.theamColor
-        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize)
+        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
         btnSignIn.layer.cornerRadius = 3
         viewTop.backgroundColor = AppColor.theamColor
         viewHeaderBottom.backgroundColor = AppColor.theamDarkColor
@@ -187,6 +180,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 defaults.removeObject(forKey: KLogin.kUserName.rawValue)
                 defaults.removeObject(forKey: KLogin.kPassword.rawValue)
             }
+            appDelegate.dashBoardTiles.removeAllObjects()
+            appDelegate.sideMenuItem.removeAllObjects()
             
             appDelegate.sideMenuItem.add(DashBoardMenu.home)
             appDelegate.sideMenuItem.add(DashBoardMenu.dlScan)
@@ -195,12 +190,17 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             appDelegate.sideMenuItem.add(DashBoardMenu.setting)
             appDelegate.sideMenuItem.add(DashBoardMenu.logout)
             
-            appDelegate.dashBoardTiles.add(DashBoardMenu.home)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.dashboard)
             appDelegate.dashBoardTiles.add(DashBoardMenu.dlScan)
             appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
             appDelegate.dashBoardTiles.add(DashBoardMenu.customer)
             appDelegate.dashBoardTiles.add(DashBoardMenu.setting)
-    
+            defaults.set(true, forKey: isLoggedIn)
+            
+            let data = AppData(dashBoardTiles: appDelegate.dashBoardTiles, sideMenuItem: appDelegate.sideMenuItem)
+            let nsData: Data = NSKeyedArchiver.archivedData(withRootObject: data)
+            defaults.set(nsData, forKey: appDetails)
+            defaults.synchronize()
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

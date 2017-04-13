@@ -19,16 +19,16 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblInventory.register(UINib(nibName: "InventoryListCell", bundle: nil), forCellReuseIdentifier: "InventoryListCell")
-        tblInventory.dataSource = self
-        tblInventory.delegate = self
+        //        tblInventory.register(UINib(nibName: "InventoryListCell", bundle: nil), forCellReuseIdentifier: "InventoryListCell")
+        //        tblInventory.dataSource = self
+        //        tblInventory.delegate = self
         customNav.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        getInventory()
+        // getInventory()
     }
     
     override func viewDidLayoutSubviews() {
@@ -45,7 +45,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         tblInventory.estimatedRowHeight = 100
         tblInventory.rowHeight = UITableViewAutomaticDimension
         segmentFilter.tintColor = AppColor.theamColor
-        customNav.createView(self.view, title: "Inventory", backBtn: .menu, isRightRequired: true, rightBtnTitle: "Add", rightButtonImage: nil)
+        customNav.createView(self.view, title: "Inventory", backBtn: .menu, isRightRequired: false, rightBtnTitle: "Add", rightButtonImage: nil)
         
     }
     
@@ -63,7 +63,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-       // customNav.createView(self.view)
+        // customNav.createView(self.view)
         return 10
     }
     
@@ -77,9 +77,9 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 100
+    //    }
     
     // MARK: - Navigation
     
@@ -96,7 +96,7 @@ class InventoryVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-      //  NotificationCenter.default.post(name: Notification.Name(rawValue: "OrientationWillChange"), object: nil)
+        //  NotificationCenter.default.post(name: Notification.Name(rawValue: "OrientationWillChange"), object: nil)
     }
     
 }

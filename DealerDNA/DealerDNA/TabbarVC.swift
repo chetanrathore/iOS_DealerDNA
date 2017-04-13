@@ -19,16 +19,16 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         var navigationVC5 = UINavigationController()
         
         var viewController1 = DashboardVC()
-        var viewController2 = HomeVC()
-        var viewController3 = MainDashboardVC()
-        var viewController4 = MainDashboardVC()
-        var viewController5 = MainDashboardVC()
+        var viewController2 = DashboardVC()
+        var viewController3 = DashboardVC()
+        var viewController4 = DashboardVC()
+        var viewController5 = DashboardVC()
         
         viewController1 = DashboardVC(nibName: "DashboardVC", bundle: nil)
-        viewController2 = HomeVC(nibName: "HomeVC", bundle: nil)
-        viewController3 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
-        viewController4 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
-        viewController5 = MainDashboardVC(nibName: "MainDashboardVC", bundle: nil)
+        viewController2 = DashboardVC(nibName: "DashboardVC", bundle: nil)
+        viewController3 = DashboardVC(nibName: "DashboardVC", bundle: nil)
+        viewController4 = DashboardVC(nibName: "DashboardVC", bundle: nil)
+        viewController5 = DashboardVC(nibName: "DashboardVC", bundle: nil)
         
         navigationVC1 = UINavigationController(rootViewController: viewController1)
         navigationVC2 = UINavigationController(rootViewController: viewController2)
@@ -38,16 +38,16 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         
         viewController1.tabBarItem = UITabBarItem(
             title: "Dashboard",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabdashboard"),
             tag: 0)
         viewController2.tabBarItem = UITabBarItem(
             title: "Reports",
-            image: #imageLiteral(resourceName: "tabpiechart"),
+            image: #imageLiteral(resourceName: "tabpie"),
             tag: 1)
         
         viewController3.tabBarItem = UITabBarItem(
             title: "Tasks",
-            image: #imageLiteral(resourceName: "tabcalender"),
+            image: #imageLiteral(resourceName: "tabcalendercheck"),
             tag: 2)
         
         viewController4.tabBarItem = UITabBarItem(
@@ -57,9 +57,8 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         
         viewController5.tabBarItem = UITabBarItem(
             title: "Search",
-            image: #imageLiteral(resourceName: "tabSearch"),
+            image: #imageLiteral(resourceName: "tabsearch"),
             tag: 4)
-        
         
         UITabBar.appearance().isTranslucent = true
         UITabBar.appearance().backgroundColor = UIColor.black

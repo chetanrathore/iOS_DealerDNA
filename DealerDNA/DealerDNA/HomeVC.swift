@@ -45,18 +45,18 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         setLayout()
-        if (CLLocationManager.locationServicesEnabled()) {
-            self.locationManager.delegate = self
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.distanceFilter = kCLDistanceFilterNone
-            self.locationManager.requestWhenInUseAuthorization()
-            self.locationManager.requestAlwaysAuthorization()
-            self.locationManager.startMonitoringSignificantLocationChanges()
-            self.locationManager.startUpdatingLocation()
-        } else {
-            showAlertView(title: "Message", message: "Location services are not enabled", view: self)
-        }
-        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
+//        if (CLLocationManager.locationServicesEnabled()) {
+//            self.locationManager.delegate = self
+//            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            self.locationManager.distanceFilter = kCLDistanceFilterNone
+//            self.locationManager.requestWhenInUseAuthorization()
+//            self.locationManager.requestAlwaysAuthorization()
+//            self.locationManager.startMonitoringSignificantLocationChanges()
+//            self.locationManager.startUpdatingLocation()
+//        } else {
+//            showAlertView(title: "Message", message: "Location services are not enabled", view: self)
+//        }
+//        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
     }
     
     override func didReceiveMemoryWarning() {
@@ -93,8 +93,8 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         }else if str == DashBoardMenu.dlScan{
             color = DashBoardMenu.dlScanTilesColor
             cell?.imgViewCell.image = #imageLiteral(resourceName: "dlscan")
-        }else if str == DashBoardMenu.home{
-            color = DashBoardMenu.homeTilesColor
+        }else if str == DashBoardMenu.dashboard{
+            color = DashBoardMenu.dashboardTilesColor
             cell?.imgViewCell.image = #imageLiteral(resourceName: "home")
         }else if str == DashBoardMenu.setting{
             color = DashBoardMenu.settingTilesColor
@@ -116,8 +116,11 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         //        let cell = collectionViewHome.cellForItem(at: indexPath) as? homeScreenCell
         if let itemName = appDelegate.dashBoardTiles[indexPath.row] as? String{
             appDelegate.selectedMenu = itemName
-            if itemName == DashBoardMenu.home{
-                let vc = TabbarVC()
+            if itemName == DashBoardMenu.dashboard{
+                
+//                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
+//                self.navigationController?.pushViewController(vc, animated: true)
+                let vc = TabbarVC()//DashboardVC(nibName: "DashboardVC", bundle: nil) //TabbarVC()
                 //                self.view.window?.rootViewController = vc
                 self.navigationController?.pushViewController(vc, animated: true)
             }else if itemName == DashBoardMenu.dlScan{
@@ -144,6 +147,13 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         let obj = appDelegate.dashBoardTiles.object(at: sourceIndexPath.row) as! String
         appDelegate.dashBoardTiles.removeObject(at: sourceIndexPath.row)
         appDelegate.dashBoardTiles.insert(obj, at: destinationIndexPath.row)
+        
+        let defaults = UserDefaults.standard
+        let data = AppData(dashBoardTiles: appDelegate.dashBoardTiles, sideMenuItem: appDelegate.sideMenuItem)
+        let nsData: Data = NSKeyedArchiver.archivedData(withRootObject: data)
+        defaults.set(nsData, forKey: appDetails)
+        defaults.synchronize()
+        
     }
     
     // Mark: Table view

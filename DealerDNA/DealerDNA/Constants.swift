@@ -65,7 +65,7 @@ struct AppColor {
     static let sideBarIconColor = UIColor(colorLiteralRed: 34/255, green: 34/255, blue: 34/255, alpha: 1)
     
     static let yellowColor = UIColor(colorLiteralRed: 255/255, green: 176/255, blue: 59/255, alpha: 1)
-    static let lightBlueColor = UIColor(colorLiteralRed: 185/255, green: 128/255, blue: 41/255, alpha: 1)
+    static let lightBlueColor = UIColor(colorLiteralRed: 41/255, green: 128/255, blue: 185/255, alpha: 1)
     static let darkRedColor = UIColor(colorLiteralRed: 240/255, green: 35/255, blue: 7/255, alpha: 1)
     static let lightGreenColor = UIColor(colorLiteralRed: 70/255, green: 137/255, blue: 102/255, alpha: 1)
 }
