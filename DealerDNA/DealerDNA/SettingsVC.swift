@@ -18,6 +18,9 @@ class SettingsVC: UIViewController, CustomNevigationDeletegate, UITableViewDataS
         tblSettings.dataSource = self
         tblSettings.delegate = self
         tblSettings.register(UINib(nibName: "SettingsCell", bundle: nil), forCellReuseIdentifier: "SettingsCell")
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        tblSettings.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {

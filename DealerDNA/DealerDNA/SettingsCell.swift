@@ -10,9 +10,14 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
 
+    @IBOutlet var imgIcon: UIImageView!
+    @IBOutlet var lblTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        imgIcon.setTintColor(color: UIColor.gray)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

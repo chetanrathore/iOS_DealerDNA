@@ -44,10 +44,12 @@ class PasscodeVC: UIViewController {
     
     func setInterface(){
         self.strPasscode = ""
+        self.btnCancelBack.isHidden = false
         switch passcodeVCFor {
         case .kCheckPasscode:
             self.lblTitle.text = "Enter passcode"
             self.lblButtonTitle.text = "Cancel"
+            self.btnCancelBack.isHidden = true
             break
         case .kCreatePasscode:
             self.lblTitle.text = "Enter New passcode"
@@ -97,7 +99,9 @@ class PasscodeVC: UIViewController {
             sender.backgroundColor = UIColor.clear
         }
         if self.strPasscode.characters.count <= 4{
-            self.strPasscode.append(String(sender.tag))
+            if(self.strPasscode.characters.count < 4){
+                self.strPasscode.append(String(sender.tag))
+            }
             fillView()
             if self.strPasscode.characters.count == 4{
                 switch self.passcodeVCFor {
@@ -175,7 +179,6 @@ class PasscodeVC: UIViewController {
                 self.wrongPin()
             }
         }
-        
     }
     
     func changePasscode(){

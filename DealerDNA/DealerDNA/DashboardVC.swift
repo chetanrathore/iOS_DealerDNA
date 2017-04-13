@@ -15,6 +15,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     @IBOutlet var lblSubTitle: UILabel!
     @IBOutlet var tblDashboard: UITableView!
     @IBOutlet var btnDate: UIButton!
+    var arrSection = [Dasdhboard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,19 +28,26 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setUpDashboard()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
     }
     
     override func viewDidLayoutSubviews() {
         setInterface()
-        appDelegate.tabAppts = "434"
+        appDelegate.tabAppts = "31"
+        appDelegate.tabTasks = "234"
         appDelegate.setBadgeValue(viewWithTabbar: self)
-        tblDashboard.reloadData()
+        
     }
     
     func setView(){
         self.tblDashboard.dataSource = self
         self.tblDashboard.delegate = self
         self.tblDashboard.register(UINib(nibName: "DashboardCell",bundle: nil), forCellReuseIdentifier: "DashboardCell")
+        self.tblDashboard.tableFooterView = UIView()
     }
     
     func setInterface(){
@@ -49,9 +57,37 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         self.lblSubTitle.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
     }
     
+    func setUpDashboard(){
+        arrSection.removeAll()
+        let d1 = DashboadMster(title: "Working", count: 10, backColor: AppColor.lightBlueColor)
+        let d2 = DashboadMster(title: "Accepted", count: 9, backColor: AppColor.lightGreenColor)
+        let d3 = DashboadMster(title: "Forgotten", count: 133, backColor: AppColor.darkRedColor)
+        let d4 = DashboadMster(title: "Unassigned", count: 3, backColor: AppColor.yellowColor)
+        arrSection.append(Dasdhboard(mainTitle: "Opportunities", subSection: [d1,d2,d3,d4]))
+        
+        let d21 = DashboadMster(title: "Email Reply", count: 13, backColor: AppColor.lightBlueColor)
+        let d22 = DashboadMster(title: "Call", count: 9, backColor: AppColor.lightBlueColor)
+        let d23 = DashboadMster(title: "Waiting Reply", count: 8, backColor: AppColor.darkRedColor)
+        let d24 = DashboadMster(title: "Text/SMS", count: 32, backColor: AppColor.lightBlueColor)
+        arrSection.append(Dasdhboard(mainTitle: "Follow Up", subSection: [d21,d22,d23,d24]))
+        
+        let d31 = DashboadMster(title: "Today", count: 13, backColor: AppColor.lightBlueColor)
+        let d32 = DashboadMster(title: "Confirmed", count: 8, backColor: AppColor.lightGreenColor)
+        let d33 = DashboadMster(title: "Missed", count: 9, backColor: AppColor.darkRedColor)
+        let d34 = DashboadMster(title: "Rescheduled", count: 2, backColor: AppColor.lightBlueColor)
+        arrSection.append(Dasdhboard(mainTitle: "Appoinments", subSection: [d31,d32,d33,d34]))
+        
+        let d41 = DashboadMster(title: "Logged", count: 13, backColor: AppColor.lightBlueColor)
+        let d42 = DashboadMster(title: "Demo", count: 8, backColor: AppColor.lightBlueColor)
+        let d43 = DashboadMster(title: "Write Up", count: 9, backColor: AppColor.lightBlueColor)
+        arrSection.append(Dasdhboard(mainTitle: "Showroom", subSection: [d41,d42,d43]))
+        tblDashboard.reloadData()
+        
+    }
+    
     // Mark: Tableview
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 10
+        return arrSection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,7 +109,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         returnedView.backgroundColor = UIColor.groupTableViewBackground
         let height = CGFloat((Screen.device == .pad) ? 35 : 30)
         let label = UILabel(frame: CGRect(x: 10, y: (returnedView.frame.height-height)/2 , width: view.frame.size.width, height: height))
-        label.text = "Temp 1"
+        label.text = arrSection[section].mainTitle
         label.font =  appFont(size: AppFont.normalFontSize, fontWeight: .kBold)
         label.textColor = UIColor.darkGray
         returnedView.addSubview(label)
@@ -81,12 +117,11 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1{
+        if self.arrSection[indexPath.section].subSection.count == 3{
             if Screen.device == .pad{
                 return 80 + 20
             }
             return 55 + 20
-            
         }
         if Screen.device == .pad{
             return 160 + 30
@@ -104,15 +139,16 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(collectionView.tag)
-        if collectionView.tag == 1{
-            return 3
-        }
-        return 4
+        return self.arrSection[section].subSection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DashboardCollectionCell", for: indexPath) as! DashboardCollectionCell
+        //print(collectionView.tag)
+        let data = arrSection[collectionView.tag].subSection[indexPath.row]
+        cell.lblTitle.text = data.title
+        cell.lblCount.text = String(data.count)
+        cell.vwBack.backgroundColor = data.backColor
         return cell
     }
     
@@ -125,7 +161,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(collectionView.tag)
+        //        print(collectionView.tag)
     }
     
     //Mark: Outlet action

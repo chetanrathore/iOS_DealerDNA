@@ -80,7 +80,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         txtAutomotiveGroup.backgroundColor = UIColor.white
         btnRemember.tintColor = AppColor.theamColor
         btnSignIn.backgroundColor = AppColor.theamColor
-        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize)
+        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
         btnSignIn.layer.cornerRadius = 3
         viewTop.backgroundColor = AppColor.theamColor
         viewHeaderBottom.backgroundColor = AppColor.theamDarkColor
@@ -190,7 +190,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
             appDelegate.sideMenuItem.add(DashBoardMenu.setting)
             appDelegate.sideMenuItem.add(DashBoardMenu.logout)
             
-            appDelegate.dashBoardTiles.add(DashBoardMenu.home)
+            appDelegate.dashBoardTiles.add(DashBoardMenu.dashboard)
             appDelegate.dashBoardTiles.add(DashBoardMenu.dlScan)
             appDelegate.dashBoardTiles.add(DashBoardMenu.inventory)
             appDelegate.dashBoardTiles.add(DashBoardMenu.customer)

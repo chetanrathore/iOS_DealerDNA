@@ -75,7 +75,7 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_customer")
         }else if str == DashBoardMenu.dlScan{
             cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_dlscan")
-        }else if str == DashBoardMenu.home{
+        }else if str == DashBoardMenu.dashboard{
             cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_home")
         }else if str == DashBoardMenu.setting{
             cell?.imgMenuIcon.image = #imageLiteral(resourceName: "m_setting")
@@ -99,8 +99,8 @@ class DrawerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tblDrawer.cellForRow(at: indexPath) as! drawerCell
         if let itemName = cell.lblMenuTitle.text{
             if itemName == DashBoardMenu.home{
-                let vc = TabbarVC()
-                //                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+                //                let vc = TabbarVC()
+                let vc = HomeVC(nibName: "HomeVC", bundle: nil)
                 let nav = UINavigationController(rootViewController: vc)
                 revealSideViewController.popViewController(withNewCenter: nav, animated: true)
             }else if itemName == DashBoardMenu.dlScan{
