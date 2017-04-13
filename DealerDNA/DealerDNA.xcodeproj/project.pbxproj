@@ -26,8 +26,6 @@
 		0C17D6461E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C17D6341E826F360055CAE7 /* IQUIView+IQKeyboardToolbar.swift */; };
 		0C17D6471E826F360055CAE7 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0C17D6361E826F360055CAE7 /* IQKeyboardManager.bundle */; };
 		0C1FC4791E9B3EC6003EB402 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1FC4781E9B3EC6003EB402 /* Security.framework */; };
-		0C1FC47A1E9B3FBE003EB402 /* KeychainWrapper.h in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B631E99044D009E1A5E /* KeychainWrapper.h */; };
-		0C1FC47B1E9B3FCA003EB402 /* KeychainWrapper.m in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B641E99044D009E1A5E /* KeychainWrapper.m */; };
 		0C1FC4811E9B47FA003EB402 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4801E9B47FA003EB402 /* KeychainItemAccessibility.swift */; };
 		0C1FC4831E9B480A003EB402 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4821E9B480A003EB402 /* KeychainWrapper.swift */; };
 		0C1FC4851E9B5E6E003EB402 /* StringConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1FC4841E9B5E6E003EB402 /* StringConstant.swift */; };
@@ -52,7 +50,6 @@
 		0C40B3571E94CDE300656605 /* DashboardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C40B3551E94CDE300656605 /* DashboardCollectionCell.xib */; };
 		0C69D9541E811C720079F9A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9531E811C720079F9A3 /* AppDelegate.swift */; };
 		0C69D95C1E811C720079F9A3 /* DealerDNA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */; };
-		0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D95D1E811C720079F9A3 /* Assets.xcassets */; };
 		0C69D9611E811C720079F9A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D95F1E811C720079F9A3 /* LaunchScreen.storyboard */; };
 		0C69D96C1E811C720079F9A3 /* DealerDNATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D96B1E811C720079F9A3 /* DealerDNATests.swift */; };
 		0C69D9771E811C730079F9A3 /* DealerDNAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C69D9761E811C730079F9A3 /* DealerDNAUITests.swift */; };
@@ -71,6 +68,7 @@
 		0C69D9AD1E815BCA0079F9A3 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */; };
 		0C879B351E9268B500BF16FF /* InventoryImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C879B331E9268B500BF16FF /* InventoryImageVC.swift */; };
 		0C879B361E9268B500BF16FF /* InventoryImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C879B341E9268B500BF16FF /* InventoryImageVC.xib */; };
+		0CD2BC851E9E0CC500ED2694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD2BC841E9E0CC500ED2694 /* Assets.xcassets */; };
 		0CE052FC1E84E888003ADF91 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE052FB1E84E888003ADF91 /* RadioButton.swift */; };
 		0CE053011E84E8AE003ADF91 /* R_C.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FD1E84E8AE003ADF91 /* R_C.png */; };
 		0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */; };
@@ -88,6 +86,8 @@
 		0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */; };
 		0CEFBEA21E9CF03200A1B01B /* InventoryVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFBEA01E9CF03200A1B01B /* InventoryVideoVC.swift */; };
 		0CEFBEA31E9CF03200A1B01B /* InventoryVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CEFBEA11E9CF03200A1B01B /* InventoryVideoVC.xib */; };
+		0CF3F6941E9E307E0039A291 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF3F6921E9E307E0039A291 /* SettingsVC.swift */; };
+		0CF3F6951E9E307E0039A291 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF3F6931E9E307E0039A291 /* SettingsVC.xib */; };
 		0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */; };
 		0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */; };
 		0CF6971A1E82AF4E00F867FA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */; };
@@ -106,8 +106,6 @@
 		3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8961E82799800D3DD4D /* CustomerDetailsVC.xib */; };
 		3079D89B1E8279AB00D3DD4D /* DLScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8991E8279AB00D3DD4D /* DLScanVC.swift */; };
 		3079D89C1E8279AB00D3DD4D /* DLScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D89A1E8279AB00D3DD4D /* DLScanVC.xib */; };
-		3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D89D1E8279D200D3DD4D /* SettingsVC.swift */; };
-		3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D89E1E8279D200D3DD4D /* SettingsVC.xib */; };
 		3079D8A41E827D5B00D3DD4D /* DrawerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8A21E827D5B00D3DD4D /* DrawerVC.swift */; };
 		3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3079D8A31E827D5B00D3DD4D /* DrawerVC.xib */; };
 		3079D8A81E827EC300D3DD4D /* drawerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3079D8A61E827EC300D3DD4D /* drawerCell.swift */; };
@@ -187,7 +185,6 @@
 		0C69D9501E811C720079F9A3 /* DealerDNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealerDNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C69D9531E811C720079F9A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C69D95B1E811C720079F9A3 /* DealerDNA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DealerDNA.xcdatamodel; sourceTree = "<group>"; };
-		0C69D95D1E811C720079F9A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C69D9601E811C720079F9A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C69D9621E811C720079F9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C69D9671E811C720079F9A3 /* DealerDNATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DealerDNATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +208,7 @@
 		0C69D9AC1E815BCA0079F9A3 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 		0C879B331E9268B500BF16FF /* InventoryImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryImageVC.swift; sourceTree = "<group>"; };
 		0C879B341E9268B500BF16FF /* InventoryImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryImageVC.xib; sourceTree = "<group>"; };
+		0CD2BC841E9E0CC500ED2694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE052FB1E84E888003ADF91 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		0CE052FD1E84E8AE003ADF91 /* R_C.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = R_C.png; sourceTree = "<group>"; };
 		0CE052FE1E84E8AE003ADF91 /* R_C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "R_C@2x.png"; sourceTree = "<group>"; };
@@ -228,10 +226,10 @@
 		0CE5D4671E8BB7FC003DA666 /* View_Details_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Details_2.png; sourceTree = "<group>"; };
 		0CEFBEA01E9CF03200A1B01B /* InventoryVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryVideoVC.swift; sourceTree = "<group>"; };
 		0CEFBEA11E9CF03200A1B01B /* InventoryVideoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InventoryVideoVC.xib; sourceTree = "<group>"; };
+		0CF3F6921E9E307E0039A291 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		0CF3F6931E9E307E0039A291 /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeVC.swift; sourceTree = "<group>"; };
 		0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasscodeVC.xib; sourceTree = "<group>"; };
-		0CF67B631E99044D009E1A5E /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
-		0CF67B641E99044D009E1A5E /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		0CF6970D1E82AF4E00F867FA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		0CF6970E1E82AF4E00F867FA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
 		0CF6970F1E82AF4E00F867FA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
@@ -258,8 +256,6 @@
 		3079D8961E82799800D3DD4D /* CustomerDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerDetailsVC.xib; sourceTree = "<group>"; };
 		3079D8991E8279AB00D3DD4D /* DLScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLScanVC.swift; sourceTree = "<group>"; };
 		3079D89A1E8279AB00D3DD4D /* DLScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLScanVC.xib; sourceTree = "<group>"; };
-		3079D89D1E8279D200D3DD4D /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		3079D89E1E8279D200D3DD4D /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		3079D8A21E827D5B00D3DD4D /* DrawerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVC.swift; sourceTree = "<group>"; };
 		3079D8A31E827D5B00D3DD4D /* DrawerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawerVC.xib; sourceTree = "<group>"; };
 		3079D8A61E827EC300D3DD4D /* drawerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = drawerCell.swift; sourceTree = "<group>"; };
@@ -406,13 +402,13 @@
 		0C69D9521E811C720079F9A3 /* DealerDNA */ = {
 			isa = PBXGroup;
 			children = (
+				0CD2BC841E9E0CC500ED2694 /* Assets.xcassets */,
 				0C69D9A31E81442D0079F9A3 /* CustomControl */,
 				0C69D9881E811D460079F9A3 /* Utilities */,
 				0C69D9861E811D0A0079F9A3 /* Resources */,
 				0C69D9851E811CFC0079F9A3 /* MVC */,
 				0C69D9841E811CE30079F9A3 /* Frameworks */,
 				0C69D9531E811C720079F9A3 /* AppDelegate.swift */,
-				0C69D95D1E811C720079F9A3 /* Assets.xcassets */,
 				0C69D95F1E811C720079F9A3 /* LaunchScreen.storyboard */,
 				0C69D9621E811C720079F9A3 /* Info.plist */,
 				0C69D95A1E811C720079F9A3 /* DealerDNA.xcdatamodeld */,
@@ -590,8 +586,6 @@
 			children = (
 				0C1FC4821E9B480A003EB402 /* KeychainWrapper.swift */,
 				0C1FC4801E9B47FA003EB402 /* KeychainItemAccessibility.swift */,
-				0CF67B631E99044D009E1A5E /* KeychainWrapper.h */,
-				0CF67B641E99044D009E1A5E /* KeychainWrapper.m */,
 			);
 			path = KeychainWrapper;
 			sourceTree = "<group>";
@@ -619,10 +613,10 @@
 		3079D8891E8278DE00D3DD4D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				3079D89D1E8279D200D3DD4D /* SettingsVC.swift */,
-				3079D89E1E8279D200D3DD4D /* SettingsVC.xib */,
 				0CF67B5D1E98AA73009E1A5E /* PasscodeVC.swift */,
 				0CF67B5E1E98AA73009E1A5E /* PasscodeVC.xib */,
+				0CF3F6921E9E307E0039A291 /* SettingsVC.swift */,
+				0CF3F6931E9E307E0039A291 /* SettingsVC.xib */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -780,18 +774,18 @@
 				TargetAttributes = {
 					0C69D94F1E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y55EBSG532;
+						DevelopmentTeam = F7SBZTFSQ8;
 						ProvisioningStyle = Manual;
 					};
 					0C69D9661E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y55EBSG532;
+						DevelopmentTeam = F7SBZTFSQ8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C69D94F1E811C720079F9A3;
 					};
 					0C69D9711E811C720079F9A3 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = Y55EBSG532;
+						DevelopmentTeam = F7SBZTFSQ8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0C69D94F1E811C720079F9A3;
 					};
@@ -823,8 +817,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C1FC4891E9B632B003EB402 /* SettingsCell.xib in Resources */,
-				0C1FC47B1E9B3FCA003EB402 /* KeychainWrapper.m in Resources */,
-				0C1FC47A1E9B3FBE003EB402 /* KeychainWrapper.h in Resources */,
 				0C40B3571E94CDE300656605 /* DashboardCollectionCell.xib in Resources */,
 				3079D8981E82799800D3DD4D /* CustomerDetailsVC.xib in Resources */,
 				0CE5D4651E8BABFF003DA666 /* User_1.png in Resources */,
@@ -841,14 +833,15 @@
 				3079D8A51E827D5B00D3DD4D /* DrawerVC.xib in Resources */,
 				0CE5D4631E8BABFF003DA666 /* Lock_1.png in Resources */,
 				0CE5D4681E8BB7FC003DA666 /* View_Details_1.png in Resources */,
+				0CF3F6951E9E307E0039A291 /* SettingsVC.xib in Resources */,
 				3079D8AE1E82842300D3DD4D /* ProfileVC.xib in Resources */,
 				3079D8941E82798500D3DD4D /* CustomerListVC.xib in Resources */,
 				0C37306E1E83D2CA00D684E3 /* left-arrow.png in Resources */,
 				0CE053091E8518F4003ADF91 /* MainDashboardVC.xib in Resources */,
 				0CEFBEA31E9CF03200A1B01B /* InventoryVideoVC.xib in Resources */,
+				0CD2BC851E9E0CC500ED2694 /* Assets.xcassets in Resources */,
 				30D6B3C11E83A8C900070D56 /* menu.png in Resources */,
 				3079D8881E8268B700D3DD4D /* homeScreenCell.xib in Resources */,
-				3079D8A01E8279D200D3DD4D /* SettingsVC.xib in Resources */,
 				3079D8B01E828F4200D3DD4D /* lock1.png in Resources */,
 				0C3730641E83C16D00D684E3 /* InventoryListCell.xib in Resources */,
 				0C69D9A71E8145040079F9A3 /* CheckedCheckbox.png in Resources */,
@@ -867,7 +860,6 @@
 				0C40B34F1E94BE4000656605 /* DashboardVC.xib in Resources */,
 				0CE053021E84E8AE003ADF91 /* R_C@2x.png in Resources */,
 				0C69D9AB1E815B7F0079F9A3 /* email.png in Resources */,
-				0C69D95E1E811C720079F9A3 /* Assets.xcassets in Resources */,
 				30D6B3C31E83A8C900070D56 /* menu@3x.png in Resources */,
 				0CE5D4691E8BB7FC003DA666 /* View_Details_2.png in Resources */,
 				0CF67B601E98AA73009E1A5E /* PasscodeVC.xib in Resources */,
@@ -1019,10 +1011,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3079D89F1E8279D200D3DD4D /* SettingsVC.swift in Sources */,
 				3079D8971E82799800D3DD4D /* CustomerDetailsVC.swift in Sources */,
 				0CF67B5F1E98AA73009E1A5E /* PasscodeVC.swift in Sources */,
 				3079D8931E82798500D3DD4D /* CustomerListVC.swift in Sources */,
+				0CF3F6941E9E307E0039A291 /* SettingsVC.swift in Sources */,
 				3079D8871E8268B700D3DD4D /* homeScreenCell.swift in Sources */,
 				3079D8AD1E82842300D3DD4D /* ProfileVC.swift in Sources */,
 				3079D8A81E827EC300D3DD4D /* drawerCell.swift in Sources */,
@@ -1144,11 +1136,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rick McLey (GLN635KP3J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rick McLey (GLN635KP3J)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				DEVELOPMENT_TEAM = F7SBZTFSQ8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1168,7 +1160,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE = "a7769cc9-dea0-4612-95ea-c98ff5079b22";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1197,11 +1189,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rick McLey (F7SBZTFSQ8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rick McLey (F7SBZTFSQ8)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				DEVELOPMENT_TEAM = F7SBZTFSQ8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1214,7 +1206,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
+				PROVISIONING_PROFILE = "6f280cbe-a2b5-4418-9b2d-7cb983f73867";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1227,16 +1219,16 @@
 			baseConfigurationReference = 8C266A2E89D32D9C2E210C4F /* Pods-DealerDNA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rick McLey (GLN635KP3J)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rick McLey (GLN635KP3J)";
+				DEVELOPMENT_TEAM = F7SBZTFSQ8;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealer.dna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
-				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
+				PROVISIONING_PROFILE = "a7769cc9-dea0-4612-95ea-c98ff5079b22";
+				PROVISIONING_PROFILE_SPECIFIER = dev_dealerdna;
 				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1248,16 +1240,16 @@
 			baseConfigurationReference = BAD57BA974F68C078163FA10 /* Pods-DealerDNA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ajeet Singh (QT4GYM2LTE)";
-				DEVELOPMENT_TEAM = Y55EBSG532;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rick McLey (F7SBZTFSQ8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rick McLey (F7SBZTFSQ8)";
+				DEVELOPMENT_TEAM = F7SBZTFSQ8;
 				INFOPLIST_FILE = DealerDNA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.snaptouch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealer.dna;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb0508e0-be8c-4f77-84f1-0d2fada8dba8";
-				PROVISIONING_PROFILE_SPECIFIER = Snaptouch_Development;
+				PROVISIONING_PROFILE = "6f280cbe-a2b5-4418-9b2d-7cb983f73867";
+				PROVISIONING_PROFILE_SPECIFIER = adhoc_dealerdna;
 				SWIFT_OBJC_BRIDGING_HEADER = "DealerDNA/DealerDNA-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

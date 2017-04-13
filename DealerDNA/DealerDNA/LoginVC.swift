@@ -80,7 +80,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         txtAutomotiveGroup.backgroundColor = UIColor.white
         btnRemember.tintColor = AppColor.theamColor
         btnSignIn.backgroundColor = AppColor.theamColor
-        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize)
+        btnSignIn.titleLabel?.font = appFont(size: AppFont.normalFontSize, fontWeight: .kSemiBold)
         btnSignIn.layer.cornerRadius = 3
         viewTop.backgroundColor = AppColor.theamColor
         viewHeaderBottom.backgroundColor = AppColor.theamDarkColor

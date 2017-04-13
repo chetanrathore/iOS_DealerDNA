@@ -49,7 +49,7 @@ class CustomNavigationBar: UIViewController {
         case .noBack:
             break
         case .menu:
-            backButton.frame = CGRect(x: 10, y: 20, width: 30, height: 32)
+            backButton.frame = CGRect(x: 12, y: 27, width: 28, height: 30)
             backButton.setImage(#imageLiteral(resourceName: "sidemenuicon"), for: .normal)
             view.addSubview(backButton)
             break

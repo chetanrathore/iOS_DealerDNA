@@ -45,17 +45,17 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
     
     override func viewWillAppear(_ animated: Bool) {
         setLayout()
-        if (CLLocationManager.locationServicesEnabled()) {
-            self.locationManager.delegate = self
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.distanceFilter = kCLDistanceFilterNone
-            self.locationManager.requestWhenInUseAuthorization()
-            self.locationManager.requestAlwaysAuthorization()
-            self.locationManager.startMonitoringSignificantLocationChanges()
-            self.locationManager.startUpdatingLocation()
-        } else {
-            showAlertView(title: "Message", message: "Location services are not enabled", view: self)
-        }
+//        if (CLLocationManager.locationServicesEnabled()) {
+//            self.locationManager.delegate = self
+//            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            self.locationManager.distanceFilter = kCLDistanceFilterNone
+//            self.locationManager.requestWhenInUseAuthorization()
+//            self.locationManager.requestAlwaysAuthorization()
+//            self.locationManager.startMonitoringSignificantLocationChanges()
+//            self.locationManager.startUpdatingLocation()
+//        } else {
+//            showAlertView(title: "Message", message: "Location services are not enabled", view: self)
+//        }
 //        self.imgLogo.contentMode = (Screen.device == .pad) ? .topLeft : .scaleAspectFit
     }
     
@@ -120,7 +120,7 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
                 
 //                let vc = DLScanVC(nibName: "DLScanVC", bundle: nil)
 //                self.navigationController?.pushViewController(vc, animated: true)
-                let vc = DashboardVC(nibName: "DashboardVC", bundle: nil) //TabbarVC()
+                let vc = TabbarVC()//DashboardVC(nibName: "DashboardVC", bundle: nil) //TabbarVC()
                 //                self.view.window?.rootViewController = vc
                 self.navigationController?.pushViewController(vc, animated: true)
             }else if itemName == DashBoardMenu.dlScan{
@@ -147,6 +147,13 @@ class HomeVC: UIViewController ,UICollectionViewDelegate ,UICollectionViewDataSo
         let obj = appDelegate.dashBoardTiles.object(at: sourceIndexPath.row) as! String
         appDelegate.dashBoardTiles.removeObject(at: sourceIndexPath.row)
         appDelegate.dashBoardTiles.insert(obj, at: destinationIndexPath.row)
+        
+        let defaults = UserDefaults.standard
+        let data = AppData(dashBoardTiles: appDelegate.dashBoardTiles, sideMenuItem: appDelegate.sideMenuItem)
+        let nsData: Data = NSKeyedArchiver.archivedData(withRootObject: data)
+        defaults.set(nsData, forKey: appDetails)
+        defaults.synchronize()
+        
     }
     
     // Mark: Table view

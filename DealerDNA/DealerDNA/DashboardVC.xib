@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,23 +42,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbh-o3-nB7">
-                            <rect key="frame" x="10" y="6" width="30" height="32"/>
+                            <rect key="frame" x="12" y="7" width="28" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="sidemenuicon"/>
                             <connections>
                                 <action selector="handleBtnMenu:" destination="-1" eventType="touchUpInside" id="8lh-Bs-c7a"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-d9-ZEf">
-                            <rect key="frame" x="49" y="6" width="30" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="user1"/>
-                            <connections>
-                                <action selector="handleBtnUser:" destination="-1" eventType="touchUpInside" id="q4u-uL-qbI"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdL-qW-9AN">
-                            <rect key="frame" x="237" y="6" width="35" height="32"/>
+                            <rect key="frame" x="239" y="8" width="30" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="car"/>
                             <connections>
@@ -66,11 +58,19 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jog-XK-uV7">
-                            <rect key="frame" x="278" y="6" width="32" height="32"/>
+                            <rect key="frame" x="281" y="8" width="27" height="27"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="plus"/>
                             <connections>
                                 <action selector="handleBtnAdd:" destination="-1" eventType="touchUpInside" id="tFd-qe-nJE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNy-d9-ZEf">
+                            <rect key="frame" x="52" y="7" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="contact"/>
+                            <connections>
+                                <action selector="handleBtnUser:" destination="-1" eventType="touchUpInside" id="q4u-uL-qbI"/>
                             </connections>
                         </button>
                     </subviews>
@@ -122,7 +122,7 @@
                         <constraint firstAttribute="height" constant="44" id="yZP-GS-ELu"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cna-My-3Kk">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cna-My-3Kk">
                     <rect key="frame" x="0.0" y="107" width="320" height="373"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,15 +137,15 @@
                 <constraint firstItem="zEO-be-qQ5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="h7Z-Hb-vWX"/>
                 <constraint firstAttribute="trailing" secondItem="5mT-zd-YVz" secondAttribute="trailing" id="vnR-DY-ZZk"/>
             </constraints>
-            <point key="canvasLocation" x="-1649" y="-905"/>
+            <point key="canvasLocation" x="-2265" y="-1160"/>
         </view>
     </objects>
     <resources>
-        <image name="car" width="50" height="50"/>
-        <image name="circleleft" width="50" height="50"/>
-        <image name="circleright" width="50" height="50"/>
-        <image name="plus" width="50" height="50"/>
+        <image name="car" width="30" height="30"/>
+        <image name="circleleft" width="30" height="30"/>
+        <image name="circleright" width="30" height="30"/>
+        <image name="contact" width="30" height="30"/>
+        <image name="plus" width="30" height="30"/>
         <image name="sidemenuicon" width="50" height="50"/>
-        <image name="user1" width="50" height="50"/>
     </resources>
 </document>

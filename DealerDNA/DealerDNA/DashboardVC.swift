@@ -58,6 +58,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
     func setUpDashboard(){
+        arrSection.removeAll()
         let d1 = DashboadMster(title: "Working", count: 10, backColor: AppColor.lightBlueColor)
         let d2 = DashboadMster(title: "Accepted", count: 9, backColor: AppColor.lightGreenColor)
         let d3 = DashboadMster(title: "Forgotten", count: 133, backColor: AppColor.darkRedColor)
@@ -81,7 +82,7 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         let d43 = DashboadMster(title: "Write Up", count: 9, backColor: AppColor.lightBlueColor)
         arrSection.append(Dasdhboard(mainTitle: "Showroom", subSection: [d41,d42,d43]))
         tblDashboard.reloadData()
-
+        
     }
     
     // Mark: Tableview
@@ -122,13 +123,6 @@ class DashboardVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             }
             return 55 + 20
         }
-        //        if indexPath.section == 1{
-        //            if Screen.device == .pad{
-        //                return 80 + 20
-        //            }
-        //            return 55 + 20
-        //
-        //        }
         if Screen.device == .pad{
             return 160 + 30
         }

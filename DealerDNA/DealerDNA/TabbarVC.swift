@@ -38,16 +38,16 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         
         viewController1.tabBarItem = UITabBarItem(
             title: "Dashboard",
-            image: #imageLiteral(resourceName: "dashboard"),
+            image: #imageLiteral(resourceName: "tabdashboard"),
             tag: 0)
         viewController2.tabBarItem = UITabBarItem(
             title: "Reports",
-            image: #imageLiteral(resourceName: "tabpiechart"),
+            image: #imageLiteral(resourceName: "tabpie"),
             tag: 1)
         
         viewController3.tabBarItem = UITabBarItem(
             title: "Tasks",
-            image: #imageLiteral(resourceName: "tabcalender"),
+            image: #imageLiteral(resourceName: "tabcalendercheck"),
             tag: 2)
         
         viewController4.tabBarItem = UITabBarItem(
@@ -57,7 +57,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         
         viewController5.tabBarItem = UITabBarItem(
             title: "Search",
-            image: #imageLiteral(resourceName: "tabSearch"),
+            image: #imageLiteral(resourceName: "tabsearch"),
             tag: 4)
         
         UITabBar.appearance().isTranslucent = true
